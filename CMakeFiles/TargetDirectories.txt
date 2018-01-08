@@ -1,0 +1,13 @@
+/data/www/trunk1.0.0/BattleServer/CMakeFiles/BattleServer.dir
+/data/www/trunk1.0.0/ChatServer/CMakeFiles/ChatServer.dir
+/data/www/trunk1.0.0/CheckServer/CMakeFiles/CheckServer.dir
+/data/www/trunk1.0.0/CMakeFiles/Common.dir
+/data/www/trunk1.0.0/CMakeFiles/DBDriver.dir
+/data/www/trunk1.0.0/CMakeFiles/HttpHelper.dir
+/data/www/trunk1.0.0/CMakeFiles/Jason.dir
+/data/www/trunk1.0.0/CMakeFiles/KxServer.dir
+/data/www/trunk1.0.0/MatchServer/CMakeFiles/MatchServer.dir
+/data/www/trunk1.0.0/RankServer/CMakeFiles/RankServer.dir
+/data/www/trunk1.0.0/ServiceServer/CMakeFiles/ServiceServer.dir
+/data/www/trunk1.0.0/SessionServer/CMakeFiles/SessionServer.dir
+/data/www/trunk1.0.0/UnionServer/CMakeFiles/UnionServer.dir

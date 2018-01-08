@@ -1,0 +1,5 @@
+月卡价格（RMB）,有限期（天）钻石数,
+RMB,钻石数,
+CardPrice,CardTime,CardDiamond
+int,int,int
+26,30,100

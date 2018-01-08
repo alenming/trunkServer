@@ -1,0 +1,12 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,闪电光环,BornStatus_2,Is_MyBuff(1*170350),,,,Do_AddBuffForMe([170350+1]),,,
+2,约修亚大招动作释放,StandStatus_3,Is_SkillReady(0*170310),Is_MyHpLessThan(0*40.0),,,Do_CastSkill(170310),,,
+3,约修亚大招技能释放,SkillStatus_32,Is_SkillReady(0*170311),Is_MyHpLessThan(0*40.0),,,Do_CastSkill(170311),,,
+4,约修亚大招动作释放,StandStatus_3,Is_SkillReady(0*170310),Is_MyHpLessThan(0*80.0),,,Do_CastSkill(170310),,,
+5,约修亚大招技能释放,SkillStatus_32,Is_SkillReady(0*170311),Is_MyHpLessThan(0*80.0),,,Do_CastSkill(170311),,,
+6,约修亚闪电风暴动作释放,StandStatus_3,Is_SkillReady(0*170302),Is_HasTarget(0*15),,,Do_CastSkill(170302),,,
+7,约修亚闪电风暴技能释放,SkillStatus_35,Is_SkillReady(0*170303),Is_FindTarget(0*170301),,,Do_CastSkill(170303),,,
+8,约修亚电球,StandStatus_3,Is_SkillReady(0*170301),Is_HasTarget(0*170311),,,Do_CastSkill(170301),,,

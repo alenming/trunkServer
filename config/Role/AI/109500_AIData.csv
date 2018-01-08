@@ -1,0 +1,17 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,添加毒气BUFF,BornStatus_2,Is_MyBuff(1*109301),,,,Do_AddBuffForMe([109301+1]*[109303+1]*[109304+1]*[109305+1]*[109306+1]*[109501+1]*[109502+1]*[109504+1]),,,
+2,自然族青年技能1,StandStatus_3,Is_SkillReady(0*109504),Is_FindTarget(0*11),,,Do_CastSkill(109504),,,
+3,自然族青年普攻1,StandStatus_3,Is_SkillReady(0*109501),Is_FindTarget(0*11),,,Do_CastSkill(109501),,,
+4,未搜索到敌人,SkillStatus_33,Is_FindTarget(1*11),,,,Do_ChangeStatus(3),,,
+5,自然族青年普攻2,SkillStatus_34,Is_SkillReady(0*109502),Is_FindTarget(0*11),,,Do_CastSkill(109502),,,
+6,未搜索到敌人,SkillStatus_34,Is_FindTarget(1*11),,,,Do_ChangeStatus(3),,,
+7,自然族青年普攻3,SkillStatus_35,Is_SkillReady(0*109503),Is_FindTarget(0*11),,,Do_CastSkill(109503),,,
+8,自然族青年技能1（移动）,MoveStatus_4,Is_SkillReady(0*109508),Is_FindTarget(0*11),,,Do_CastSkill(109508),,,
+9,自然族青年普攻1（移动）,MoveStatus_4,Is_SkillReady(0*109505),Is_FindTarget(0*11),,,Do_CastSkill(109505),,,
+10,未搜索到敌人,SkillStatus_37,Is_FindTarget(1*11),,,,Do_ChangeStatus(3),,,
+11,自然族青年普攻2（移动）,SkillStatus_38,Is_SkillReady(0*109506),Is_FindTarget(0*11),,,Do_CastSkill(109506),,,
+12,未搜索到敌人,SkillStatus_38,Is_FindTarget(1*11),,,,Do_ChangeStatus(3),,,
+13,自然族青年普攻3（移动）,SkillStatus_39,Is_SkillReady(0*109507),Is_FindTarget(0*11),,,Do_CastSkill(109507),,,

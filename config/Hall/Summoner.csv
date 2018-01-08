@@ -1,0 +1,11 @@
+召唤师ID,获得方式   ,对应参数,召唤师背景音效名称ID  ,是否显示New标签,角色头像资源,角色背景资源,背景纹理,头像ID
+,1钻石购买   2通关获得,1钻石消耗数  2对应关卡的语言包ID,填对应音效ID,0=不需要    1=要,,,,
+ID,Type,Num,SummonerMusic,NewLabel,Head_Name,Bg_Name,Bg_Texture,HeadID
+index,int,int,int,int,string,string,string,int
+1000,1,1000,,0,summoner_1000.png,hero_1000_Pic.csb,hero_1000_Ult.plist,1
+1100,1,1000,,0,summoner_1100.png,hero_1100_Pic.csb,hero_1100_Ult.plist,2
+1200,1,1000,,0,summoner_1200.png,hero_1200_Pic.csb,hero_1200_Ult.plist,3
+1300,1,1000,,0,summoner_1300.png,hero_1300_Pic.csb,hero_1300_Ult.plist,4
+1400,1,1000,,0,summoner_1400.png,hero_1400_Pic.csb,hero_1400_Ult.plist,5
+1500,1,1000,,0,summoner_1500.png,hero_1500_Pic.csb,hero_1500_Ult.plist,6
+1600,1,1000,,0,summoner_1600.png,hero_1600_Pic.csb,hero_1600_Ult.plist,7

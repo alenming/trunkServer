@@ -1,0 +1,9 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,释放喷血技能,MoveStatus_4,Is_SkillReady(0*165401),Is_FindTarget(0*1),,,Do_CastSkill(165401),,,
+2,释放踩地技能1,StandStatus_3,Is_SkillReady(0*165901),,,,Do_LockPointsForMe(0*0),Do_CastSkill(165901),Do_CastSkill(165902),
+3,释放冥斩,MoveStatus_4,Is_SkillReady(0*165803),Is_HasTarget(0*11),,,Do_LockPointsForMe(200*0),Do_CastSkill(165803),,
+4,攻击2,MoveStatus_4,Is_SkillReady(0*165802),Is_HasTarget(0*11),,,Do_LockPointsForMe(200*0),Do_CastSkill(165802),,
+5,攻击1,MoveStatus_4,Is_SkillReady(0*165801),Is_HasTarget(0*11),,,Do_LockPointsForMe(200*0),Do_CastSkill(165801),,

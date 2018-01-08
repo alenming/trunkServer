@@ -1,0 +1,8 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,治疗起手,StandStatus_3,Is_SkillReady(0*10901),Is_HasTarget(0*23),,,Do_ChangeStatus(31),,,
+2,攻击敌人,StandStatus_3,Is_SkillReady(0*10900),Is_FindTarget(0*12),,,Do_CastSkill(10900),Do_Clear(),,
+3,持续治疗结束,SkillStatus_32,Is_HasTarget(1*23),,,,Do_ChangeStatus(33),Do_Clear(),,
+4,持续治疗,SkillStatus_32,Is_SkillReady(0*10901),Is_FindTarget(0*23),,,Do_CastSkill(10901),Do_Clear(),,

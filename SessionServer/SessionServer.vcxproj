@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D7C02860-8514-4D51-A235-A7285D902E47}</ProjectGuid>
+    <RootNamespace>SessionServer</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir).$(ProjectName)$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../Common/SimpleCocos;../External/kxServer;../External/kxServer/core;../External/kxServer/server;../External/kxServer/helper;../External/kxServer/pulgins;../External/kxServer/commnication;../External;GameLogic;Classes;../External/mysqld;../Common/Protocol;../Common/GameConfig;../Common/GameCommon;../Common/GameModel;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>../External/libs/libmysql.lib;../External/libs/libmysqld.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>..\BaseFrame;..\Protocol;..\RichServer;..\BaseFrame\mysql_include;..\BaseFrame\redis_include\;..\BaseFrame\redis_include\hiredis;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\GameConfig\CsvLoader.cpp" />
+    <ClCompile Include="..\External\kxServer\commnication\KxBufferList.cpp" />
+    <ClCompile Include="..\External\kxServer\commnication\KxEpoller.cpp" />
+    <ClCompile Include="..\External\kxServer\commnication\KxSelectPoller.cpp" />
+    <ClCompile Include="..\External\kxServer\commnication\KxSock.cpp" />
+    <ClCompile Include="..\External\kxServer\commnication\KxTCPClienter.cpp" />
+    <ClCompile Include="..\External\kxServer\commnication\KxTCPConnector.cpp" />
+    <ClCompile Include="..\External\kxServer\commnication\KxTCPListener.cpp" />
+    <ClCompile Include="..\External\kxServer\commnication\KxTCPUnit.cpp" />
+    <ClCompile Include="..\External\kxServer\commnication\KxUDPUnit.cpp" />
+    <ClCompile Include="..\External\kxServer\core\KxLog.cpp" />
+    <ClCompile Include="..\External\kxServer\core\KxMemPool.cpp" />
+    <ClCompile Include="..\External\kxServer\core\KxObject.cpp" />
+    <ClCompile Include="..\External\kxServer\helper\KxTimerManager.cpp" />
+    <ClCompile Include="..\External\kxServer\helper\LogBattleHandler.cpp" />
+    <ClCompile Include="..\External\kxServer\helper\LogConsoleHandler.cpp" />
+    <ClCompile Include="..\External\kxServer\helper\LogFileHandler.cpp" />
+    <ClCompile Include="..\External\kxServer\server\KxBaseServer.cpp" />
+    <ClCompile Include="Classes\ChangeConnectModule.cpp" />
+    <ClCompile Include="Classes\ConnectModule.cpp" />
+    <ClCompile Include="Classes\Main.cpp" />
+    <ClCompile Include="Classes\NetworkManager.cpp" />
+    <ClCompile Include="Classes\ServerConfig.cpp" />
+    <ClCompile Include="Classes\SessionClient.cpp" />
+    <ClCompile Include="Classes\SessionConnect.cpp" />
+    <ClCompile Include="Classes\SessionGMService.cpp" />
+    <ClCompile Include="Classes\SessionHelper.cpp" />
+    <ClCompile Include="Classes\SessionListener.cpp" />
+    <ClCompile Include="Classes\SessionModule.cpp" />
+    <ClCompile Include="Classes\SessionServer.cpp" />
+    <ClCompile Include="GameLogic\SessionEvent.cpp" />
+    <ClCompile Include="GameLogic\SummonerEvent.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\GameConfig\CsvLoader.h" />
+    <ClInclude Include="..\Common\Protocol\GMProtocol.h" />
+    <ClInclude Include="..\Common\Protocol\LoginProtocol.h" />
+    <ClInclude Include="..\Common\Protocol\Protocol.h" />
+    <ClInclude Include="..\Common\Protocol\ServerProtocol.h" />
+    <ClInclude Include="..\Common\Protocol\SessionProtocol.h" />
+    <ClInclude Include="..\External\kxServer\commnication\KxBufferList.h" />
+    <ClInclude Include="..\External\kxServer\commnication\KxCommInterfaces.h" />
+    <ClInclude Include="..\External\kxServer\commnication\KxEpoller.h" />
+    <ClInclude Include="..\External\kxServer\commnication\KxSelectPoller.h" />
+    <ClInclude Include="..\External\kxServer\commnication\KxSock.h" />
+    <ClInclude Include="..\External\kxServer\commnication\KxTCPClienter.h" />
+    <ClInclude Include="..\External\kxServer\commnication\KxTCPConnector.h" />
+    <ClInclude Include="..\External\kxServer\commnication\KxTCPListener.h" />
+    <ClInclude Include="..\External\kxServer\commnication\KxTCPUnit.h" />
+    <ClInclude Include="..\External\kxServer\commnication\KxUDPUnit.h" />
+    <ClInclude Include="..\External\kxServer\core\KxCore.h" />
+    <ClInclude Include="..\External\kxServer\core\KxLog.h" />
+    <ClInclude Include="..\External\kxServer\core\KxMemPool.h" />
+    <ClInclude Include="..\External\kxServer\core\KxObject.h" />
+    <ClInclude Include="..\External\kxServer\core\KxPlatform.h" />
+    <ClInclude Include="..\External\kxServer\helper\KxTimerCallback.h" />
+    <ClInclude Include="..\External\kxServer\helper\KxTimerManager.h" />
+    <ClInclude Include="..\External\kxServer\helper\KxTimeVal.h" />
+    <ClInclude Include="..\External\kxServer\helper\LogBattleHandler.h" />
+    <ClInclude Include="..\External\kxServer\helper\LogConsoleHandler.h" />
+    <ClInclude Include="..\External\kxServer\helper\LogFileHandler.h" />
+    <ClInclude Include="..\External\kxServer\KXServer.h" />
+    <ClInclude Include="..\External\kxServer\server\KxBaseServer.h" />
+    <ClInclude Include="Classes\BaseModule.h" />
+    <ClInclude Include="Classes\ChangeConnectModule.h" />
+    <ClInclude Include="Classes\ConnectModule.h" />
+    <ClInclude Include="Classes\NetworkManager.h" />
+    <ClInclude Include="Classes\ServerConfig.h" />
+    <ClInclude Include="Classes\ServerData.h" />
+    <ClInclude Include="Classes\SessionClient.h" />
+    <ClInclude Include="Classes\SessionConnect.h" />
+    <ClInclude Include="Classes\SessionGMService.h" />
+    <ClInclude Include="Classes\SessionHelper.h" />
+    <ClInclude Include="Classes\SessionListener.h" />
+    <ClInclude Include="Classes\SessionModule.h" />
+    <ClInclude Include="Classes\SessionServer.h" />
+    <ClInclude Include="GameLogic\SessionEvent.h" />
+    <ClInclude Include="GameLogic\SummonerEvent.h" />
+    <ClInclude Include="GameLogic\GameInterface.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

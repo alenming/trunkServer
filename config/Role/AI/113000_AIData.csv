@@ -1,0 +1,8 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,召唤死亡骑士,StandStatus_3,Is_MyHpLessThan(0*60.0),Is_MyBuff(1*113006),Is_MyBuff(1*113007),,Do_AddBuffForMe([113006+1]),Do_ChangeStatus(34),,
+2,召唤死亡骑士,StandStatus_3,Is_MyHpLessThan(0*30.0),Is_MyBuff(1*113010),Is_MyBuff(1*113011),,Do_AddBuffForMe([113010+1]),Do_ChangeStatus(34),,
+3,冰火停止释放,StandStatus_3,Is_MyHpLessThan(0*80.0),Is_MyBuff(1*113004),Is_MyBuff(0*113001),,Do_AddBuffForMe([113004+1]),Do_DelBuffForMe([113001]),,
+4,冰火停止释放,StandStatus_3,Is_MyHpLessThan(0*80.0),Is_MyBuff(1*113004),Is_MyBuff(0*113002),,Do_AddBuffForMe([113004+1]),Do_DelBuffForMe([113002]),,

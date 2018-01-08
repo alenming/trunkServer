@@ -1,0 +1,8 @@
+水晶等级,水晶提升速度,水晶最大值,水晶价格
+主键,,,
+Crystal_Level,Crystal_Speed,Crystal_Max,Crystal_Cost
+index,int,int,int
+1,35,999,600
+2,44,999,800
+3,53,999,999
+4,62,999,0

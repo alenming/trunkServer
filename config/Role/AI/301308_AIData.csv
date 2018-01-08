@@ -1,0 +1,9 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,添加受击BUFF,BornStatus_2,Is_MyBuff(1*107208),,,,Do_AddBuffForMe([107208+1]*[107209+1]*[107217+1]*[9+1]),,,
+2,半破损状态添加受击BUFF,SkillStatus_32,Is_MyBuff(1*107210),,,,Do_AddBuffForMe([107210+1]*[107211+1]),Do_DelBuffForMe([107208]),Do_DelBuffForMe([107209]),
+3,牢笼门破,SkillStatus_34,Is_MyBuff(0*107211),,,,Do_DelBuffForMe([107210]),Do_DelBuffForMe([107211]),Do_DelBuffForMe([107217]),
+4,破门后给BOSS添加标识BUFF,SkillStatus_35,Is_SkillReady(0*107215),Is_MyBuff(1*10),Is_FindTarget(0*2),,Do_CastSkill(107215),Do_AddBuffForMe([10+1]),,
+5,破门后给石柱添加标识BUFF,SkillStatus_35,Is_SkillReady(0*107215),Is_MyBuff(1*11),Is_FindTarget(0*107401),,Do_CastSkill(107215),Do_AddBuffForMe([11+1]),,

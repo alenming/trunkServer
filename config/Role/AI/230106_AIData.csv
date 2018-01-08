@@ -1,0 +1,16 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,攻击牢笼,MoveStatus_4,Is_SkillReady(0*107216),Is_FindTarget(0*107203),,,Do_CastSkill(107216),,,
+2,进入怒意,MoveStatus_4,Is_MyAttribute(0*303*0*20.0),Is_MyBuff(1*30104),Is_HasTarget(0*12),,Do_AddBuffForMe([30102+1]*[30104+1]),Do_ChangeStatus(3),,
+3,退出怒意,MoveStatus_4,Is_MyBuff(0*30103),Is_HasTarget(0*12),,,Do_DelBuffForMe([30103+30104]),Do_ChangeStatus(3),,
+4,退出怒意,MoveStatus_4,Is_MyAttribute(0*303*1*0.0),Is_MyBuff(0*30103),,,Do_DelBuffForMe([30103+30104]),Do_ChangeStatus(3),,
+5,近战范围内发现敌人,MoveStatus_4,Is_SkillReady(0*30105),Is_MyBuff(1*30101),Is_HasTarget(0*30101),Is_FindTarget(0*1),Do_AddBuffForMe([30101+1]),Do_CastSkill(30105),,
+6,箭雨释放,MoveStatus_4,Is_MyBuff(0*30104),Is_SkillReady(0*30102),Is_FindTarget(0*12),,Do_CastSkill(30102),,,
+7,普攻,MoveStatus_4,Is_SkillReady(0*30101),Is_MyBuff(1*30104),Is_HasTarget(0*12),,Do_CastSkill(30101),,,
+8,近战范围内发现敌人,SkillStatus_32,Is_SkillReady(0*30105),Is_MyBuff(1*30101),Is_HasTarget(0*30101),Is_FindTarget(0*1),Do_AddBuffForMe([30101+1]),Do_CastSkill(30105),,
+9,近战范围内发现敌人,SkillStatus_33,Is_SkillReady(0*30105),Is_MyBuff(1*30101),Is_HasTarget(0*30101),Is_FindTarget(0*1),Do_AddBuffForMe([30101+1]),Do_CastSkill(30105),,
+10,近战范围内发现敌人,FightStatus_5,Is_SkillReady(0*30105),Is_MyBuff(1*30101),Is_HasTarget(0*30101),Is_FindTarget(0*1),Do_AddBuffForMe([30101+1]),Do_CastSkill(30105),,
+11,后跳实际动作,SkillStatus_41,Is_FindTarget(0*1),,,,Do_Count(30114),,,
+12,后跳落地普攻,SkillStatus_36,Is_SkillReady(0*30107),Is_FindTarget(0*3),,,Do_CastSkill(30107),,,

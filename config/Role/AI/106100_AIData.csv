@@ -1,0 +1,10 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,收魂光环和黑暗深渊,BornStatus_2,Is_MyBuff(1*106101),Is_SkillReady(0*106001),Is_FindTarget(0*1),,Do_AddBuffForMe([106101+1]),Do_LockPointsForMe(900*0),Do_CastSkill(106001),
+2,70%血量添加前进Buff,SkillStatus_39,Is_MyHpLessThan(0*70.00),Is_MyBuff(1*106103),,,Do_AddBuffForMe([106103+1]),,,
+3,待机转前进,SkillStatus_39,Is_MyBuff(0*106103),Is_FindTarget(1*12),,,Do_ChangeStatus(4),,,
+4,待机风吹雪起手,SkillStatus_39,Is_FindTarget(0*12),,,,Do_ChangeStatus(32),,,
+5,移动风吹雪起手,MoveStatus_4,Is_FindTarget(0*12),,,,Do_ChangeStatus(32),,,
+6,风吹雪释放,ChargingStatus_7,Is_SkillReady(0*106101),,,,Do_CastSkill(106101),,,

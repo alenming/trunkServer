@@ -1,0 +1,12 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,开场释放雾隐技能,BornStatus_2,Is_MyBuff(1*11102),,,,Do_AddBuffForMe([11102+1]),,,
+2,潜行攻击-召唤师,SkillStatus_50,Is_HasTarget(0*51),,,,Do_DelBuffForMe([9]),Do_ChangeStatus(3),,
+3,潜行攻击-非战士单位,SkillStatus_50,Is_HasTarget(0*50),,,,Do_DelBuffForMe([9]),Do_ChangeStatus(3),,
+4,非隐身状态去除隐身BUFF,MoveStatus_4,Is_MyBuff(0*9),,,,Do_DelBuffForMe([9]),Do_ChangeStatus(3),,
+5,偷水晶攻击3,MoveStatus_4,Is_SkillReady(0*11102),Is_FindTarget(0*16),,,Do_CastSkill(11102),Do_CastSkill(11105),,
+6,偷水晶攻击1 2,MoveStatus_4,Is_SkillReady(0*11101),Is_FindTarget(0*16),,,Do_CastSkill(11101),Do_CastSkill(11106),,
+7,攻击3,MoveStatus_4,Is_SkillReady(0*11102),Is_FindTarget(0*11),,,Do_CastSkill(11102),,,
+8,攻击1 2,MoveStatus_4,Is_SkillReady(0*11101),Is_FindTarget(0*11),,,Do_CastSkill(11101),,,

@@ -1,0 +1,18 @@
+状态优先级,描述,状态标签,状态生命周期,周期影响参数,状态是否加锁,状态自动跳转,角色行为,角色骨骼动画,,,,,,,,特效动画,,,,音乐ID
+,无效列,状态标签StateNameToID,正整数代表毫秒      0代表永久-1攻击速度,"0无,1攻击速率,2移动速度影响,3回蓝速度",0不锁 1锁,状态结束后进入新状态,Action(a*b*[x+y]),动画标签,是否循环(0不正循负美决),动画播放速率,速率因素(0无1攻击速率连动2移速3回蓝速度),灰化(0不1灰),透明度,最后一帧隔多少毫秒淡出,偏色[R+G+B],附加特效动画ID,附加效果播放点：(0不播放1头2身3脚),特效是否跟随移动,附加UI特效(UI特效只能对应1个),
+Status_CanBreakParam,null,Status_Name,Status_LifeTime,Status_LifeTimePrarm,Status_Lock,Status_NextStatus,Status_Action,Animation_Label,Animation_Loop,Animation_Speed,Animation_SpeedAffect,Animation_Ash,Animation_Transparency,Animation_IsFadeOutTime,Animation_AddColor,Animation_ID,Animation_EffectPlay,Animation_IsFollow,UIEffect_ID,Animation_AudioID
+int,null,string,int,int,bool,string,function,string,int,float,int,bool,float,float,float,json,int,bool,int,int
+10,骨龙出生状态,BornStatus_2,1000,0,1,SkillStatus_39,,Birth1,0,1,0,0,1,0,0,[],0,0,106801,[108601+0]
+40,骨龙出生待机状态,SkillStatus_39,0,1,0,,,Stand1,1,1,1,0,1,0,0,[],0,0,0,
+40,骨龙普攻待机状态,StandStatus_3,500,1,0,SkillStatus_39,,Stand1,1,1,1,0,1,0,0,[],0,0,0,
+40,技能1-激光炮起手,SkillStatus_31,1030,0,0,ChargingStatus_7,,Skill1_Start,0,1,0,0,1,0,0,[108601],3,1,0,[108603+0]
+40,技能1-激光炮循环,ChargingStatus_7,0,0,0,,,Skill1_Loop,1,1,0,0,1,0,0,[108602],3,1,0,[108604+0+1]
+40,技能1-激光炮施放（最高伤害）,SkillStatus_33,3000,0,0,SkillStatus_39,,Skill1_Release,0,1,0,0,1,0,0,[108603],3,1,0,[108605+1500]
+40,技能1-激光炮施放（中等伤害）,SkillStatus_34,3000,0,0,SkillStatus_39,,Skill1_Release,0,1,0,0,1,0,0,[108604],3,1,0,[108605+1500]
+40,技能1-激光炮施放（最低伤害）,SkillStatus_35,3000,0,0,SkillStatus_39,,Skill1_Release,0,1,0,0,1,0,0,[108605],3,1,0,[108605+1500]
+40,技能2-龙的口气,SkillStatus_36,4000,0,1,SkillStatus_39,,Skill2,0,1,0,0,1,0,0,[108606],3,1,0,[108602+2500+1]
+50,骨龙被击状态,HitStatus_10,660,0,0,SkillStatus_39,,Hit1,0,1,0,0,1,0,0,[],0,0,0,
+60,骨龙击晕状态,HitVertigoStatus_11,2000,0,0,SkillStatus_39,,Vertigo1,1,1,0,0,1,0,0,[3],1,1,0,
+99,骨龙解冻状态,SkillStatus_40,1000,0,0,SkillStatus_39,,Hit1,0,1,0,0,1,0,0,[15+16+17],3,1,0,
+100,骨龙冰冻状态,FrozenStatus_16,10,0,0,SkillStatus_40,,Hit1,0,1,0,0,0.4,0,0,[13+14],3,1,0,
+999,骨龙死亡状态,DeathStatus_1,3000,0,1,,Dead(),Death1,0,1,0,0,1,2000,0,[41+42+43+44+45],3,1,106802,[108606+600]

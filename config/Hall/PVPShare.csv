@@ -1,0 +1,5 @@
+回放频道最大显示回放数,回放频道分享CD（秒）,回放频道每日分享次数限制,每日战斗分享次数限制,观看量刷新间隔（秒）,回放频道低于X名不显示名次,分享描述字数限制,默认描述
+单位个数,单位秒,次数,次数,秒,,汉字长度,语言包
+ReplayShowCount,ReplayShareCD,ReplayShareCount,BattleShareCount,RefreshCD,ReplayShowRank,ShareDescLength,Desc
+int,int,int,int,int,int,int,int
+30,60,5,5,300,200,30,2180

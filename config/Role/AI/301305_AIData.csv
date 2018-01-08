@@ -1,0 +1,15 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,怒意酋长状态,MoveStatus_4,Is_MyAttribute(0*303*0*20.0),Is_MyBuff(1*20502),Is_HasTarget(0*11),,Do_ChangeStatus(34),Do_AddBuffForMe([20501+1]*[20503+1]),,
+2,无士兵解除怒意,MoveStatus_4,Is_MyBuff(0*20502),Is_HasTarget(1*11),,,Do_DelBuffForMe([20502+20503]),,,
+3,无能量解除怒意,MoveStatus_4,Is_MyAttribute(0*303*1*0.0),Is_MyBuff(0*20502),,,Do_DelBuffForMe([20502+20503]),,,
+4,进入踩踏,MoveStatus_4,Is_MyBuff(0*20502),Is_HasTarget(0*11),,,Do_ChangeStatus(35),,,
+5,战争践踏,MoveStatus_4,Is_SkillReady(0*20505),Is_HasTarget(0*11),,,Do_LockPointsForMe(0*0),Do_CastSkill(20505),,
+6,普攻,MoveStatus_4,Is_SkillReady(0*20504),Is_FindTarget(0*11),,,Do_CastSkill(20504),,,
+7,能量判断,SkillStatus_35,Is_MyAttribute(0*303*1*0.0),Is_MyBuff(0*20502),,,Do_ChangeStatus(3),Do_DelBuffForMe([20502+20503]),,
+8,士兵死亡判断,SkillStatus_35,Is_MyBuff(0*20502),Is_HasTarget(1*11),,,Do_ChangeStatus(3),Do_DelBuffForMe([20502+20503]),,
+9,怒意踩踏,SkillStatus_35,Is_SkillReady(0*20501),Is_MyBuff(0*20502),Is_HasTarget(0*11),,Do_LockPointsForMe(0*0),Do_CastSkill(20501),,
+10,能量判断,SkillStatus_36,Is_MyAttribute(0*303*1*0.0),Is_MyBuff(0*20502),,,Do_ChangeStatus(3),Do_DelBuffForMe([20502+20503]),,
+11,怒意挥斧,SkillStatus_36,Is_SkillReady(0*20502),Is_MyBuff(0*20502),Is_FindTarget(0*13),,Do_CastSkill(20502),,,

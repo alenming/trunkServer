@@ -1,0 +1,17 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,召唤血泉石像,BornStatus_2,Is_SkillReady(0*111610),,,,Do_LockPoints(1200*0),Do_CastSkill(111610),,
+2,释放暴风雪,StandStatus_3,Is_SkillReady(0*111603),Is_MyHpLessThan(0*75.0),,,Do_CastSkill(111603),Do_ChangeStatus(34),,
+3,让暴风雪再密一点,SkillStatus_34,Is_SkillReady(0*111613),,,,Do_CastSkill(111613),,,
+4,让暴风雪再密一点,SkillStatus_34,Is_SkillReady(0*111614),,,,Do_CastSkill(111614),,,
+5,让暴风雪再密二点,SkillStatus_34,Is_SkillReady(0*111615),,,,Do_CastSkill(111615),,,
+6,让暴风雪再密二点,SkillStatus_34,Is_SkillReady(0*111616),,,,Do_CastSkill(111616),,,
+7,让暴风雪再密二点,SkillStatus_34,Is_SkillReady(0*111617),,,,Do_CastSkill(111617),,,
+8,冰墙,StandStatus_3,Is_SkillReady(0*111602),Is_MyHpLessThan(0*60.0),,,Do_ChangeStatus(36),Do_LockPoints(1200*500),Do_CastSkill(111602),Do_Clear()
+9,加嗜血buff,StandStatus_3,Is_SkillReady(0*111401),Is_FindTarget(0*111600),,,Do_ChangeStatus(32),Do_CastSkill(111401),Do_Clear(),
+10,发射冰弹,StandStatus_3,Is_SkillReady(0*111601),Is_SkillReady(0*111604),,,Do_ChangeStatus(31),Do_CastSkill(111601),Do_Clear(),
+11,召唤选点（中）,StandStatus_3,Is_RandomForAI(0*33),Is_SkillReady(0*111604),,,Do_ChangeStatus(38),Do_LockPoints(1200*0),Do_CastSkill(111604),Do_Clear()
+12,召唤选点（远）,StandStatus_3,Is_RandomForAI(1*53),Is_SkillReady(0*111604),,,Do_ChangeStatus(38),Do_LockPoints(1700*0),Do_CastSkill(111604),Do_Clear()
+13,召唤选点（近）,StandStatus_3,Is_SkillReady(0*111604),,,,Do_ChangeStatus(38),Do_LockPoints(700*0),Do_CastSkill(111604),Do_Clear()

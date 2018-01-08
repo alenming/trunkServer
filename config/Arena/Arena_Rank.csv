@@ -1,0 +1,11 @@
+组号,无效列,积分上下限值[n1+n2],段位图标素材,MMR_K值,MMR_kx值,MMR上下限,Arena_K值
+,,(填写格式是[)，左边是大于等于，右边是小于),,,,(填写格式是[)，左边是大于等于，右边是小于),
+GroupNumber,null,GNRank,GNPic,MMR_K,MMR_kx,MMR_Range,Arena_K
+index,null,json,string,float,float,json,float
+1,新手,[0+300],icon_guildbadge_01.png,60,1.32,[0+100000],60
+2,青铜,[300+750],icon_guildbadge_07.png,60,1.32,[100000+100001],60
+3,白银,[750+1500],icon_guildbadge_06.png,60,1.32,[100001+100002],60
+4,黄金 ,[1500+2250],icon_guildbadge_05.png,60,1.32,[100002+100003],60
+5,珀金,[2250+3000],icon_guildbadge_04.png,60,1.32,[100003+100004],60
+6,钻石,[3000+5000],icon_guildbadge_03.png,60,1.32,[100004+100005],60
+7,王者,[5000+100000],icon_guildbadge_02.png,60,1.32,[100005+100006],60

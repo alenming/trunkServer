@@ -1,0 +1,13 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,出生给予毒气弹计算BUFF,BornStatus_2,Is_MyBuff(1*161408),Is_MyBuff(1*161411),,,Do_AddBuffForMe([161408+1]*[161411+1]),,,
+2,丢毒气弹,SkillStatus_39,Is_MyBuff(0*161401),Is_SkillReady(0*161406),,,Do_LockPointsForMe(1450*0),Do_CastSkill(161406),Do_AddBuffForMe([161408+1]),Do_DelBuffForMe([161401])
+3,丢毒气弹,SkillStatus_39,Is_MyBuff(0*161402),Is_SkillReady(0*161406),,,Do_LockPointsForMe(1100*0),Do_CastSkill(161406),Do_AddBuffForMe([161409+1]),Do_DelBuffForMe([161402])
+4,丢毒气弹,SkillStatus_39,Is_MyBuff(0*161403),Is_SkillReady(0*161406),,,Do_LockPointsForMe(750*0),Do_CastSkill(161406),Do_AddBuffForMe([161410+1]),Do_DelBuffForMe([161403])
+5,丢双重毒气标记,SkillStatus_35,Is_MyBuff(1*161411),Is_MyBuff(1*161412),Is_SkillReady(0*161409),,Do_LockPointsForMe(400*0),Do_CastSkill(161409),Do_AddBuffForMe([161412+1]),
+6,丢双重毒气本体,SkillStatus_35,Is_MyBuff(1*161411),Is_MyBuff(0*161412),Is_SkillReady(0*161409),Is_SkillReady(0*161408),Do_LockPointsForMe(400*0),Do_CastSkill(161409),Do_CastSkill(161408),
+7,百鬼夜行移动,SkillStatus_39,Is_MyBuff(1*161405),Is_MyBuff(1*161406),Is_MyBuff(1*161407),,Do_ChangeStatus(33),Do_AddBuffForMe([161405+1]*[161406+1]*[161407+1]),,
+8,普攻1,SkillStatus_39,Is_SkillReady(0*161404),Is_FindTarget(0*11),,,Do_CastSkill(161404),,,
+9,普攻2,SkillStatus_39,Is_SkillReady(0*161405),Is_FindTarget(0*11),,,Do_CastSkill(161405),,,

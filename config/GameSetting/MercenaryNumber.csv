@@ -1,0 +1,6 @@
+佣兵数量,扩展佣兵所需消耗
+主键,
+MercenaryNum,MercenaryPrice
+index,int
+1,0
+2,0

@@ -1,0 +1,8 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,召唤冰柱,BornStatus_2,Is_MyBuff(1*162001),,,,Do_AddBuffForMe([162001+1]),,,
+2,使用斩杀,StandStatus_3,Is_MyBuff(1*113203),Is_SkillReady(0*162005),Is_FindTarget(0*3),,Do_CastSkill(162005),,,
+3,使用刺杀,StandStatus_3,Is_MyBuff(0*113201),Is_SkillReady(0*113205),Is_FindTarget(0*113201),,Do_CastSkill(113205),,,
+4,使用审判,StandStatus_3,Is_MyBuff(0*113203),Is_SkillReady(0*113203),Is_FindTarget(0*1),,Do_CastSkill(113203),Do_AddBuffForMe([113213+1]),,

@@ -1,0 +1,11 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,庇护光环,BornStatus_2,Is_MyBuff(1*1600),Is_MyBuff(1*181204),,,Do_AddBuffForMe([1600+1]),Do_AddBuffForMe([181204+1]),,
+2,圣光大宝剑,StandStatus_3,Is_FindTarget(0*12),Is_SkillReady(0*181201),,,Do_CastSkill(181201),,,
+3,圣光领域-近,StandStatus_3,Is_SkillReady(0*181202),Is_HasTarget(0*11),,,Do_LockPointsForMe(500*0),Do_CastSkill(181202),,
+4,圣光领域-远,StandStatus_3,Is_SkillReady(0*181202),Is_HasTarget(0*12),,,Do_LockPointsForMe(850*0),Do_CastSkill(181202),,
+5,圣光审判动作释放,StandStatus_3,Is_SkillReady(0*181203),Is_MyBuff(1*181204),Is_EnemySoldierNumber(0*2),,Do_CastSkill(181203),,,
+6,加标记,SkillStatus_33,Is_MyBuff(1*1601),,,,Do_AddBuffForMe([1601+1]),,,
+7,圣光审判,SkillStatus_33,Is_SkillReady(0*181204),Is_MyBuff(0*1602),,,Do_CastSkill(181204),,,

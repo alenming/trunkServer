@@ -1,0 +1,17 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,战魂光环,BornStatus_2,Is_MyBuff(1*170600),,,,Do_AddBuffForMe([170600+1]*[170602+1]),,,
+2,觉醒,StandStatus_3,Is_MyBuff(1*170602),,,,Do_ChangeStatus(4),,,
+3,撤离战场,MoveStatus_4,Is_MyBuff(1*170603),Is_FindTarget(0*1),,,Do_ChangeStatus(42),,,
+4,跳离后空状态位移,SkillStatus_43,Is_MyBuff(1*170603),,,,Do_Count(1512),,,
+5,觉醒吹笛动作,StandStatus_3,Is_SkillReady(0*170609),Is_FindTarget(0*1),,,Do_CastSkill(170609),,,
+6,待机气流斩,StandStatus_3,Is_SkillReady(0*170607),,,,Do_CastSkill(170607),,,
+7,待机连击1,StandStatus_3,Is_SkillReady(0*170601),Is_FindTarget(0*11),,,Do_CastSkill(170601),,,
+8,待机连击2,StandStatus_3,Is_SkillReady(0*170602),Is_FindTarget(0*11),,,Do_CastSkill(170602),,,
+9,待机连击3,StandStatus_3,Is_SkillReady(0*170603),Is_FindTarget(0*11),,,Do_CastSkill(170603),,,
+10,移动气流斩,MoveStatus_4,Is_SkillReady(0*170608),,,,Do_CastSkill(170608),,,
+11,移动连击1,MoveStatus_4,Is_SkillReady(0*170604),Is_FindTarget(0*11),,,Do_CastSkill(170604),,,
+12,移动连击2,MoveStatus_4,Is_SkillReady(0*170605),Is_FindTarget(0*11),,,Do_CastSkill(170605),,,
+13,移动连击3,MoveStatus_4,Is_SkillReady(0*170606),Is_FindTarget(0*11),,,Do_CastSkill(170606),,,

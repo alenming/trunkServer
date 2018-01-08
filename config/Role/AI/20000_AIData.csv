@@ -1,0 +1,9 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,进入怒意状态,MoveStatus_4,Is_MyAttribute(0*303*0*20.0),Is_MyBuff(1*20001),Is_HasTarget(0*11),,Do_AddBuffForMe([20001+1]*[20002+1]*[20003+1]),Do_ChangeStatus(41),,
+2,推出怒意状态-没有能量,MoveStatus_4,Is_MyBuff(0*20004),Is_HasTarget(1*11),,,Do_DelBuffForMe([20001+20002+20004]),Do_ChangeStatus(41),,
+3,推出怒意状态-没有士兵,MoveStatus_4,Is_MyAttribute(0*303*1*0.0),Is_MyBuff(0*20004),,,Do_DelBuffForMe([20001+20002+20004]),Do_ChangeStatus(41),,
+4,普攻-2连击,MoveStatus_4,Is_SkillReady(0*20001),Is_FindTarget(0*11),,,Do_CastSkill(20001),,,
+5,怒意状态下特殊攻击,SkillStatus_32,Is_SkillReady(0*20003),Is_MyBuff(0*20001),Is_FindTarget(0*11),,Do_CastSkill(20003),,,

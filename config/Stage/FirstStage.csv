@@ -1,0 +1,5 @@
+默认关卡ID,关卡描述,关卡己方召唤师,召唤师等级,关卡己方士兵1,士兵1等级,士兵1星级天赋,关卡己方士兵2,士兵2等级,士兵2星级天赋,关卡己方士兵3,士兵3等级,士兵3星级天赋,关卡己方士兵4,士兵4等级,士兵4星级天赋,关卡己方士兵5,士兵5等级,士兵5星级天赋,关卡己方士兵6,士兵6等级,士兵6星级天赋,关卡己方士兵7,士兵7等级,士兵7星级天赋
+主键,,,,,,,,,,,,,,,,,,,,,,,,
+StageId,Null,HeroId,HeroLv,SoliderId,SoliderLevel,SoliderStar,SoliderId,SoliderLevel,SoliderStar,SoliderId,SoliderLevel,SoliderStar,SoliderId,SoliderLevel,SoliderStar,SoliderId,SoliderLevel,SoliderStar,SoliderId,SoliderLevel,SoliderStar,SoliderId,SoliderLevel,SoliderStar
+int,Null,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int
+100,新手关卡,91500,1,10000,1,1,10200,1,1,10300,1,1,,,,,,,,,,,,

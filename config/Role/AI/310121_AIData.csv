@@ -1,0 +1,9 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,加标示,BornStatus_2,Is_MyBuff(1*162699),Is_FindTarget(0*1),,,Do_Count(370112),Do_AddBuffForMe([162699+1]),,
+2,近距离召唤,SkillStatus_31,Is_SkillReady(0*162604),Is_HasTarget(0*11),,,Do_LockPointsForMe(0*0),Do_ChangeStatus(33),Do_CastSkill(162604),Do_Clear()
+3,近距离召唤,SkillStatus_31,Is_SkillReady(0*162605),Is_HasTarget(0*11),,,Do_LockPointsForMe(0*0),Do_ChangeStatus(33),Do_CastSkill(162605),Do_Clear()
+4,召唤蓝蜘蛛,SkillStatus_31,Is_SkillReady(0*162602),,,,Do_LockPointsForMe(0*0),Do_ChangeStatus(33),Do_CastSkill(162602),Do_Clear()
+5,召唤红蜘蛛,SkillStatus_31,Is_SkillReady(0*162603),,,,Do_LockPointsForMe(0*0),Do_ChangeStatus(33),Do_CastSkill(162603),Do_Clear()

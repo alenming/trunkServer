@@ -1,0 +1,8 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,释放时间透支和召唤,BornStatus_2,Is_MyBuff(1*113500),Is_SkillReady(0*113506),,,Do_AddBuffForMe([113500+1]),Do_LockPointsForMe(700*0),Do_CastSkill(113506),
+2,驱逐,StandStatus_3,Is_MyHpLessThan(0*80.0),Is_SkillReady(0*113505),Is_FindTarget(0*3),,Do_CastSkill(113505),,,
+3,普攻连射,StandStatus_3,Is_MyHpLessThan(0*60.0),Is_SkillReady(0*113508),Is_FindTarget(0*3),,Do_CastSkill(113508),Do_AddBuffForMe([113508+1]),,
+4,普攻,StandStatus_3,Is_SkillReady(0*113507),Is_MyBuff(1*113508),Is_FindTarget(0*3),,Do_CastSkill(113507),,,

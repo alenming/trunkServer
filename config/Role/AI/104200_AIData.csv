@@ -1,0 +1,13 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,嗜血爆发,StandStatus_3,Is_MyHpLessThan(0*60.0),Is_FindTarget(0*1),Is_SkillReady(0*104204),,Do_CastSkill(104204),,,
+2,战争践踏,StandStatus_3,Is_SkillReady(0*104203),Is_FindTarget(0*12),,,Do_CastSkill(104203),,,
+3,攻击3,StandStatus_3,Is_SkillReady(0*104202),Is_FindTarget(0*11),,,Do_CastSkill(104202),,,
+4,攻击1 2,StandStatus_3,Is_SkillReady(0*104201),Is_FindTarget(0*11),,,Do_CastSkill(104201),,,
+5,开始移动,StandStatus_3,Is_MyBuff(1*104201),,,,Do_ChangeStatus(4),,,
+6,嗜血爆发,MoveStatus_4,Is_MyHpLessThan(0*60.0),Is_FindTarget(0*1),Is_SkillReady(0*104204),,Do_CastSkill(104204),,,
+7,移动战争践踏,MoveStatus_4,Is_SkillReady(0*104203),Is_FindTarget(0*12),,,Do_CastSkill(104203),,,
+8,移动状态攻击3,MoveStatus_4,Is_SkillReady(0*104202),Is_FindTarget(0*11),,,Do_CastSkill(104202),,,
+9,移动状态1 2,MoveStatus_4,Is_SkillReady(0*104201),Is_FindTarget(0*11),,,Do_CastSkill(104201),,,

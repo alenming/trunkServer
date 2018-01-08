@@ -1,0 +1,9 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,召唤师治疗标识BUFF、回血光环、辅助回蓝,BornStatus_2,Is_MyBuff(1*11),Is_MyBuff(1*10901),Is_MyBuff(1*161712),,Do_AddBuffForMe([11+1]*[10901+1]*[161712+1]),,,
+2,治疗起手,StandStatus_3,Is_FindTarget(0*10901),Is_SkillReady(0*10901),,,Do_ChangeStatus(31),,,
+3,持续治疗,SkillStatus_32,Is_FindTarget(0*10903),Is_SkillReady(0*10901),,,Do_CastSkill(10901),Do_Clear(),,
+4,持续治疗结束,SkillStatus_32,Is_FindTarget(1*10903),,,,Do_ChangeStatus(33),Do_Clear(),,
+5,攻击敌人,StandStatus_3,Is_FindTarget(0*70),Is_SkillReady(0*461401),,,Do_CastSkill(461401),Do_Clear(),,

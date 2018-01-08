@@ -1,0 +1,10 @@
+,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,切换状态到近战,StandStatus_3,Is_HasTarget(0*141101),,,,Do_ChangeStatus(49),,,
+2,切换状态到远程,FightStandStatus_6,Is_HasTarget(1*141101),,,,Do_ChangeStatus(50),,,
+3,释放闪电技能,StandStatus_3,Is_SkillReady(0*141103),Is_FindTarget(0*12),,,Do_CastSkill(141103),Do_AddBuffForMe([141101+1]),,
+4,释放横扫技能,FightStandStatus_6,Is_SkillReady(0*141104),Is_FindTarget(0*13),,,Do_CastSkill(141104),Do_AddBuffForMe([141101+1]),,
+5,普攻2,SkillStatus_31,Is_SkillReady(0*141102),Is_FindTarget(0*11),,,Do_CastSkill(141102),Do_AddBuffForMe([141101+1]),,
+6,普攻1 ,FightStandStatus_6,Is_SkillReady(0*141101),Is_FindTarget(0*11),,,Do_CastSkill(141101),,,

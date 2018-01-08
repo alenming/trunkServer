@@ -1,0 +1,5 @@
+聊天解锁等级,发言次数日恢复时间,恢复次数,每日发言次数限制,发言字数限制,发言时间间隔
+,格式：时-分,,,,单位：s
+ChatUnlockLv,RecoverTime,RecoverTimes,SpeedTimesLimit,WordNumLimit,IntervalTime
+int,json,int,int,int,int
+1,[1+0],999,999,120,0

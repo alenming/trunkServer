@@ -1,0 +1,24 @@
+状态优先级,描述,状态标签,状态生命周期,周期影响参数,状态是否加锁,状态自动跳转,角色行为,角色骨骼动画,,,,,,,,特效动画,,,,音乐ID
+,无效列,状态标签StateNameToID,正整数代表毫秒      0代表永久-1攻击速度,"0无,1攻击速率,2移动速度影响,3回蓝速度",0不锁 1锁,状态结束后进入新状态,Action(a*b*[x+y]),动画标签,是否循环(0不正循负美决),动画播放速率,速率因素(0无1攻击速率连动2移速3回蓝速度),灰化(0不1灰),透明度,最后1帧淡出,偏色[R+G+B],附加特效动画ID,附加效果播放点：(0不播放1头2身3脚),特效是否跟随移动,附加UI特效(UI特效只能对应1个),
+Status_CanBreakParam,null,Status_Name,Status_LifeTime,Status_LifeTimePrarm,Status_Lock,Status_NextStatus,Status_Action,Animation_Label,Animation_Loop,Animation_Speed,Animation_SpeedAffect,Animation_Ash,Animation_Transparency,Animation_IsFadeOutTime,Animation_AddColor,Animation_ID,Animation_EffectPlay,Animation_IsFollow,UIEffect_ID,Animation_AudioID
+int,null,string,int,int,bool,string,function,string,int,float,int,bool,float,float,float,json,int,bool,int,int
+10,出生状态,BornStatus_2,1600,0,1,StandStatus_3,0,Stand1,0,1,0,0,1,0,0,[],3,0,0,
+40,待机状态,StandStatus_3,0,0,0,0,0,Stand1,1,1,1,0,1,0,0,[],0,0,0,
+40,攻击待机,SkillStatus_47,450,0,0,MoveStatus_4,0,Stand2,1,1,1,0,1,0,0,[],0,0,0,
+40,觉醒后待机状态,SkillStatus_48,200,0,0,0,0,Stand2,1,1,1,0,1,0,0,[],0,0,0,
+40,移动状态,MoveStatus_4,0,2,0,0,Move(),Move2,1,1,2,0,1,0,0,[],0,0,0,
+40,待机接移动状态,SkillStatus_31,200,1,0,MoveStatus_4,0,Ready,0,1,1,0,1,0,0,[],0,0,0,
+40,放置陷阱空状态,SkillStatus_32,770,1,0,,0,,0,1,1,0,1,0,0,[],0,0,0,
+40,1技能,SkillStatus_33,4800,1,0,StandStatus_3,0,Skill1,0,1,0,0,1,0,0,[],0,0,0,[1504+0]
+40,觉醒下1技能,SkillStatus_34,4800,1,0,MoveStatus_4,0,Skill4,0,1,0,0,1,0,0,[],0,0,0,[1507+0]
+40,气流斩空状态,SkillStatus_35,3800,1,0,StandStatus_3,0,,0,1,1,0,1,0,0,[],0,0,0,
+40,小气流斩,SkillStatus_36,3800,1,0,StandStatus_3,0,Skill2,0,1,1,0,1,0,0,[],0,0,0,[1505+0]
+40,大气流斩,SkillStatus_37,4400,1,0,MoveStatus_4,0,Skill5,0,1,1,0,1,0,0,[],0,0,0,[1506+0]
+40,蓄力觉醒,SkillStatus_38,2550,1,0,MoveStatus_4,0,Skill3,0,1,1,0,1,0,0,[],0,0,0,[1509+1000]*[1511+0]
+80,觉醒返回跳离,SkillStatus_39,1133,1,0,SkillStatus_49,0,FallBack,0,1,0,0,1,0,0,[],0,0,0,
+80,跳离后空状态,SkillStatus_49,200,0,0,SkillStatus_40,0,,0,1,0,0,1,0,0,[],0,0,0,
+80,觉醒返回落地,SkillStatus_40,1220,1,0,StandStatus_3,0,Back1,0,1,0,0,1,0,0,[],0,0,0,
+40,连击1,SkillStatus_41,1466,1,0,SkillStatus_47,0,Attack1,0,1,1,0,1,0,0,[],0,0,0,[1501+100]*[1502+600]
+40,连击2,SkillStatus_42,1330,1,0,SkillStatus_47,0,Attack2,0,1,1,0,1,0,0,[],0,0,0,[1501+100]*[1502+800]
+40,连击3,SkillStatus_43,2633,1,0,SkillStatus_47,0,Attack3,0,1,1,0,1,0,0,[],0,0,0,[1501+100]*[1502+1200]
+999,死亡状态,DeathStatus_1,2666,0,1,0,Dead(),Death1,0,1,0,0,1,300,0,[41+42+43+44+45],3,1,0,[1510+100]

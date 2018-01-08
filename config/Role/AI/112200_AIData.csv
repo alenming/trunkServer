@@ -1,0 +1,7 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,释放骷髅召唤师,BornStatus_2,Is_SkillReady(0*112209),,,,Do_LockPointsForMe(1500*0),Do_CastSkill(112209),,
+2,飞锚,StandStatus_3,Is_SkillReady(0*112202),Is_FindTarget(0*11),,,Do_CastSkill(112202),Do_Clear(),,
+3,攻击敌人,StandStatus_3,Is_SkillReady(0*112201),Is_FindTarget(0*11),,,Do_CastSkill(112201),Do_Clear(),,

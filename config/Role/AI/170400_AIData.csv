@@ -1,0 +1,11 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,添加大招计时BUFF,BornStatus_2,Is_MyBuff(1*107403),,,,Do_AddBuffForMe([107403+1]),,,
+2,魔攻光环,StandStatus_3,Is_FindTarget(0*170450),,,,Do_CastSkill(170400),,,
+3,火龙技能起手,StandStatus_3,Is_SkillReady(0*170403),Is_MyBuff(1*107403),,,Do_CastSkill(170403),,,
+4,释放火龙,SkillStatus_34,Is_SkillReady(0*170405),,,,Do_LockPointsForMe(-400*0),Do_CastSkill(170405),,
+5,身前有敌人释放火雨,StandStatus_3,Is_HasTarget(0*12),Is_SkillReady(0*170402),,,Do_LockPointsForMe(300*0),Do_CastSkill(170402),,
+6,身前有敌人释放火雨,StandStatus_3,Is_SkillReady(0*170402),,,,Do_LockPointsForMe(1500*0),Do_CastSkill(170402),,
+7,火球,StandStatus_3,Is_HasTarget(0*170311),Is_SkillReady(0*170401),,,Do_CastSkill(170401),,,

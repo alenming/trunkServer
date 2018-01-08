@@ -1,0 +1,13 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,出场激励,BornStatus_2,Is_SkillReady(0*10005),Is_FindTarget(0*10000),,,Do_CastSkill(10005),Do_Count(10003),,
+2,三星勇士跑步入场（装备）,BornStatus_2,Is_MyBuff(0*10002),,,,Do_ChangeStatus(35),Do_AddBuffForMe([10006+1]),,
+3,删除跑步加速BUFF并转为走路,SkillStatus_35,Is_HasTarget(0*11),,,,Do_DelBuffForMe([10006]),Do_ChangeStatus(4),,
+4,正常移动时减移速,MoveStatus_4,Is_MyBuff(0*10006),,,,Do_DelBuffForMe([10006]),,,
+5,勇士技能-跳劈,MoveStatus_4,Is_SkillReady(0*10003),Is_FindTarget(0*11),,,Do_CastSkill(10003),,,
+6,攻击1,MoveStatus_4,Is_SkillReady(0*10001),Is_FindTarget(0*11),,,Do_CastSkill(10001),,,
+7,敌人死了,SkillStatus_31,Is_HasTarget(1*11),,,,Do_ChangeStatus(4),,,
+8,攻击2,SkillStatus_31,Is_SkillReady(0*10002),Is_FindTarget(0*11),,,Do_CastSkill(10002),,,
+9,激励删除,DeathStatus_1,Is_SkillReady(0*10006),Is_MyBuff(0*10003),Is_FindTarget(0*10001),,Do_Count(10004),Do_DelBuffForMe([10003]),Do_CastSkill(10006),

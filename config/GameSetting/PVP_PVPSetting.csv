@@ -1,0 +1,5 @@
+定级赛场次,锦标赛开赛日范围,锦标赛开赛时间点
+,（周几到周几）,（时+分+时+分）
+GradingNum,ArenaDay,ArenaTime
+int,json,json
+5,[1+6],[00+01+23+59]

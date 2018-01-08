@@ -1,0 +1,10 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,魔化之藤半场,SkillStatus_45,Is_SkillReady(0*106502),Is_FindTarget(0*106506),,,Do_CastSkill(106502),,,
+2,魔化之藤全场1,SkillStatus_45,Is_SkillReady(0*106508),Is_MyHpLessThan(0*90.0),Is_FindTarget(0*106505),,Do_CastSkill(106508),,,
+3,魔化之藤全场2,SkillStatus_45,Is_SkillReady(0*106509),Is_MyHpLessThan(0*75.0),Is_FindTarget(0*106505),,Do_CastSkill(106509),,,
+4,生命之藤全场1,SkillStatus_45,Is_SkillReady(0*106501),Is_MyHpLessThan(0*60.0),Is_FindTarget(0*106501),,Do_CastSkill(106501),,,
+5,生命之藤全场2,SkillStatus_45,Is_SkillReady(0*106507),Is_MyHpLessThan(0*45.0),Is_FindTarget(0*106501),,Do_CastSkill(106501),,,
+6,普攻,SkillStatus_45,Is_SkillReady(0*106506),Is_FindTarget(0*106509),,,Do_CastSkill(106506),,,

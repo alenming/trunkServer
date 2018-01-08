@@ -1,0 +1,8 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,添加BUFF,StandStatus_3,Is_MyBuff(1*112402),Is_MyBuff(1*112404),Is_MyBuff(1*112406),Is_MyBuff(1*112508),Do_AddBuffForMe([112402+1]),Do_AddBuffForMe([112404+1]),Do_AddBuffForMe([112406+1]),Do_AddBuffForMe([112508+1])
+1,召唤石柱,StandStatus_3,Is_MyHpLessThan(0*50.00),Is_MyBuff(1*112504),Is_FindTarget(0*2),,Do_AddBuffForMe([112504+1]),Do_Count(112407),Do_Clear(),Do_ChangeStatus(32)
+1,添加召唤蝙蝠怪BUFF,SkillStatus_33,Is_MyHpLessThan(0*50.00),Is_MyBuff(1*112408),Is_MyBuff(1*112506),Is_FindTarget(0*2),Do_AddBuffForMe([112408+1]),Do_AddBuffForMe([112506+1]),Do_Count(112407),Do_Clear()
+2,爆炸,DeathStatus_1,Is_FindTarget(0*112403),,,,Do_CastSkill(112412),,,

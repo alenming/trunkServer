@@ -1,0 +1,8 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,添加召唤BUFF,BornStatus_2,Is_MyBuff(1*170001),,,,Do_AddBuffForMe([170001+1]*[170004+1]),,,
+2,召唤大熊,StandStatus_3,Is_MyHpLessThan(0*90.0),Is_MyBuff(1*170002),Is_MyBuff(1*170004),,Do_AddBuffForMe([170002+1]*[170003+1]),,,
+3,释放治疗,StandStatus_3,Is_FindTarget(0*170001),Is_SkillReady(0*170001),,,Do_CastSkill(170001),,,
+4,坚韧光环,StandStatus_3,Is_FindTarget(0*170000),,,,Do_CastSkill(170000),,,

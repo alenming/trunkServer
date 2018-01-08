@@ -1,0 +1,10 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,闪电光环&大招计时,BornStatus_2,Is_MyBuff(1*1450),Is_MyBuff(1*181505),,,Do_AddBuffForMe([1450+1]),Do_AddBuffForMe([181505+1]),,
+2,闪电风暴动作释放,StandStatus_3,Is_SkillReady(0*181502),Is_EnemySoldierNumber(0*2),,,Do_CastSkill(181502),,,
+3,闪电风暴技能释放,SkillStatus_35,Is_FindTarget(0*1401),Is_SkillReady(0*1403),,,Do_CastSkill(1403),,,
+4,电球,StandStatus_3,Is_SkillReady(0*181501),Is_EnemySoldierNumber(0*1),,,Do_CastSkill(181501),,,
+5,大招动作释放,StandStatus_3,Is_SkillReady(0*181503),Is_MyBuff(1*181505),Is_EnemySoldierNumber(0*2),,Do_CastSkill(181503),,,
+6,大招技能释放,SkillStatus_32,Is_SkillReady(0*1411),,,,Do_CastSkill(1411),,,

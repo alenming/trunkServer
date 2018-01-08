@@ -1,0 +1,353 @@
+#!/bin/bash
+
+cd `dirname $0`
+BIN_PATH=`pwd`
+LOG_PATH=$BIN_PATH
+LOG_BAK_PATH=$BIN_PATH/baklogs
+CORE_BAK_PATH=$BIN_PATH/bakcores
+ACTION_CMD=$1
+SERVER_PIDs=$BIN_PATH/sum-server.pids
+SERVER_GUARD=sum-guard
+
+# group
+GROUPID=1008
+SERVER_BEGINID=0
+SESSION_PORT=10001
+# ipv4=0, ipv6=1
+IPVERSION=0
+LOOPBACKADDR=127.0.0.1
+
+# server group
+# CHECK_GROUPID=1 SERVICE_GROUPID=2 BATTLE_GROUPID=3
+# MATCH_GROUPID=4 UNION_GROUPID=5 RANK_GROUPID=6 CHAT_GROUPID=7
+SERVER_GROUPID=(1 2 3 4 5 6)
+CHAT_GROUPID=7
+
+# server filename
+GROUP_SERVERS=("CheckServer" "ServiceServer" "BattleServer" "MatchServer" "UnionServer" "RankServer")
+SESSION_SERVER="SessionServer"
+CHAT_SERVER="ChatServer"
+
+#server count
+SERVER_COUNT=(1 1 1 1 1 1)
+
+check() {
+	# check bash whether running
+	sumbash=`ps aux | grep $0`
+	[ -z "$sumbash" ] && return 1
+	# check server whether running
+	[ -f "$SERVER_PIDs" ] && return 1
+	return 0
+}
+
+backuplogs() {
+	datename=`date +%Y%m%d-%H%M%S`
+	logzipname=log$datename\.zip
+	corezipname=core$datename\.zip
+	mkdir -p $LOG_BAK_PATH
+	if [ `find $LOG_PATH -type f -name "*.log" | wc -l` -gt 0 ]; then
+		zip -m $LOG_BAK_PATH/$logzipname *\.log
+	fi
+	
+	mkdir -p $CORE_BAK_PATH
+	if [ `find $LOG_PATH -type f -name "core.*" | wc -l` -gt 0 ]; then
+		zip -m $CORE_BAK_PATH/$corezipname core\.*
+	fi
+}
+# session params
+session_params() {
+	params="-g $GROUPID -ipv $IPVERSION"
+	# -ip 0 means INADDR_ANY
+	params="${params} -ip 0"
+	params="${params} -p $SESSION_PORT"
+	for ((i=0;i<${#SERVER_GROUPID[*]};i++))
+	do
+		params="${params} -connsg ${SERVER_GROUPID[$i]} -connsc ${SERVER_COUNT[$i]}"
+	done
+	# chat server
+	params="${params} -chatsg $CHAT_GROUPID -chatsc 1"
+	
+	echo $params
+}
+# start other server except chat and session
+start_other_server() {
+	servername=$1
+	servergroupid=$2
+	serverid=$3
+	port=$4
+	if [ -x $servername ]; then
+		echo "start ${GROUP_SERVERS[i]} ..."
+		nohup ./$servername -g $GROUPID -ipv $IPVERSION -sg $servergroupid -si $serverid -ip $LOOPBACKADDR -p $port >/dev/null 2>&1 &
+		if [ $? -eq 0 ]; then
+			pid=$!
+			echo "$pid $servername $serverid" >> $SERVER_PIDs
+			echo "start ${GROUP_SERVERS[i]} success! pid=$pid"
+		else
+			echo "start ${GROUP_SERVERS[i]} failed!"
+		fi
+	else
+		echo "error: ${GROUP_SERVERS[i]} should be exist and executable!"
+	fi
+}
+# start chat server 
+start_chat_server() {
+	serverid=$1
+	if [ -x $CHAT_SERVER ]; then
+		echo "start $CHAT_SERVER ..."
+		chatport=$(($SESSION_PORT-1))
+		checkport=$(($SESSION_PORT+1))
+		checksg=1
+		nohup ./$CHAT_SERVER -g $GROUPID -ipv $IPVERSION -sg $CHAT_GROUPID -si $serverid -ip 0 -p $chatport -checksg $checksg -checkp $checkport >/dev/null 2>&1 &
+		if [ $? -eq 0 ]; then
+			pid=$!
+			echo "$pid $CHAT_SERVER" >> $SERVER_PIDs
+			echo "start $CHAT_SERVER success! pid=$pid"
+		else
+			echo "start $CHAT_SERVER failed!"
+		fi
+	else
+		echo "error: $CHAT_SERVER should be exist and executable!"
+	fi
+}
+
+# start session server
+start_session_server() {
+	if [ -x $SESSION_SERVER ]; then
+		echo "start $SESSION_SERVER ..."
+		params=$(session_params)
+		nohup ./$SESSION_SERVER $params >/dev/null 2>&1 &
+		if [ $? -eq 0 ]; then
+			pid=$!
+			echo "$pid $SESSION_SERVER" >> $SERVER_PIDs
+			echo "start $SESSION_SERVER success! pid=$pid"
+		else
+			echo "start $SESSION_SERVER failed!"
+		fi
+	else
+		echo "error: $SESSION_SERVER should be exist and executable!"
+	fi
+}
+# the guard
+start_guard_shell() {
+	if [ ! -f $SERVER_GUARD ]; then
+		return
+	fi
+
+	if [ ! -x $SERVER_GUARD ]; then
+		chmod a+x $SERVER_GUARD
+	fi
+	
+	nohup ./$SERVER_GUARD >/dev/null 2>&1 &
+	if [ $? -eq 0 ]; then
+		pid=$!
+		echo "$pid" >> $SERVER_PIDs
+	else
+		echo "start $SERVER_GUARD failed!"
+	fi
+}
+
+start() {
+	check
+	if [ $? -eq 1 ]; then
+		echo "[start] error: summoner server is running!"
+	else
+		echo "start server begin ..."
+		echo "[start] group id:     $GROUPID"
+		echo "[start] session port: $SESSION_PORT"
+		# backup logs
+		backuplogs
+		# 1. start other servers
+		port=$SESSION_PORT
+		serverid=$SERVER_BEGINID
+		for ((i=0;i<${#GROUP_SERVERS[*]};i++)) 
+		do
+			for ((j=0;j<${SERVER_COUNT[i]};j++))
+			do
+				((serverid++));
+				((port++));
+				start_other_server ${GROUP_SERVERS[i]} ${SERVER_GROUPID[i]} $serverid $port 
+			done
+		done
+		((serverid++));
+		# 2. start chat server 
+		start_chat_server $serverid
+		
+		# 3. start session server at last
+		start_session_server
+		
+		# 4. run the guard
+		start_guard_shell
+		echo "start server finish !"
+	fi
+}
+
+stop() {
+	check
+	if [ $? -eq 0 ]; then
+		echo "[stop] error: summoner server isn't running!"
+	else
+		echo "stop server begin..."
+		# stop servers
+		while read pid _
+		do
+			kill $pid
+			if [ $? -eq 0 ]; then
+				echo "[stop] kill $s ok!"
+			else
+				echo "[stop] kill $s error!"
+			fi
+		done < $SERVER_PIDs
+		
+		rm -f $SERVER_PIDs
+		echo "remove file $SERVER_PIDs!"
+		# backup logs
+		backuplogs
+		echo "stop server finish !"
+	fi
+}
+
+delete_pids_pid() {
+	param1=$1
+	param2=$2
+	cmpstr=""
+	if [ -n $param1 ]; then
+		cmpstr="$param1"
+	fi
+	
+	if [ -n $param2 ]; then
+		cmpstr="$cmpstr $param2"
+	fi
+	
+	dline=1
+	op=d
+	while read pid params
+	do
+		if [[ $cmpstr == $params ]]; then
+			sed -i $dline$op $SERVER_PIDs
+			break
+		fi
+		((dline++));
+	done < $SERVER_PIDs
+}
+
+start_one(){
+	servername=$1
+	sid=$2
+	port=$SESSION_PORT
+	serverid=$SERVER_BEGINID
+	if [[ $servername == $SESSION_SERVER ]]; then
+		# check session server
+		scheck=`ps ax | grep $servername | grep $GROUPID | grep -v grep`
+		if [ -n "$scheck" ]; then
+			echo "[startone] server $servername sid $sid was running, if you still want to start it, stop it first!"
+			return
+		fi
+		delete_pids_pid $servername
+		start_session_server
+	elif [[ $servername == $CHAT_SERVER ]]; then
+		for ((i=0;i<${#GROUP_SERVERS[*]};i++)) 
+		do
+			for ((j=0;j<${SERVER_COUNT[i]};j++))
+			do
+				((serverid++));
+			done
+		done
+		((serverid++));
+		
+		# check chat server
+		scheck=`ps ax | grep $servername | grep $GROUPID | grep si\ $serverid | grep -v grep`
+		if [ -n "$scheck" ]; then
+			echo "[startone] server $servername sid $sid was running, if you still want to start it, stop it first!"
+			return
+		fi
+		delete_pids_pid $servername
+		start_chat_server $serverid
+	else
+		for ((i=0;i<${#GROUP_SERVERS[*]};i++)) 
+		do
+			for ((j=0;j<${SERVER_COUNT[i]};j++))
+			do
+				((serverid++));
+				((port++));
+				if [ ${GROUP_SERVERS[i]} == $servername -a $serverid -eq $sid ]; then
+					# check other server
+					scheck=`ps ax | grep $servername | grep $GROUPID | grep si\ $serverid | grep -v grep`
+					if [ -n "$scheck" ]; then
+						echo "[startone] server $servername sid $sid was running, if you still want to start it, stop it first!"
+						return
+					fi
+					delete_pids_pid $servername $serverid
+					start_other_server ${GROUP_SERVERS[i]} ${SERVER_GROUPID[i]} $serverid $port
+					break
+				fi
+			done
+		done
+	fi
+}
+
+stop_one(){
+	servername=$1
+	sid=$2
+	port=$SESSION_PORT
+	
+	echo "[stopone] servername $servername serverid $sid"
+	if [ ! "$servername" ]; then
+		echo "[stopone] stop specify server need server name! if server name isn't SessionServer, you need specify server id also!"
+		return
+	fi
+	
+	pid=0
+	result=""
+	if [ $servername == $SESSION_SERVER ]; then
+		result=`ps ax | grep $servername | grep $GROUPID | grep -v grep`
+	elif [ $servername == $CHAT_SERVER ]; then
+		result=`ps ax | grep $servername | grep $GROUPID | grep -v grep`
+	else
+		if [ ! "$sid" ]; then
+			echo "[stopone] params error, need sid like: stopone servername sid!"
+			return
+		fi
+		result=`ps ax | grep $GROUPID | grep $servername | grep -si $sid | grep -v grep`
+	fi
+	
+	if [ -n "$result" ]; then
+		for p in $result
+		do
+			pid=$p
+			break
+		done
+	fi
+	
+	if [ $pid -eq 0 ]; then
+		echo "[stopone] can't find server=$servername sid=$sid stop failed!"
+	else
+		kill $pid
+		if [ $? -eq 0 ]; then
+			echo "[stopone] kill $servername ok!"
+		else
+			echo "[stopone] kill $servername error!"
+		fi
+	fi
+}
+
+case "$ACTION_CMD" in
+	start)
+		start
+		;;
+	stop)
+		stop
+		;;
+	startone)
+		start_one $2 $3
+		;;
+	stopone)
+		stop_one $2 $3
+		;;
+	restartone)
+		stop_one $2 $3
+		start_one $2 $3
+		;;
+	*)
+		echo "usage: $0 { start | stop | startone servername serverid | stopone servername serverid | restartone servername serverid }"
+esac
+

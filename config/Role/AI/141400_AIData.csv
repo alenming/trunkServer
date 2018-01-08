@@ -1,0 +1,8 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,坚韧光环,StandStatus_3,Is_FindTarget(0*1300),,,,Do_CastSkill(1300),,,
+2,传送门,StandStatus_3,Is_HasTarget(0*60),Is_HasTarget(0*61),Is_SkillReady(0*140502),,Do_LockPointsForMe(1000*0),Do_CastSkill(140502),Do_AddBuffForMe([11+1]),
+3,精灵之光,StandStatus_3,Is_FindTarget(0*140501),Is_SkillReady(0*140501),Is_MyBuff(1*13),,Do_CastSkill(140501),,,
+4,熊砸,StandStatus_3,Is_SkillReady(0*140503),,,,Do_LockPointsForMe(1550*0),Do_CastSkill(140503),,

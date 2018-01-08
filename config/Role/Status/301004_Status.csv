@@ -1,0 +1,23 @@
+状态优先级,描述,状态标签,状态生命周期,周期影响参数,状态是否加锁,状态自动跳转,角色行为,角色骨骼动画,,,,,,,,特效动画,,,,音乐ID
+,无效列,状态标签StateNameToID,正整数代表毫秒      0代表永久-1攻击速度,"0无,1攻击速率,2移动速度影响,3回蓝速度",0不锁 1锁,状态结束后进入新状态,Action(a*b*[x+y]),动画标签,是否循环(0不正循负美决),动画播放速率,速率因素(0无1攻击速率连动2移速3回蓝速度),灰化(0不1灰),透明度,最后一帧隔多少毫秒淡出,偏色[R+G+B],附加特效动画ID,附加效果播放点：(0不播放1头2身3脚),特效是否跟随移动,附加UI特效(UI特效只能对应1个),
+Status_CanBreakParam,null,Status_Name,Status_LifeTime,Status_LifeTimePrarm,Status_Lock,Status_NextStatus,Status_Action,Animation_Label,Animation_Loop,Animation_Speed,Animation_SpeedAffect,Animation_Ash,Animation_Transparency,Animation_IsFadeOutTime,Animation_AddColor,Animation_ID,Animation_EffectPlay,Animation_IsFollow,UIEffect_ID,Animation_AudioID
+int,null,string,int,int,bool,string,function,string,int,float,int,bool,float,float,float,json,int,bool,int,int
+10,出生状态,BornStatus_2,750,0,1,MoveStatus_4,,Stand1,0,1,0,0,0.5,0,0,[7],3,0,0,[200+0]*[40800+0]
+20,普攻待机状态,StandStatus_3,200,0,0,MoveStatus_4,,Stand1,1,1,0,0,1,0,0,[],0,0,0,
+20,技能待机状态,SkillStatus_41,200,0,0,MoveStatus_4,,Stand1,1,1,0,0,1,0,0,[],0,0,0,
+40,移动状态,MoveStatus_4,0,2,0,,Move(),Move1,1,1,2,0,1,0,0,[],0,0,0,
+40,巫妖普攻1,SkillStatus_31,1860,1,0,StandStatus_3,,Attack1,0,1,1,0,1,0,0,[],0,0,0,
+40,巫妖技能霜冻新星-起手,SkillStatus_34,700,3,0,ChargingStatus_7,,Skill1_Begin,0,1,3,0,1,0,0,[40808],3,1,0,[40801+200]
+40,巫妖技能霜冻新星-吟唱,ChargingStatus_7,0,0,0,,,Skill1_Charging,1,1,0,0,1,0,0,[40809],3,1,0,[40802+0+1]
+40,巫妖技能霜冻新星-释放,SkillStatus_32,2500,3,0,SkillStatus_41,,Skill1_Release,0,1,3,0,1,0,0,[40810],3,1,0,[40803+400]
+40,巫妖技能死亡凋零,SkillStatus_33,5000,0,0,SkillStatus_41,,Skill2,0,1,0,0,1,0,0,[],0,0,0,
+50,被击状态,HitStatus_10,500,0,0,MoveStatus_4,,Hit1,0,1,0,0,1,0,0,[],0,0,0,
+60,击晕状态,HitVertigoStatus_11,2000,0,0,MoveStatus_4,,Vertigo1,1,1,0,0,1,0,0,[3],1,1,0,
+99,解冻状态,SkillStatus_40,1000,0,0,MoveStatus_4,,Hit1,0,1,0,0,1,0,0,[15+16+17],3,1,0,
+100,冰冻状态,FrozenStatus_16,10,0,0,SkillStatus_40,,Hit1,0,1,0,0,0.4,0,0,[13+14],3,1,0,
+999,死亡,DeathStatus_1,1600,0,1,SkillStatus_42,Dead(),Death1,0,1,0,0,1,0,0,[],0,0,0,[40804+200]
+800,击退状态,HitBackStatusReady_18,1,0,0,MoveStatus_4,HitPower(),Hit1,0,1,0,0,1,0,0,[1],3,1,0,
+800,击退状态,HitBackStatus_12,1,0,1,HitBackStatusReady_18,,,0,1,0,0,1,0,0,[],0,0,0,
+850,击飞状态,HitFlyStatus_13,830,0,1,MoveStatus_4,HitPower(),Hitfly1,1,1,0,0,1,0,0,[],0,0,0,
+1100,胜利状态,WinStatus_8,0,0,0,,,Stand1,1,1,0,0,1,0,0,[],0,0,0,
+1101,失败状态,LoseStatus_9,800,0,0,,Dead(),Stand1,0,1,0,0,0,0,0,[41],3,0,0,

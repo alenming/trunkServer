@@ -1,0 +1,16 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,出生触发试剂Doodad并召唤地上试液,BornStatus_2,Is_SkillReady(0*105701),Is_MyBuff(1*105904),,,Do_LockPointsForMe(1100*0),Do_AddBuffForMe([105904+1]),Do_Count(105905),Do_CastSkill(105701)
+2,50%血量添加前进Buff,SkillStatus_39,Is_MyHpLessThan(0*50.00),Is_MyBuff(1*105903),Is_HasTarget(0*105901),,Do_AddBuffForMe([105902+1]*[105903+1]),,,
+3,50%血量后添加前进Buff,SkillStatus_39,Is_MyBuff(0*105902),Is_MyBuff(1*105903),Is_HasTarget(0*105901),,Do_AddBuffForMe([105902+1]*[105903+1]),,,
+4,待机战争践踏,SkillStatus_39,Is_SkillReady(0*105901),Is_FindTarget(0*3),,,Do_CastSkill(105901),,,
+5,待机普攻,SkillStatus_39,Is_SkillReady(0*105902),Is_FindTarget(0*11),,,Do_CastSkill(105902),,,
+6,待机转前进,SkillStatus_39,Is_MyBuff(0*105903),,,,Do_ChangeStatus(4),,,
+7,停止移动,MoveStatus_4,Is_HasTarget(1*105901),,,,Do_ChangeStatus(34),Do_DelBuffForMe([105903]),,
+8,移动战争践踏,MoveStatus_4,Is_SkillReady(0*105901),Is_FindTarget(0*3),,,Do_CastSkill(105901),,,
+9,移动普攻,MoveStatus_4,Is_SkillReady(0*105902),Is_FindTarget(0*11),,,Do_CastSkill(105902),,,
+10,复活判断,DeathStatus_1,Is_SkillReady(0*105903),Is_FindTarget(0*1),,,Do_CastSkill(105903),Do_Count(105903),Do_Count(105905),
+11,复活判断,DeathStatus_1,Is_None(0),,,,Do_ChangeStatus(42),,,
+12,假死关三搜,SkillStatus_43,Is_MyBuff(1*105901),,,,Do_AddBuffForMe([105901+1]),,,

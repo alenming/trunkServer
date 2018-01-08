@@ -1,0 +1,13 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,出生关闭C类搜索,BornStatus_2,Is_FindTarget(0*1),,,,Do_Count(162401),Do_AddBuffForMe([162406+1]),,
+2,升级LV2,StandStatus_3,Is_SkillReady(0*162411),Is_FindTarget(0*162402),,,Do_CastSkill(162411),,,
+3,升级LV3,StandStatus_3,Is_SkillReady(0*162412),Is_FindTarget(0*162402),Is_MyBuff(0*162411),,Do_CastSkill(162412),,,
+4,升级LV4,SkillStatus_32,Is_SkillReady(0*162413),Is_FindTarget(0*162402),Is_MyBuff(0*162412),,Do_CastSkill(162413),Do_AddBuffForMe([111002+1]),,
+5,普攻1,StandStatus_3,Is_SkillReady(0*162405),Is_FindTarget(0*162404),,,Do_CastSkill(162405),,,
+6,普攻2,SkillStatus_32,Is_SkillReady(0*162406),Is_FindTarget(0*162404),,,Do_CastSkill(162406),,,
+7,普攻3,SkillStatus_31,Is_SkillReady(0*162404),Is_FindTarget(0*162404),,,Do_CastSkill(162404),,,
+8,死亡判断,DeathStatus_1,Is_FindTarget(0*162405),,,,Do_CastSkill(162414),,,
+9,死亡判断2,SkillStatus_50,Is_MyBuff(0*111002),,,,Do_ChangeStatus(38),,,

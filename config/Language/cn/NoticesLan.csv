@@ -1,0 +1,30 @@
+语言包id,说明,内容
+主键,,
+ID,Null,Content,Content2,Content3
+index,Null,string,string,string
+101,,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='FFFFFF'>每周一开的锦标赛开始啦，快来参加比赛吧</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='FFFFFF' size='28'>每周一开的锦标赛开始啦，快了参加比赛吧</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='572a00'>每周一开的锦标赛开始啦，快了参加比赛吧</font>
+201,,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='FFFFFF'>欢迎</font><font color='06CBFC'>%s</font><font color='FFFFFF'>加入公会</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='FFFFFF' size='28'>欢迎</font><font color='06CBFC'>%s</font><font color='FFFFFF'>加入公会</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='572a00'>欢迎</font><font color='06CBFC'>%s</font><font color='572a00'>加入公会</font>
+202,,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='06CBFC'>%s</font><font color='FFFFFF'>离开公会</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='06CBFC'>%s</font><font color='FFFFFF' size='28'>离开公会</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='06CBFC'>%s</font><font color='572a00'>离开公会</font>
+203,,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='06CBFC'>%s</font><font color='FFFFFF'>任命</font><font color='06CBFC'>%s</font><font color='FFFFFF'>为副会长</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='06CBFC' size='28'>%s</font><font color='FFFFFF'>任命</font><font color='06CBFC'>%s</font><font color='FFFFFF'>为副会长</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='06CBFC'>%s</font><font color='572a00'>任命</font><font color='06CBFC'>%s</font><font color='572a00'>为副会长</font>
+204,,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='06CBFC'>%s</font><font color='FFFFFF'>的会长职务已移交给</font><font color='06CBFC'>%s</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='06CBFC' size='28'>%s</font><font color='FFFFFF'>的会长职务已移交给</font><font color='06CBFC'>%s</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='06CBFC'>%s</font><font color='572a00'>的会长职务已移交给</font><font color='06CBFC'>%s</font>
+205,,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='FFFFFF'>公会公告已更新</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='FFFFFF' size='28'>公会公告已更新</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='572a00'>公会公告已更新</font>
+206,,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='FFFFFF'>新的远征目标已经被设定</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='FFFFFF' size='28'>新的远征目标已经被设定</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='572a00'>新的远征目标已经被设定</font>
+207,,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='FFFFFF'>远征正式开始</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='FFFFFF' size='28'>远征正式开始</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='572a00'>远征正式开始</font>
+208,,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='FFFFFF'>远征获得胜利</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='FFFFFF' size='28'>远征获得胜利</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='572a00'>远征获得胜利</font>
+209,,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='FFFFFF'>非常不幸，本次远征失败</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='FFFFFF' size='28'>非常不幸，本次远征失败</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='572a00'>非常不幸，本次远征失败</font>
+210,,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='FFFFFF'>远征奖励开始派发了，快去领取吧</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='FFFFFF' size='28'>远征奖励开始派发了，快去领取吧</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='572a00'>远征奖励开始派发了，快去领取吧</font>
+301,,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='06CBFC'>%s</font><font color='FFFFFF'>抽到紫卡——</font><font color='A55EFD'>%s</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='06CBFC' size='28'>%s</font><font color='FFFFFF' size='28'>抽到紫卡——</font><font color='A55EFD' size='28'>%s</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='06CBFC'>%s</font><font color='572a00'>抽到紫卡——</font><font color='A55EFD'>%s</font>
+302,,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='06CBFC'>%s<font color='FFFFFF'>用召唤术激活水晶法阵，召唤出了传奇金色卡牌</font><font color='FEE405'>%s</font></font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='06CBFC' size='28'>%s<font color='FFFFFF' size='28'>用召唤术激活水晶法阵，召唤出了传奇金色卡牌</font><font color='FEE405' size='28'>%s</font></font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='06CBFC'>%s<font color='572a00'>用召唤术激活水晶法阵，召唤出了传奇金色卡牌</font><font color='CF8E03'>%s</font></font>
+303,,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='06CBFC'>%s<font color='FFFFFF'>的工匠之魂爆发，打造出了史诗级紫色装备</font><font color='A55EFD'>%s</font></font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='06CBFC' size='28'>%s<font color='FFFFFF' size='28'>的工匠之魂爆发，打造出了史诗级紫色装备</font><font color='A55EFD' size='28'>%s</font></font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='06CBFC'>%s<font color='572a00'>的工匠之魂爆发，打造出了史诗级紫色装备</font><font color='A55EFD'>%s</font></font>
+304,,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='06CBFC'>%s<font color='FFFFFF'>的工匠之魂大爆发！锻造出了传奇工匠的金色装备</font><font color='FEE405'>%s</font></font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='06CBFC' size='28'>%s<font color='FFFFFF' size='28'>的工匠之魂大爆发！锻造出了传奇工匠的金色装备</font><font color='FEE405' size='28'>%s</font></font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='06CBFC'>%s<font color='572a00'>的工匠之魂大爆发！锻造出了传奇工匠的金色装备</font><font color='CF8E03'>%s</font></font>
+401,,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='FF5400'>%s</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='FF5400' size='28'>%s</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='FF5400'>%s</font>
+402,,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='FF5400'>%s</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='FF5400' size='28'>%s</font>,<font face='ui_new/f_font/CN/font_dym/FZcyj.TTF' color='FF5400'>%s</font>
+
+
+
+
+
+
+
+
+

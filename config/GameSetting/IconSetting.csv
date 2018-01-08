@@ -1,0 +1,5 @@
+武器部位图标           1,头饰部位图标           2,衣服部位图标              3,鞋子部位图标           4,饰品部位图标           5,宝器部位图标            6,人族图标                      1,亡灵图标               2,自然图标               3,其它图标               4,战士职业图标              1,刺客职业图标                       2,射手职业图标                       3,法师职业图标           4,辅助职业图标                 5,卫士职业图标                 5
+美术资源,美术资源,美术资源,美术资源,美术资源,美术资源,美术资源,美术资源,美术资源,美术资源,美术资源,美术资源,美术资源,美术资源,美术资源,美术资源
+weaponicon,helmetsicon,clothicon,shoesicon,decorationicon,pantsicon,renicon,wanglingicon,ziranicon,qitaicon,warrioricon,assassinicon,archericon,mageicon,auxiliaryicon,knighticon
+string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string
+icon_EqItem_weapon.png,icon_EqItem_helmets.png,icon_EqItem_close.png,icon_EqItem_shoes.png,icon_EqItem_decoration.png,icon_EqItem_pants.png,card_race_human.png,card_race_dead.png,card_race_nature.png,pub_zi_qita.png,pub_zy_warrior.png,pub_zy_assassin.png,pub_zy_archer.png,pub_zy_mage.png,pub_zy_auxiliary.png,pub_zy_knight.png

@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="SessionServer">
+      <UniqueIdentifier>{ea32c4dd-94e9-41e1-84c7-a16d04ed966a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KxServer">
+      <UniqueIdentifier>{c6dc37d6-ea57-43a4-a86a-ca7c481d7270}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KxServer\server">
+      <UniqueIdentifier>{48799d4a-75df-4e9c-be5d-3944f7cfc30f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KxServer\core">
+      <UniqueIdentifier>{aa5a38ad-5b84-4854-96ab-bafa008b9f1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KxServer\commnication">
+      <UniqueIdentifier>{e3904939-82b8-415d-90f9-a45de614b7be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KxServer\helper">
+      <UniqueIdentifier>{7e0afb25-cc1f-444d-a749-3e0d48c08bbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KxServer\pulgins">
+      <UniqueIdentifier>{4c7f3dab-560a-4276-8947-78dfb5e2749e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{d3bb9e82-28a6-41ea-b196-2c0e411abc81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Protocol">
+      <UniqueIdentifier>{912fab20-e5b2-4680-9dbb-b9d941eb3f7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\ConfigLoad">
+      <UniqueIdentifier>{9b9399c1-166c-4598-80b2-1b7213d85b85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SessionServer\ServerData">
+      <UniqueIdentifier>{7cb07c3d-d57b-4d25-9202-e0ce0601b573}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SessionServer\GameLogic">
+      <UniqueIdentifier>{b435cc5a-bc38-4957-a4f2-f61aaab2e100}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SessionServer\SessionCommon">
+      <UniqueIdentifier>{8b000ba9-dc1b-4e7a-9814-5a725e014051}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\External\kxServer\server\KxBaseServer.cpp">
+      <Filter>KxServer\server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\core\KxLog.cpp">
+      <Filter>KxServer\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\core\KxMemPool.cpp">
+      <Filter>KxServer\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\core\KxObject.cpp">
+      <Filter>KxServer\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\commnication\KxBufferList.cpp">
+      <Filter>KxServer\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\commnication\KxEpoller.cpp">
+      <Filter>KxServer\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\commnication\KxSelectPoller.cpp">
+      <Filter>KxServer\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\commnication\KxSock.cpp">
+      <Filter>KxServer\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\commnication\KxTCPClienter.cpp">
+      <Filter>KxServer\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\commnication\KxTCPConnector.cpp">
+      <Filter>KxServer\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\commnication\KxTCPListener.cpp">
+      <Filter>KxServer\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\commnication\KxTCPUnit.cpp">
+      <Filter>KxServer\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\commnication\KxUDPUnit.cpp">
+      <Filter>KxServer\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\helper\KxTimerManager.cpp">
+      <Filter>KxServer\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\helper\LogFileHandler.cpp">
+      <Filter>KxServer\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\SessionServer.cpp">
+      <Filter>SessionServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Main.cpp">
+      <Filter>SessionServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\helper\LogConsoleHandler.cpp">
+      <Filter>KxServer\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameConfig\CsvLoader.cpp">
+      <Filter>Common\ConfigLoad</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\ServerConfig.cpp">
+      <Filter>SessionServer\ServerData</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\SessionClient.cpp">
+      <Filter>SessionServer\SessionCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\SessionConnect.cpp">
+      <Filter>SessionServer\SessionCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\SessionListener.cpp">
+      <Filter>SessionServer\SessionCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\SessionModule.cpp">
+      <Filter>SessionServer\SessionCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\NetworkManager.cpp">
+      <Filter>SessionServer\SessionCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\ConnectModule.cpp">
+      <Filter>SessionServer\SessionCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLogic\SummonerEvent.cpp">
+      <Filter>SessionServer\GameLogic</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLogic\SessionEvent.cpp">
+      <Filter>SessionServer\GameLogic</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\SessionHelper.cpp">
+      <Filter>SessionServer\SessionCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\helper\LogBattleHandler.cpp">
+      <Filter>KxServer\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\SessionGMService.cpp">
+      <Filter>SessionServer\GameLogic</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\ChangeConnectModule.cpp">
+      <Filter>SessionServer\GameLogic</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\External\kxServer\KXServer.h">
+      <Filter>KxServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\server\KxBaseServer.h">
+      <Filter>KxServer\server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\core\KxCore.h">
+      <Filter>KxServer\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\core\KxLog.h">
+      <Filter>KxServer\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\core\KxMemPool.h">
+      <Filter>KxServer\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\core\KxObject.h">
+      <Filter>KxServer\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\core\KxPlatform.h">
+      <Filter>KxServer\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxBufferList.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxCommInterfaces.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxEpoller.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxSelectPoller.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxSock.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxTCPClienter.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxTCPConnector.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxTCPListener.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxTCPUnit.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxUDPUnit.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\helper\KxTimerManager.h">
+      <Filter>KxServer\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\helper\KxTimeVal.h">
+      <Filter>KxServer\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\helper\LogFileHandler.h">
+      <Filter>KxServer\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\SessionServer.h">
+      <Filter>SessionServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\BaseModule.h">
+      <Filter>SessionServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\helper\LogConsoleHandler.h">
+      <Filter>KxServer\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameConfig\CsvLoader.h">
+      <Filter>Common\ConfigLoad</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\ServerData.h">
+      <Filter>SessionServer\ServerData</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\ServerConfig.h">
+      <Filter>SessionServer\ServerData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\ServerProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLogic\GameInterface.h">
+      <Filter>SessionServer\GameLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\LoginProtocol.h">
+      <Filter>SessionServer\GameLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\Protocol.h">
+      <Filter>SessionServer\GameLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\helper\KxTimerCallback.h">
+      <Filter>KxServer\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\SessionClient.h">
+      <Filter>SessionServer\SessionCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\SessionConnect.h">
+      <Filter>SessionServer\SessionCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\SessionListener.h">
+      <Filter>SessionServer\SessionCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\SessionModule.h">
+      <Filter>SessionServer\SessionCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\NetworkManager.h">
+      <Filter>SessionServer\SessionCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\ConnectModule.h">
+      <Filter>SessionServer\SessionCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLogic\SummonerEvent.h">
+      <Filter>SessionServer\GameLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLogic\SessionEvent.h">
+      <Filter>SessionServer\GameLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\SessionHelper.h">
+      <Filter>SessionServer\SessionCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\SessionProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\helper\LogBattleHandler.h">
+      <Filter>KxServer\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\GMProtocol.h">
+      <Filter>SessionServer\GameLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\SessionGMService.h">
+      <Filter>SessionServer\GameLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\ChangeConnectModule.h">
+      <Filter>SessionServer\GameLogic</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

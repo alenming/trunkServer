@@ -1,0 +1,6 @@
+套装ID,套装名称,套餐描述,套装所需的武器1ID,套装所需的衣服2ID,套装所需的裤子3ID,套装所需的鞋子4ID,套装所需的饰品5ID,套装所需的饰品6ID,2件套属性效果,2件套属性效果参数,2件套附带额外Buff,2件套激活几星天赋,2件套描述,3件套属性效果,3件套属性效果参数,3件套附带额外Buff,3件套激活几星天赋,3件套描述,4件套属性效果,4件套属性效果参数,4件套附带额外Buff,4件套激活几星天赋,4件套描述,5件套属性效果,5件套属性效果参数,5件套附带额外Buff,5件套激活几星天赋,5件套描述,6件套属性效果,6件套属性效果参数,6件套附带额外Buff,6件套激活几星天赋,6件套描述
+,对应语言包ID,对应语言包ID,对应的道具ID,对应的道具ID,对应的道具ID,对应的道具ID,对应的道具ID,对应的道具ID,,,2维数组[BuffID+层数]*[],1维数组[士兵ID+星级],对应语言包,,,3维数组[BuffID+层数]*[],2维数组[士兵ID+星级],对应语言包,,,4维数组[BuffID+层数]*[],3维数组[士兵ID+星级],对应语言包,,,5维数组[BuffID+层数]*[],4维数组[士兵ID+星级],对应语言包,,,6维数组[BuffID+层数]*[],5维数组[士兵ID+星级],对应语言包
+ID,Name,Desc,Suit_Eq1,Suit_Eq2,Suit_Eq3,Suit_Eq4,Suit_Eq5,Suit_Eq6,Ability,AbilityParam,Suit_ExtraBuff2,Suit_ExtraTalent2,AbilityDesc,Ability,AbilityParam,Suit_ExtraBuff3,Suit_ExtraTalent3,AbilityDesc,Ability,AbilityParam,Suit_ExtraBuff4,Suit_ExtraTalent4,AbilityDesc,Ability,AbilityParam,Suit_ExtraBuff5,Suit_ExtraTalent5,AbilityDesc,Ability,AbilityParam,Suit_ExtraBuff6,Suit_ExtraTalent6,AbilityDesc
+int,int,int,int,int,int,int,int,int,int,int,json,json,int,int,int,json,json,int,int,int,json,json,int,int,int,json,json,int,int,int,json,json,int
+1,34501,34502,20901,21901,22901,23901,,,16,20,,,34503,24,10,,,34504,5,6,[10002+1],,34505,,,,,,,,,,
+260001,34001,34002,200001,210001,220001,230001,,,4,4,[],[],34503,,,,,,,,,,,,,,,,,,,,

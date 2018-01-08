@@ -1,0 +1,13 @@
+先驱者日记ID,对应的区域ID,区域1号人物名字,区域1号人物介绍,区域人物1号选择列表图片,区域人物1背景图片,区域1号角色ID,区域1号人物危险度,区域1号人物技能,区域1号人物贡献,区域1号人物稀有品,1号人物关卡地图ID,区域2号人物名字,区域2号人物介绍,区域人物2号选择列表图片,区域人物2背景图片,区域2号角色ID,区域2号人物危险度,区域2号人物技能,区域2号人物贡献,区域2号人物稀有品,2号人物关卡地图ID
+先驱者日记ID,对应的区域ID,区域1号人物名字,区域1号人物介绍,区域人物1号选择列表图片,区域人物1背景图片,区域1号角色ID,区域1号人物危险度,区域1号人物技能,区域1号人物贡献,区域1号人物稀有品,1号人物关卡地图ID,区域2号人物名字,区域2号人物介绍,区域人物2号选择列表图片,区域人物2背景图片,区域2号角色ID,区域2号人物危险度,区域2号人物技能,区域2号人物贡献,区域2号人物稀有品,2号人物关卡地图ID
+ExpeditionBook_ID,ExpeditionBook_ExpeditionID,ExpeditionBook_Role1Name,ExpeditionBook_Role1Desc,ExpeditionBook_Role1Pic,ExpeditionBook_Role1bg,ExpeditionBook_Role1Animation,ExpeditionBook_Role1Evaluate,ExpeditionBook_Role1Skill,ExpeditionBook_Role1Contribut,ExpeditionBook_Role1Drop,ExpeditionBook_Role1MapID,ExpeditionBook_Role2Name,ExpeditionBook_Role2Desc,ExpeditionBook_Role1Pic,ExpeditionBook_Role2bg,ExpeditionBook_Role2Animation,ExpeditionBook_Role2Evaluate,ExpeditionBook_Role2Skill,ExpeditionBook_Role2Contribut,ExpeditionBook_Role2Drop,ExpeditionBook_Role2MapID
+index,int,int,int,string,string,string,int,json,int,json,int,int,int,string,string,string,int,json,int,json,int
+1,1,201401,291401,guild_exped_taskboss_02.png,guild_exped_taskbg_02.png,161700,7,[161701+161704+161703],100,[120181+241020+241024],1,,,,,,,,,,
+2,2,202401,292401,guild_exped_taskboss_01.png,guild_exped_taskbg_01.png,162700,7,[111904+162701+111905],100,[120189+251020+251024],2,,,,,,,,,,
+3,3,201401,291401,guild_exped_taskboss_03.png,guild_exped_taskbg_03.png,165900,7,[165401+165803+165901],100,[120013+120009+120181+120189],3,,,,,,,,,,
+4,4,201401,291401,,,100800,7,[10001+10002+10003],100,[120013+120009+120181+120189],1,,,,,,,,,,
+5,5,201401,291401,,,100800,7,[10001+10002+10003],100,[120013+120009+120181+120189],1,,,,,,,,,,
+6,6,201401,291401,,,100800,7,[10001+10002+10003],100,[120013+120009+120181+120189],1,,,,,,,,,,
+7,7,201401,291401,,,100800,7,[10001+10002+10003],100,[120013+120009+120181+120189],1,,,,,,,,,,
+8,8,201401,291401,,,100800,7,[10001+10002+10003],100,[120013+120009+120181+120189],1,,,,,,,,,,
+9,9,201401,291401,,,100800,7,[10001+10002+10003],100,[120013+120009+120181+120189],1,,,,,,,,,,

@@ -1,0 +1,10 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,召唤起手,MoveStatus_4,Is_HasTarget(0*12),,,,Do_ChangeStatus(34),,,
+2,召唤释放,ChargingStatus_7,Is_SkillReady(0*40404),,,,Do_CastSkill(40404),Do_AddBuffForMe([40409+1]*[40410+1]),Do_ChangeStatus(32),Do_Clear()
+3,骷髅召唤师召唤骷髅法阵,SkillStatus_32,Is_SkillReady(0*40407),,,,Do_LockPointsForMe(0*0),Do_CastSkill(40407),,
+4,复活让自己可以被搜索,SkillStatus_45,Is_MyBuff(0*928),,,,Do_DelBuffForMe([928]),,,
+5,天赋死亡判断,SkillStatus_50,Is_MyBuff(0*928),Is_RandomForAI(0*15),Is_FindTarget(0*1),,Do_Count(40006),Do_ChangeStatus(43),,
+6,天赋死亡判断,SkillStatus_50,,,,,Do_ChangeStatus(42),,,

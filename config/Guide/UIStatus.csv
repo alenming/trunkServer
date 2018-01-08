@@ -1,0 +1,5 @@
+界面ID,锁住按钮数量,播放动画节点,播放动画
+主键,,,
+UIID,ButtonLockCount,NodeID,CSB
+int,int,int,string
+1,1,103,ui_new\\g_gamehall\\g_gpub\\AllHideButtton.csb

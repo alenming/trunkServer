@@ -1,0 +1,9 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,召唤防御塔,BornStatus_2,Is_SkillReady(0*111301),,,,Do_LockPoints(1200*500),Do_CastSkill(111301),,
+2,圣盾术标识和光环,BornStatus_2,Is_MyBuff(1*11),Is_MyBuff(1*111301),,,Do_AddBuffForMe([11+1]),Do_AddBuffForMe([111301+1]),,
+3,释放圣盾术,SkillStatus_39,Is_MyHpLessThan(0*55.0),Is_SkillReady(0*110503),Is_MyBuff(0*11),Is_FindTarget(0*1),Do_CastSkill(110503),Do_DelBuffForMe([11]),Do_Clear(),
+4,召唤盾妹,SkillStatus_39,Is_MyBuff(1*111303),Is_MyBuff(1*111304),Is_MyBuff(1*111305),,Do_AddBuffForMe([111303+1]),Do_AddBuffForMe([111304+1]*[111305+1]),,
+5,攻击敌人,SkillStatus_39,Is_FindTarget(0*11),,,,Do_CastSkill(110504),Do_Clear(),,

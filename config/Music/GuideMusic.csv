@@ -1,0 +1,7 @@
+音效ID,策划备注(无效列),资源位置,是否受到场景音效播放规则影响（1受0不受-不受影响代表直接最大音量播放）
+主键,,,
+ID,Null,Res,Effect
+index,null,string,int
+50,新系统解锁,event:/UI/unlocknewsys,
+51,新系统出现,event:/UI/newsys,
+55,剧情对话框,event:/UI/talkbox,

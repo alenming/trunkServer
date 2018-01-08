@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ChatServer">
+      <UniqueIdentifier>{88c2a057-c91f-45f4-8789-e303a9290388}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KxServer">
+      <UniqueIdentifier>{99ef2765-dba0-454d-9cdd-de961ba62d2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KxServer\server">
+      <UniqueIdentifier>{bfcc2ee8-e99d-4f56-83c4-41f1b3f00f85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KxServer\core">
+      <UniqueIdentifier>{bb8e533e-c23b-4e97-b033-5e9005cbd2ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KxServer\commnication">
+      <UniqueIdentifier>{294c826e-1778-47ec-a87d-3fe59b0d1aa3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KxServer\helper">
+      <UniqueIdentifier>{77dbcd76-c948-4fae-b2ac-3f2262b3a248}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KxServer\pulgins">
+      <UniqueIdentifier>{b0280025-22cc-43f1-8e8f-d7527aa8bddc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{c4d95939-1508-4db9-9af4-229062ec8438}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Protocol">
+      <UniqueIdentifier>{5bd87be4-84cf-40fc-b11d-798d05089f25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ChatServer\ChatService">
+      <UniqueIdentifier>{c60b7071-dd87-4a7c-9d96-d432c7e639c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ChatServer\ChatManager">
+      <UniqueIdentifier>{424b75d1-48c8-4b29-a695-a6186ee9fb71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ChatServer\ServerData">
+      <UniqueIdentifier>{2c30c57c-73ef-477b-9c8a-283201201557}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\ConfigLoad">
+      <UniqueIdentifier>{a5e3f2fd-9bea-4d38-bc1e-4c6c87a31d2b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\External\kxServer\server\KxBaseServer.cpp">
+      <Filter>KxServer\server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\core\KxLog.cpp">
+      <Filter>KxServer\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\core\KxMemPool.cpp">
+      <Filter>KxServer\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\core\KxObject.cpp">
+      <Filter>KxServer\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\commnication\KxBufferList.cpp">
+      <Filter>KxServer\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\commnication\KxEpoller.cpp">
+      <Filter>KxServer\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\commnication\KxSelectPoller.cpp">
+      <Filter>KxServer\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\commnication\KxSock.cpp">
+      <Filter>KxServer\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\commnication\KxTCPClienter.cpp">
+      <Filter>KxServer\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\commnication\KxTCPConnector.cpp">
+      <Filter>KxServer\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\commnication\KxTCPListener.cpp">
+      <Filter>KxServer\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\commnication\KxTCPUnit.cpp">
+      <Filter>KxServer\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\commnication\KxUDPUnit.cpp">
+      <Filter>KxServer\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\helper\KxTimerManager.cpp">
+      <Filter>KxServer\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\helper\LogBattleHandler.cpp">
+      <Filter>KxServer\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\helper\LogConsoleHandler.cpp">
+      <Filter>KxServer\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\helper\LogFileHandler.cpp">
+      <Filter>KxServer\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\ChatServer.cpp">
+      <Filter>ChatServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Main.cpp">
+      <Filter>ChatServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\ChatModule.cpp">
+      <Filter>ChatServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\ChatListen.cpp">
+      <Filter>ChatServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\ChatService.cpp">
+      <Filter>ChatServer\ChatService</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\ChatMessageManager.cpp">
+      <Filter>ChatServer\ChatManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\ChatClient.cpp">
+      <Filter>ChatServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\ChatConnect.cpp">
+      <Filter>ChatServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\ConnectModule.cpp">
+      <Filter>ChatServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\NetworkManager.cpp">
+      <Filter>ChatServer\ChatManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\ServerConfig.cpp">
+      <Filter>ChatServer\ServerData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameConfig\CsvLoader.cpp">
+      <Filter>Common\ConfigLoad</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\ChatHelper.cpp">
+      <Filter>ChatServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\NoticeService.cpp">
+      <Filter>ChatServer\ChatService</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\External\kxServer\KXServer.h">
+      <Filter>KxServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\server\KxBaseServer.h">
+      <Filter>KxServer\server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\core\KxCore.h">
+      <Filter>KxServer\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\core\KxLog.h">
+      <Filter>KxServer\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\core\KxMemPool.h">
+      <Filter>KxServer\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\core\KxObject.h">
+      <Filter>KxServer\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\core\KxPlatform.h">
+      <Filter>KxServer\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxBufferList.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxCommInterfaces.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxEpoller.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxSelectPoller.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxSock.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxTCPClienter.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxTCPConnector.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxTCPListener.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxTCPUnit.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxUDPUnit.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\helper\KxTimerCallback.h">
+      <Filter>KxServer\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\helper\KxTimerManager.h">
+      <Filter>KxServer\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\helper\KxTimeVal.h">
+      <Filter>KxServer\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\helper\LogBattleHandler.h">
+      <Filter>KxServer\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\helper\LogConsoleHandler.h">
+      <Filter>KxServer\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\helper\LogFileHandler.h">
+      <Filter>KxServer\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\ServerProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\SessionProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\BaseModule.h">
+      <Filter>ChatServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\ChatServer.h">
+      <Filter>ChatServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\ChatModule.h">
+      <Filter>ChatServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\ChatListen.h">
+      <Filter>ChatServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\AchievementProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\ActiveProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\BagProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\BattleProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\ErrorCodeProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\GoldTestProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\GuideProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\HeroProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\HeroTestProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\InstanceProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\InternalProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\LoginProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\MailProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\NoticeProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\PayProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\Protocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\PvpProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\RankProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\ShopProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\StageProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\SummonerProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\TaskProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\TeamProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\TowerTestProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\UnionExpiditionProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\UnionProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\UserProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\ChatProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\ChatService.h">
+      <Filter>ChatServer\ChatService</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\ChatMessageManager.h">
+      <Filter>ChatServer\ChatManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\ChatClient.h">
+      <Filter>ChatServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\ChatConnect.h">
+      <Filter>ChatServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\ConnectModule.h">
+      <Filter>ChatServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\NetworkManager.h">
+      <Filter>ChatServer\ChatManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\ServerConfig.h">
+      <Filter>ChatServer\ServerData</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\ServerData.h">
+      <Filter>ChatServer\ServerData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameConfig\CsvLoader.h">
+      <Filter>Common\ConfigLoad</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\ChatHelper.h">
+      <Filter>ChatServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\NoticeService.h">
+      <Filter>ChatServer\ChatService</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

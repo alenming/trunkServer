@@ -1,0 +1,5 @@
+左右音道消失距离,音量衰减系数（每多少距离音量减少1个百分点）
+感觉已弃用,
+misschannel,volumeDecayRate
+int,int
+650,10

@@ -1,0 +1,5 @@
+爬塔试练初始水晶,爬塔开启时间,爬塔持续时间
+每次挑战重置的数量,每周的第几天,小时
+FirstCrystal,TowerStart,TowerEnd
+int,int,int
+3000,6,48

@@ -1,0 +1,12 @@
+角色ID,角色备注,角色近战攻击范围,角色远程攻击范围,角色移动速度,角色生命值,角色生命成长值,角色物理攻击力,角色物理攻击力成长值,角色魔法攻击力,角色魔法攻击力成长值,角色物理减伤,角色物理护甲,角色物理护甲成长,角色魔法减伤,角色魔法护甲,角色魔法护甲成长,角色物理穿透,角色魔法穿透,角色攻击速度,角色吸血值,角色反弹值,角色闪避值,角色暴击值,角色暴击成长,角色暴击伤害,角色怒气上限值,角色怒气回复值,角色魔法上限值,角色魔法回复,角色质量,角色霸体值上限,角色霸体值恢复速度,角色仇恨值
+1000-9999,策划标注给自己看的无效列,,,,,,,,,,"填0-1,百分比数值",,,"填0-1,百分比数值",,,,,"逻辑上这个数值无效,供显示只用","填0-100,百分比数值","填0-100,百分比数值","填0-100,百分比数值","填0-100,百分比数值","填0-100,百分比数值","填0-无穷,百分比数值",兽族一般不为0其他种族为0,一般都必须填0,,每秒回复多少点,5(轻)~15(重),,每秒回复多少点,一般填50
+Role.ClassID,Null,Role.ClassFireRange,Role.ClassFarFireRange,Role.ClassSpeed,Role.ClassHP,Role.ClassHPGrowUp,Role.ClassPAttack,Role.ClassPAttackGrowUp,Role.ClassMattack,Role.ClassMAttackGrowUp,Role.ClassDefend,Role.ClassPGuard,Role.ClassPguardGrowUp,Role.ClassResustance,Role.ClassMGuard,Role.ClassMguardGrowUp,Role.ClassPPenetrate,Role.ClassMpenetrate,Role.ClassAttackSpeed,Role.ClassVampire,Role.ClassRebound,Role.ClassMiss,Role.ClassCrit,Role.ClassCritGrowUp,Role.ClassCritDamage,Role.ClassRage,Role.ClassRageRecover,Role.ClassMP,Role.ClassMPRecover,Role.ClassMass,Role.ClassEndure,Role.ClassEndureRecover,Role.ClassHaterd
+index,null,int,int,int,int,int,int,int,int,int,float,int,int,float,int,int,int,int,int,float,float,float,float,float,float,int,int,int,int,float,int,int,int
+1000,火法老头,100,550,70,20000,450,0,0,400,9,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,7,1000,400,50
+1100,冰霜女皇,100,550,70,20000,450,0,0,400,9,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,7,1000,400,50
+1200,刺客少女,300,100,70,20000,450,400,9,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,7,1000,400,50
+1300,艾丽卡,300,100,70,20000,450,0,0,400,9,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,7,1000,400,50
+1400,约修亚,300,100,70,20000,450,0,0,400,9,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,7,1000,400,50
+1500,莱奥,250,100,160,20000,450,400,9,0,0,0,0,0,0,0,0,100,0,1,0,0,0,0,0,0,0,0,0,0,7,1000,400,50
+1600,罗迪亚克,300,100,70,20000,450,400,9,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,7,1000,400,50
+91500,莱奥,250,650,250,1000000,450,5000,10,0,0,0,0,0,0,0,0,100,0,1,0,0,0,0,33.3,0,0,0,0,0,7,4000,0,50

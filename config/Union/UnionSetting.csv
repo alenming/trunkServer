@@ -1,0 +1,5 @@
+解锁等级,花费金币,审核时间；单位“分钟”,退会冷却时间；单位“分钟”,申请次数,改名价格,远征次数,奖励发放等待时间
+主键,,,,,,,
+UnLockLv,CostCoin,AuditTime,ApplyCD,ApplyCount,ChangeNameCost,Expedition_Num,RewardTime
+index,int,int,int,int,int,int,int
+1,100000,10,1440,30,600,2,600

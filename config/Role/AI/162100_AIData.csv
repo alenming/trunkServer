@@ -1,0 +1,8 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,出生加计时BUFF,BornStatus_2,Is_MyBuff(1*162102),,,,Do_AddBuffForMe([162102+1]*[162103+1]*[162104+1]*[162105+1]*[162106+1]*[162107+1]),,,
+2,50血变身加速,StandStatus_3,Is_MyBuff(1*162101),Is_MyBuff(1*162102),,,Do_AddBuffForMe([162101+1]),Do_ChangeStatus(36),,
+3,变身普攻,SkillStatus_32,Is_SkillReady(0*162102),Is_FindTarget(0*3),,,Do_CastSkill(162102),,,
+4,未变身普攻,StandStatus_3,Is_SkillReady(0*162101),Is_FindTarget(0*3),,,Do_CastSkill(162101),,,

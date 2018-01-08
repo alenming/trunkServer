@@ -1,0 +1,7 @@
+商店ID,说明,商店名称 语言包ID,商店图片 ,商店的商品数量,商店开启等级,刷新时间,货币显示类型  1金币 2竞技币 3塔币 4钻石 5公会币
+主键,,,,,,,
+nShopType,Null,nName,strShopIcon,nCount,nOpenLevel,nFreshTime,tCoinType
+index,null,int,string,json,int,int,json
+1,金币商店,1301,ui_pnb_goldshop.png,[10+11+12+13+14+15],1,240,[1]
+2,神秘商店,1300,ui_pnb_storegold.png,[10+11+12+13+14+15],1,240,[4]
+3,公会商店,2042,ui_pnb_storepoints.png,,1,,[5]

@@ -1,0 +1,12 @@
+道具ID,显示图片,商品名称,商品描述,价格 RMB,获得钻石,额外赠送
+主键,,,,,,
+nGoodsID,strPicName,nNameLanID,nDescLanID,nPrice,nDiamond,Extra
+index,string,int,int,int,int,int
+1,icon_recharge_01.png,1600,30008,6,60,60
+2,icon_recharge_04.png,1603,30008,128,1280,1280
+3,icon_recharge_02.png,1601,30010,30,300,300
+4,icon_recharge_05.png,1604,30010,328,3280,3280
+5,icon_recharge_03.png,1602,30012,68,680,680
+6,icon_recharge_06.png,1605,30012,648,6480,6480
+7,icon_recharge_05.png,2112,,30,300,0
+9,icon_recharge_06.png,2114,,88,0,0

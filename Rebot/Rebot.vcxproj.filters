@@ -1,0 +1,899 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Rebot">
+      <UniqueIdentifier>{1ebe1328-04e7-4514-8e91-2128f02cfbba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rebot\RebotConfig">
+      <UniqueIdentifier>{5d501657-7f41-45f6-86dc-8d1483d027fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{fb96caa1-bfda-4bbf-84ba-2d4a3afbebb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\GameModel">
+      <UniqueIdentifier>{6bf242ab-6bda-43df-8d9b-e00afcbe3281}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\GameCommon">
+      <UniqueIdentifier>{bdd301fd-95bb-4fca-93a9-d872d528ab1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\GameUser">
+      <UniqueIdentifier>{3c3b48b5-4648-4bf1-bca6-4c35226e3333}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Jason">
+      <UniqueIdentifier>{ce00f5ee-8cef-4136-a4b3-0cf835b4aea1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Protocol">
+      <UniqueIdentifier>{7bbb5920-75c8-414a-abfd-7e9c11e479ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DBDriver">
+      <UniqueIdentifier>{92ade59e-afbe-4160-b67e-7dcd7c987b14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DBDriver\hiredis">
+      <UniqueIdentifier>{16affbe8-0395-4e42-878b-d202ac9980fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KxServer">
+      <UniqueIdentifier>{e34046d1-1046-4404-a926-0aa0ebf21f14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KxServer\server">
+      <UniqueIdentifier>{69d3d42e-dad0-4259-a72e-4e39a0797f8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KxServer\core">
+      <UniqueIdentifier>{3849fd18-9147-4bda-b96a-cd035f8c73d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KxServer\commnication">
+      <UniqueIdentifier>{4a076ebf-1d65-4def-9a4c-e8d6de4f5dfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KxServer\helper">
+      <UniqueIdentifier>{8c742331-ada1-4126-80a2-a44c7682ac80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KxServer\pulgins">
+      <UniqueIdentifier>{ed028259-0e6f-47b9-a4e8-0d7758631288}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SimpleCocos">
+      <UniqueIdentifier>{c5e2e0c8-0875-4f9b-aa27-f7a3f4f7a157}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\GameConfig">
+      <UniqueIdentifier>{714f6140-cefe-470f-a437-f4186943b791}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Classes\RebotConfig.h">
+      <Filter>Rebot\RebotConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\RebotOpConfig.h">
+      <Filter>Rebot\RebotConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\PlayerModule.h">
+      <Filter>Rebot</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\RebotComm.h">
+      <Filter>Rebot</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\RebotManager.h">
+      <Filter>Rebot</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\RebotPlayer.h">
+      <Filter>Rebot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\AchievementModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\ActivityInstanceModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\BagModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\BillnoModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\EquipModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\GiftModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\GlobalMailModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\GoldTestModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\HeadModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\HeroModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\HeroTestModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\IDBModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\MailModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\ModelDef.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\PassTeamModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\PersonMercenaryModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\PvpModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\PvpRankModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\RankModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\ShopModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\StageModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\GuideModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\StatModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\SummonModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\TaskModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\TeamModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\TowerTestModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\UnionExpiditionModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\UnionMercenaryModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\UnionModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\UnionShopModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\UserActiveModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\UserModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\UserUnionModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameCommon\Achievement.h">
+      <Filter>Common\GameCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameCommon\ActiveHelper.h">
+      <Filter>Common\GameCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameCommon\ActiveTask.h">
+      <Filter>Common\GameCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameCommon\ActiveTimeObject.h">
+      <Filter>Common\GameCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameCommon\BufferData.h">
+      <Filter>Common\GameCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameCommon\CommonHelper.h">
+      <Filter>Common\GameCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameCommon\CommOssHelper.h">
+      <Filter>Common\GameCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameCommon\CommStructs.h">
+      <Filter>Common\GameCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameCommon\CommTools.h">
+      <Filter>Common\GameCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameCommon\EquipComm.h">
+      <Filter>Common\GameCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameCommon\GameDef.h">
+      <Filter>Common\GameCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameCommon\ItemDrop.h">
+      <Filter>Common\GameCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameCommon\KxCommManager.h">
+      <Filter>Common\GameCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameCommon\KxCSComm.h">
+      <Filter>Common\GameCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameCommon\MailHelper.h">
+      <Filter>Common\GameCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameCommon\ModelHelper.h">
+      <Filter>Common\GameCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameCommon\PropUseHelper.h">
+      <Filter>Common\GameCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameCommon\RandGenerator.h">
+      <Filter>Common\GameCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameCommon\SummonerServer.h">
+      <Filter>Common\GameCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameCommon\Task.h">
+      <Filter>Common\GameCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameCommon\TaskAchieveHelper.h">
+      <Filter>Common\GameCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameCommon\TimeCalcTool.h">
+      <Filter>Common\GameCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameUser\GameUser.h">
+      <Filter>Common\GameUser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameUser\GameUserManager.h">
+      <Filter>Common\GameUser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameUser\UserActionListener.h">
+      <Filter>Common\GameUser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameUser\UserActionManager.h">
+      <Filter>Common\GameUser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\Jason\autolink.h">
+      <Filter>Common\Jason</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\Jason\config.h">
+      <Filter>Common\Jason</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\Jason\features.h">
+      <Filter>Common\Jason</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\Jason\forwards.h">
+      <Filter>Common\Jason</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\Jason\json.h">
+      <Filter>Common\Jason</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\Jason\json_batchallocator.h">
+      <Filter>Common\Jason</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\Jason\reader.h">
+      <Filter>Common\Jason</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\Jason\value.h">
+      <Filter>Common\Jason</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\Jason\writer.h">
+      <Filter>Common\Jason</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\AchievementProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\ActiveProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\BagProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\BattleProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\ErrorCodeProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\GoldTestProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\GuideProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\HeroProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\HeroTestProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\InstanceProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\InternalProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\LoginProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\MailProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\PayProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\Protocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\PvpProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\RankProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\ServerProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\ShopProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\StageProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\SummonerProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\TaskProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\TeamProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\TowerTestProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\UnionExpiditionProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\UnionProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Protocol\UserProtocol.h">
+      <Filter>Common\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DBDriver\CacheStorer.h">
+      <Filter>DBDriver</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DBDriver\DbStorer.h">
+      <Filter>DBDriver</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DBDriver\IStorer.h">
+      <Filter>DBDriver</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DBDriver\MarkupSTL.h">
+      <Filter>DBDriver</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DBDriver\RedisStorer.h">
+      <Filter>DBDriver</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DBDriver\Storage.h">
+      <Filter>DBDriver</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\DBDriver\StorageManager.h">
+      <Filter>DBDriver</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\hiredis\async.h">
+      <Filter>DBDriver\hiredis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\hiredis\config.h">
+      <Filter>DBDriver\hiredis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\hiredis\hiredis.h">
+      <Filter>DBDriver\hiredis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\hiredis\net.h">
+      <Filter>DBDriver\hiredis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\hiredis\sds.h">
+      <Filter>DBDriver\hiredis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\KXServer.h">
+      <Filter>KxServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\server\KxBaseServer.h">
+      <Filter>KxServer\server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\core\KxCore.h">
+      <Filter>KxServer\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\core\KxLog.h">
+      <Filter>KxServer\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\core\KxMemPool.h">
+      <Filter>KxServer\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\core\KxObject.h">
+      <Filter>KxServer\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\core\KxPlatform.h">
+      <Filter>KxServer\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxBufferList.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxCommInterfaces.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxEpoller.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxSelectPoller.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxSock.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxTCPClienter.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxTCPConnector.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxTCPListener.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxTCPUnit.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\commnication\KxUDPUnit.h">
+      <Filter>KxServer\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\helper\KxTimerCallback.h">
+      <Filter>KxServer\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\helper\KxTimerManager.h">
+      <Filter>KxServer\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\helper\KxTimeVal.h">
+      <Filter>KxServer\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\helper\LogBattleHandler.h">
+      <Filter>KxServer\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\helper\LogConsoleHandler.h">
+      <Filter>KxServer\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\kxServer\helper\LogFileHandler.h">
+      <Filter>KxServer\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\SimpleCocos\Director.h">
+      <Filter>SimpleCocos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\SimpleCocos\Node.h">
+      <Filter>SimpleCocos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\SimpleCocos\Ref.h">
+      <Filter>SimpleCocos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\SimpleCocos\SimpleCocos.h">
+      <Filter>SimpleCocos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\SimpleCocos\Vec2.h">
+      <Filter>SimpleCocos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\PvpTaskModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameModel\BlueDiamondModel.h">
+      <Filter>Common\GameModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameConfig\ConfActive.h">
+      <Filter>Common\GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameConfig\ConfAnalytic.h">
+      <Filter>Common\GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameConfig\ConfArena.h">
+      <Filter>Common\GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameConfig\ConfFight.h">
+      <Filter>Common\GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameConfig\ConfGameSetting.h">
+      <Filter>Common\GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameConfig\ConfGuide.h">
+      <Filter>Common\GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameConfig\ConfHall.h">
+      <Filter>Common\GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameConfig\ConfLanguage.h">
+      <Filter>Common\GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameConfig\ConfManager.h">
+      <Filter>Common\GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameConfig\ConfMusic.h">
+      <Filter>Common\GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameConfig\ConfOther.h">
+      <Filter>Common\GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameConfig\ConfRole.h">
+      <Filter>Common\GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameConfig\ConfStage.h">
+      <Filter>Common\GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameConfig\ConfUnion.h">
+      <Filter>Common\GameConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameConfig\CsvLoader.h">
+      <Filter>Common\GameConfig</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Classes\RebotConfig.cpp">
+      <Filter>Rebot\RebotConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\RebotOpConfig.cpp">
+      <Filter>Rebot\RebotConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Main.cpp">
+      <Filter>Rebot</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\PlayerModule.cpp">
+      <Filter>Rebot</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\RebotManager.cpp">
+      <Filter>Rebot</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\RebotPlayer.cpp">
+      <Filter>Rebot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\AchievementModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\ActivityInstanceModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\BagModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\BillnoModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\EquipModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\GiftModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\GlobalMailModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\GoldTestModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\HeadModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\HeroModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\HeroTestModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\IDBModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\MailModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\PassTeamModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\PersonMercenaryModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\PvpModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\PvpRankModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\RankModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\ShopModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\StageModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\GuideModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\StatModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\SummonModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\TaskModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\TeamModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\TowerTestModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\UnionExpiditionModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\UnionMercenaryModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\UnionModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\UnionShopModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\UserActiveModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\UserModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\UserUnionModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameCommon\Achievement.cpp">
+      <Filter>Common\GameCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameCommon\ActiveHelper.cpp">
+      <Filter>Common\GameCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameCommon\ActiveTask.cpp">
+      <Filter>Common\GameCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameCommon\ActiveTimeObject.cpp">
+      <Filter>Common\GameCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameCommon\BufferData.cpp">
+      <Filter>Common\GameCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameCommon\CommonHelper.cpp">
+      <Filter>Common\GameCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameCommon\CommOssHelper.cpp">
+      <Filter>Common\GameCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameCommon\ItemDrop.cpp">
+      <Filter>Common\GameCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameCommon\KxCommManager.cpp">
+      <Filter>Common\GameCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameCommon\MailHelper.cpp">
+      <Filter>Common\GameCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameCommon\ModelHelper.cpp">
+      <Filter>Common\GameCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameCommon\PropUseHelper.cpp">
+      <Filter>Common\GameCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameCommon\RandGenerator.cpp">
+      <Filter>Common\GameCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameCommon\SummonerServer.cpp">
+      <Filter>Common\GameCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameCommon\Task.cpp">
+      <Filter>Common\GameCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameCommon\TaskAchieveHelper.cpp">
+      <Filter>Common\GameCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameCommon\TimeCalcTool.cpp">
+      <Filter>Common\GameCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameUser\GameUser.cpp">
+      <Filter>Common\GameUser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameUser\GameUserManager.cpp">
+      <Filter>Common\GameUser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameUser\UserActionManager.cpp">
+      <Filter>Common\GameUser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\Jason\json_reader.cpp">
+      <Filter>Common\Jason</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\Jason\json_value.cpp">
+      <Filter>Common\Jason</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\Jason\json_writer.cpp">
+      <Filter>Common\Jason</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\DBDriver\CacheStorer.cpp">
+      <Filter>DBDriver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\DBDriver\DbStorer.cpp">
+      <Filter>DBDriver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\DBDriver\IStorer.cpp">
+      <Filter>DBDriver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\DBDriver\MarkupSTL.cpp">
+      <Filter>DBDriver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\DBDriver\RedisStorer.cpp">
+      <Filter>DBDriver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\DBDriver\Storage.cpp">
+      <Filter>DBDriver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\DBDriver\StorageManager.cpp">
+      <Filter>DBDriver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\hiredis\async.c">
+      <Filter>DBDriver\hiredis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\hiredis\hiredis.c">
+      <Filter>DBDriver\hiredis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\hiredis\net.c">
+      <Filter>DBDriver\hiredis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\hiredis\sds.c">
+      <Filter>DBDriver\hiredis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\server\KxBaseServer.cpp">
+      <Filter>KxServer\server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\core\KxLog.cpp">
+      <Filter>KxServer\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\core\KxMemPool.cpp">
+      <Filter>KxServer\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\core\KxObject.cpp">
+      <Filter>KxServer\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\commnication\KxBufferList.cpp">
+      <Filter>KxServer\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\commnication\KxEpoller.cpp">
+      <Filter>KxServer\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\commnication\KxSelectPoller.cpp">
+      <Filter>KxServer\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\commnication\KxSock.cpp">
+      <Filter>KxServer\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\commnication\KxTCPClienter.cpp">
+      <Filter>KxServer\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\commnication\KxTCPConnector.cpp">
+      <Filter>KxServer\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\commnication\KxTCPListener.cpp">
+      <Filter>KxServer\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\commnication\KxTCPUnit.cpp">
+      <Filter>KxServer\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\commnication\KxUDPUnit.cpp">
+      <Filter>KxServer\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\helper\KxTimerManager.cpp">
+      <Filter>KxServer\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\helper\LogBattleHandler.cpp">
+      <Filter>KxServer\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\helper\LogConsoleHandler.cpp">
+      <Filter>KxServer\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\kxServer\helper\LogFileHandler.cpp">
+      <Filter>KxServer\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\SimpleCocos\Director.cpp">
+      <Filter>SimpleCocos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\SimpleCocos\Node.cpp">
+      <Filter>SimpleCocos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\SimpleCocos\Ref.cpp">
+      <Filter>SimpleCocos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\SimpleCocos\Vec2.cpp">
+      <Filter>SimpleCocos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\PvpTaskModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameModel\BlueDiamondModel.cpp">
+      <Filter>Common\GameModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameConfig\ConfActive.cpp">
+      <Filter>Common\GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameConfig\ConfAnalytic.cpp">
+      <Filter>Common\GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameConfig\ConfArena.cpp">
+      <Filter>Common\GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameConfig\ConfFight.cpp">
+      <Filter>Common\GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameConfig\ConfGameSetting.cpp">
+      <Filter>Common\GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameConfig\ConfGuide.cpp">
+      <Filter>Common\GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameConfig\ConfHall.cpp">
+      <Filter>Common\GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameConfig\ConfLanguage.cpp">
+      <Filter>Common\GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameConfig\ConfManager.cpp">
+      <Filter>Common\GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameConfig\ConfMusic.cpp">
+      <Filter>Common\GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameConfig\ConfOther.cpp">
+      <Filter>Common\GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameConfig\ConfRole.cpp">
+      <Filter>Common\GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameConfig\ConfStage.cpp">
+      <Filter>Common\GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameConfig\ConfUnion.cpp">
+      <Filter>Common\GameConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GameConfig\CsvLoader.cpp">
+      <Filter>Common\GameConfig</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\External\Jason\json_internalarray.inl">
+      <Filter>Common\Jason</Filter>
+    </None>
+    <None Include="..\External\Jason\json_internalmap.inl">
+      <Filter>Common\Jason</Filter>
+    </None>
+    <None Include="..\External\Jason\json_valueiterator.inl">
+      <Filter>Common\Jason</Filter>
+    </None>
+    <None Include="..\Common\SimpleCocos\Vec2.inl">
+      <Filter>SimpleCocos</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,5 @@
+卡牌升级相关配置,,,,抽卡相关配置,,,,,,,,,,,,,
+普通升级概率   单位：%,大成功升级概率               单位：%,非常成功升级概率                单位：%,超级成功升级概率                  单位：%,抽一次单价（钻石）,10连抽价格(钻石）,白色英雄概率             单位：%,白色英雄系数,绿色英雄概率,绿色英雄系数,蓝色英雄概率,蓝色英雄系数,紫色英雄概率,紫色英雄系数,金色英雄概率,金色英雄系数,首此抽必得英雄,英雄碎片与金币兑换比
+Rate,Rate,Rate,Rate,DiamondCardGamblePrice,DiamondCardGamble10Price,Rare1Probability,Rare1Ratio,Rare2Probability,Rare2Ratio,Rare3Probability,Rare3StarRatio,Rare4StarProbability,Rare4StarRatio,Rare5Probability,Rare5Ratio,FirstDrawCard,exchangeRatio
+int,int,int,int,int,int,int,float,int,float,int,float,int,float,int,float,json,int
+70,20,5,5,200,1800,3400,1,0,1,6000,1,500,1,100,1,[10900+1],1000

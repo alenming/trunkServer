@@ -1,0 +1,13 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,开局召唤,BornStatus_2,Is_MyBuff(1*162506),Is_MyBuff(1*162507),,,Do_AddBuffForMe([162506+1]*[162507+1]),,,
+2,切换状态到近战,StandStatus_3,Is_FindTarget(0*162501),,,,Do_ChangeStatus(49),,,
+3,切换状态到远程,FightStandStatus_6,Is_FindTarget(1*162501),,,,Do_ChangeStatus(50),,,
+4,释放闪电技能,StandStatus_3,Is_SkillReady(0*162503),Is_FindTarget(0*12),,,Do_CastSkill(162503),Do_AddBuffForMe([162501+1]),,
+5,释放横扫技能,FightStandStatus_6,Is_SkillReady(0*162504),Is_FindTarget(0*13),,,Do_CastSkill(162504),Do_AddBuffForMe([162501+1]),,
+6,释放戳地技能,FightStandStatus_6,Is_SkillReady(0*162505),Is_HasTarget(0*13),,,Do_LockPointsForMe(640*0),Do_CastSkill(162505),Is_AddBuffForMe([162501+1]),
+7,普攻1 ,FightStandStatus_6,Is_FindTarget(0*11),,,,Do_CastSkill(162501),,,
+8,普攻2,SkillStatus_31,Is_SkillReady(0*162502),Is_FindTarget(0*13),,,Do_CastSkill(162502),Do_AddBuffForMe([162501+1]),,
+9,大笑,StandStatus_3,Is_MyBuff(0*162501),,,,Do_ChangeStatus(48),Do_DelBuffForMe([162501]),,

@@ -1,0 +1,12 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,出生召唤,BornStatus_2,Is_SkillReady(0*165612),,,,Do_LockPointsForMe(500*0),Do_CastSkill(165612),,
+2,释放暴风雪,StandStatus_3,Is_SkillReady(0*165602),,,,Do_CastSkill(165602),Do_ChangeStatus(34),,
+3,让暴风雪再密一点,SkillStatus_34,Is_SkillReady(0*165603),,,,Do_CastSkill(165603),,,
+4,让暴风雪再密一点,SkillStatus_34,Is_SkillReady(0*165604),,,,Do_CastSkill(165604),,,
+5,让暴风雪再密二点,SkillStatus_34,Is_SkillReady(0*165605),,,,Do_CastSkill(165605),,,
+6,让暴风雪再密二点,SkillStatus_34,Is_SkillReady(0*165606),,,,Do_CastSkill(165606),,,
+7,让暴风雪再密二点,SkillStatus_34,Is_SkillReady(0*165607),,,,Do_CastSkill(165607),,,
+8,发射冰弹,StandStatus_3,Is_SkillReady(0*165601),,,,Do_ChangeStatus(31),Do_CastSkill(165601),Do_Clear(),

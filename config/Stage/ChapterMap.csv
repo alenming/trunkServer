@@ -1,0 +1,13 @@
+地图ID,远景层资源名称,地图素材层资源名称,迷雾装饰资源名称,交互式场景音乐切换
+主键,,,,参数1是氛围名mood参数2是参数值
+ID,Sky,Map,Fog,MoodEffect
+index,string,string,string,json
+1,Sky1.csb,Map_1.csb,fog.csb,[mood+1]
+2,Sky2.csb,Map_2.csb,fog.csb,[mood+2]
+3,Sky1.csb,Map_3.csb,fog.csb,[mood+3]
+4,Sky2.csb,Map_4.csb,fog.csb,[mood+4]
+5,Sky1.csb,Map_5.csb,fog.csb,[mood+5]
+6,Sky2.csb,Map_6.csb,fog.csb,[]
+7,Sky1.csb,Map_6.csb,fog.csb,[]
+8,Sky2.csb,Map_8.csb,fog.csb,[]
+9,Sky1.csb,Map_9.csb,fog.csb,[]

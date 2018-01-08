@@ -1,0 +1,9 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,复活所有石像,StandStatus_3,Is_MyHpLessThan(0*80.00),Is_SkillReady(0*112601),Is_FindTarget(0*112404),,Do_CastSkill(112601),Do_Clear(),Do_ChangeStatus(36),
+2,击飞技能,SkillStatus_38,Is_MyHpLessThan(0*70.00),Is_SkillReady(0*112602),Is_MyBuff(1*112609),Is_FindTarget(0*112601),Do_LockPoints(0*400*0),Do_CastSkill(112602),Do_AddBuffForMe([112609+1]),
+3,普攻1,StandStatus_3,Is_SkillReady(0*112401),Is_FindTarget(0*11),,,Do_CastSkill(112401),,,
+4,召唤石柱,SkillStatus_32,Is_MyBuff(1*112612),,,,Do_AddBuffForMe([112612+1]),,,
+5,普攻2,SkillStatus_32,Is_SkillReady(0*112402),,,,Do_CastSkill(112402),,,

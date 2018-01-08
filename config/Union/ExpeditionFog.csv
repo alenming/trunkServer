@@ -1,0 +1,11 @@
+迷雾解锁等级,迷雾资源,美术标签
+迷雾解锁等级,迷雾资源,美术标签
+ExpeditionFog_Level,ExpeditionFog_CSB,ExpeditionFog_Label
+index,string,string
+1,MaskPanel,expedmap_mask1
+1,MaskPanel,expedmap_mask2
+1,MaskPanel,expedmap_mask3
+4,MaskPanel,expedmap_mask4
+5,MaskPanel,expedmap_mask5
+6,MaskPanel,expedmap_mask6
+7,MaskPanel,expedmap_mask7

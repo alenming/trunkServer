@@ -1,0 +1,15 @@
+状态优先级,描述,状态标签,状态生命周期,周期影响参数,状态是否加锁,状态自动跳转,角色行为,角色骨骼动画,,,,,,,,特效动画,,,,音乐ID
+,无效列,状态标签StateNameToID,正整数代表毫秒      0代表永久-1攻击速度,"0无,1攻击速率,2移动速度影响,3回蓝速度",0不锁 1锁,状态结束后进入新状态,Action(a*b*[x+y]),动画标签,是否循环(0不正循负美决),动画播放速率,速率因素(0无1攻击速率连动2移速3回蓝速度),灰化(0不1灰),透明度,最后1帧淡出,偏色[R+G+B],附加特效动画ID,附加效果播放点：(0不播放1头2身3脚),特效是否跟随移动,附加UI特效(UI特效只能对应1个),
+Status_CanBreakParam,null,Status_Name,Status_LifeTime,Status_LifeTimePrarm,Status_Lock,Status_NextStatus,Status_Action,Animation_Label,Animation_Loop,Animation_Speed,Animation_SpeedAffect,Animation_Ash,Animation_Transparency,Animation_IsFadeOutTime,Animation_AddColor,Animation_ID,Animation_EffectPlay,Animation_IsFollow,UIEffect_ID,Animation_AudioID
+int,null,string,int,int,bool,string,function,string,int,float,int,bool,float,float,float,json,int,bool,int,int
+10,出生状态,BornStatus_2,1000,0,0,FrozenStatus_16,0,Back1,1,1,0,0,1,0,0,[],3,1,0,
+40,冰冻待机状态,FrozenStatus_16,1000,0,0,0,0,Stand1,0,1,0,0,0.4,0,0,[13+14],3,1,0,
+50,冰冻解除状态,SkillStatus_50,2633,0,0,MoveStatus_4,,Attack3,0,1,0,0,1,0,0,[15+16+17],3,1,162700,
+40,移动状态,MoveStatus_4,0,2,0,0,Move(),Move2,1,1,2,0,1,0,0,[],3,0,0,
+50,待机接移动状态,SkillStatus_31,200,0,0,MoveStatus_4,0,Ready,0,1,0,0,1,0,0,[],3,0,0,
+50,觉醒下吹笛,SkillStatus_34,3800,0,0,SkillStatus_31,0,Skill4,0,1.25,1,0,1,0,0,[1593],3,0,0,[1507+0]
+50,大气流斩,SkillStatus_37,4400,0,0,SkillStatus_31,0,Skill5,0,1,0,0,1,0,0,[],3,0,0,[1506+0]
+40,连击1,SkillStatus_41,1466,1,0,SkillStatus_31,0,Attack1,0,1,1,0,1,0,0,[1594],3,0,0,[1501+100]*[1502+600]
+40,连击2,SkillStatus_42,1330,1,0,SkillStatus_31,0,Attack2,0,1,1,0,1,0,0,[1595],3,0,0,[1501+100]*[1502+800]
+40,连击3,SkillStatus_43,2633,1,0,SkillStatus_31,0,Attack3,0,1,1,0,1,0,0,[1596],3,0,0,[1501+100]*[1502+1200]
+999,死亡状态,DeathStatus_1,2730,0,1,0,Dead(),Death1,0,1,0,0,1,0,0,[],3,0,0,[1510+100]

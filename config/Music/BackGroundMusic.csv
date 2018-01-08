@@ -1,0 +1,27 @@
+背景音乐ID,音乐文件名,淡入时间,淡出时间,是否循环,循环间隔时间,备注
+唯一标识,路径下文件，并且带有文件后缀,秒（s）,秒（s）,0=否 1=是,"秒（s）,默认无间隔时间",无效列（策划用）
+bgmID,fileName,fadeInTime,fadeOutTime,isRepeat,intervalsTime,null
+int,string,int,int,int,int,null
+1,event:/Music/login,1,1,1,0,登陆界面音乐
+2,event:/Music/city,1,1,1,0,游戏大厅音乐
+3,event:/Music/world,1,1,1,2,世界地图音乐
+4,event:/Music/victory,0,1,0,0,胜利音乐
+5,event:/Music/defeat,0,1,0,0,失败音乐
+6,event:/Music/woodland,1,0,1,0,林地
+7,event:/Music/woodland rainy,1,0,1,0,林地雷雨
+8,event:/Music/woodland fire,1,0,1,0,林地火焰
+9,event:/Music/GreenBird,1,0,1,0,新手延迟9s雷雨
+10,event:/Music/Arena,1,0,1,0,竞技场
+11,event:/Music/cave,1,0,1,0,洞穴
+12,event:/Music/forestcamp,1,0,1,0,兽族领地
+13,event:/Music/Spider,1,0,1,0,蜘蛛森林
+14,event:/Music/Styx,1,0,1,0,冥河洞穴
+15,event:/Music/Town,1,0,1,0,城镇
+16,event:/Music/castle,1,0,1,0,城堡
+17,event:/Music/Village,1,0,1,0,村庄
+18,event:/Music/Library,1,0,1,0,图书馆
+19,event:/Music/jail,1,0,1,0,监狱
+20,event:/Music/Night,1,0,1,0,萤火虫森林
+21,event:/Music/Seaside,1,0,1,0,海边
+22,event:/Music/secretbuilding,1,0,1,0,圣地
+23,event:/Music/snowfield,1,0,1,0,雪地

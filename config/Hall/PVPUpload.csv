@@ -1,0 +1,5 @@
+自动上传的剩余血量标准,申请上榜最低排名,当日申请次数限制,自动上传的名次范围
+主键,,,
+AutoUploadHP,ApplyRank,ApplyCount,AutoUploadRank
+int,int,int,int
+5,50,5,200

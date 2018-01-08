@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# this bash was guard of summoner server,
+# it will check summmoner server per 5 second once. 
+# if the server specify in SERVER_PIDs was crash, 
+# this bash will restart it.
+
+cd `dirname $0`
+SERVER_EXEC=sum-bash
+SERVER_PIDs=sum-server.pids
+SERVER_GUARDLOG=sum-guard.log
+PERSECONDS=5
+
+while [ true ]; do
+	sleep $PERSECONDS
+	if [ ! -f $SERVER_PIDs ]; then
+		echo `date` >>$SERVER_GUARDLOG 
+		echo "the $SERVER_PIDs was not exist!! what's matter?" >>$SERVER_GUARDLOG 
+		break
+	fi
+	
+	while read pid execparams
+	do
+		ret=`ps -p $pid --no-heading`
+		# if ret is null
+		if [[ -z $ret ]]; then
+			echo `date` >>$SERVER_GUARDLOG 
+			echo "check $pid crash params $execparams and restart" >>$SERVER_GUARDLOG 
+			./$SERVER_EXEC startone $execparams
+		fi
+	done < $SERVER_PIDs
+done
+

@@ -1,0 +1,9 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,分裂技能(延时标记),MoveStatus_4,Is_FindTarget(0*1),Is_SkillReady(0*106304),,,Do_CastSkill(106304),,,
+2,分裂技能（召唤）,SkillStatus_41,Is_SkillReady(0*106302),Is_MyBuff(0*106301),,,Do_LockPointsForMe(50*0),Do_CastSkill(106302),Do_AddBuffForMe([106301+-1]),
+3,冰箭起手,MoveStatus_4,Is_FindTarget(0*12),,,,Do_ChangeStatus(32),,,
+4,冰箭释放,ChargingStatus_7,Is_SkillReady(0*106303),,,,Do_CastSkill(106303),,,
+5,死亡无法被搜索,DeathStatus_1,Is_FindTarget(0*10),,,,Do_Count(41),,,

@@ -1,0 +1,10 @@
+装备品质,装备属性条目上限
+主键 1白2绿3蓝4紫5金,
+Item_Quality,Eq_AttributeMax
+index,int
+1,2
+2,3
+3,4
+4,5
+5,6
+6,6

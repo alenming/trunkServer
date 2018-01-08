@@ -1,0 +1,5 @@
+活动ID,月卡类型,商店图片,月卡生效时间,月卡钻石数,月卡商品ID
+主键,1月卡2终身月卡,在活动商店显示的月卡,填写天数；终身月卡填-1,月卡生效后每天领取的钻石数,钻石商店商品ID
+GameOp_ID,MCard,MCard_Pic,MCard_Time,MCard_Number,Mcard_PID
+index,index,String,Int,Int,int
+4001,1,,31,100,7

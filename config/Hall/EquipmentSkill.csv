@@ -1,0 +1,5 @@
+士兵ID,条件参数1
+主键（Soldier表ID）,[装备ID+装备ID]
+ID,EquipmentID
+index,jsons
+10000,[20901+21901+22901+23901]

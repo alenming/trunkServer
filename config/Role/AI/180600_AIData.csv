@@ -1,0 +1,17 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,添加大招计时BUFF,BornStatus_2,Is_MyBuff(1*180603),,,,Do_AddBuffForMe([180603+1]),,,
+2,回蓝光环,StandStatus_3,Is_FindTarget(0*1150),,,,Do_CastSkill(1100),,,
+3,冰弹,StandStatus_3,Is_HasTarget(0*180600),Is_SkillReady(0*180601),,,Do_CastSkill(180601),,,
+4,冰墙1,StandStatus_3,Is_HasTarget(1*12),Is_SkillReady(0*180602),Is_RandomForAI(0*40),,Do_LockPointsForMe(1800*0),Do_CastSkill(180602),,
+5,冰墙2,StandStatus_3,Is_HasTarget(1*12),Is_SkillReady(0*180602),,,Do_LockPointsForMe(1900*0),Do_CastSkill(180602),,
+6,冰墙3,StandStatus_3,Is_HasTarget(0*12),Is_SkillReady(0*180602),Is_RandomForAI(0*40),,Do_LockPointsForMe(400*0),Do_CastSkill(180602),,
+7,冰墙4,StandStatus_3,Is_HasTarget(0*12),Is_SkillReady(0*180602),,,Do_LockPointsForMe(300*0),Do_CastSkill(180602),,
+8,暴风雪技能动作起手,StandStatus_3,Is_SkillReady(0*180603),Is_MyBuff(1*180603),Is_EnemySoldierNumber(0*2),,Do_CastSkill(180603),,,
+9,让暴风雪再密一点,SkillStatus_34,Is_SkillReady(0*1108),,,,Do_CastSkill(1108),,,
+10,让暴风雪再密一点,SkillStatus_34,Is_SkillReady(0*1104),,,,Do_CastSkill(1104),,,
+11,让暴风雪再密二点,SkillStatus_34,Is_SkillReady(0*1105),,,,Do_CastSkill(1105),,,
+12,让暴风雪再密二点,SkillStatus_34,Is_SkillReady(0*1106),,,,Do_CastSkill(1106),,,
+13,让暴风雪再密二点,SkillStatus_34,Is_SkillReady(0*1107),,,,Do_CastSkill(1107),,,

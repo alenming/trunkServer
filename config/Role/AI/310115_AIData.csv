@@ -1,0 +1,12 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,自杀,StandStatus_3,Is_FindTarget(0*162403),,,,Do_ChangeStatus(47),,,
+2,兵工厂标识BUFF、通用回蓝,BornStatus_2,Is_MyBuff(1*32),Is_FindTarget(0*1),,,Do_AddBuffForMe([32+1]),Do_AddBuffForMe([162408+1]*[162409+1]),Do_Count(162406),Do_Clear()
+3,LV1升级转化待机,SkillStatus_50,Is_MyBuff(1*162408),,,,Do_ChangeStatus(3),,,
+4,兵工厂-召唤兵工厂,StandStatus_3,Is_MyBuff(1*162407),,,,Do_ChangeStatus(32),Do_AddBuffForMe([162407+1]),,
+5,给友军加护盾,StandStatus_3,Is_SkillReady(0*162409),Is_FindTarget(0*10402),,,Do_CastSkill(162409),Do_Clear(),,
+6,敲炮台,StandStatus_3,Is_SkillReady(0*162410),Is_FindTarget(0*162401),,,Do_CastSkill(162410),Do_Clear(),,
+7,初始敲炮台,SkillStatus_50,Is_SkillReady(0*162415),Is_FindTarget(0*162401),,,Do_CastSkill(162415),Do_Clear(),,
+8,桥炮台回LV1状态,FightStatus_5,Is_MyBuff(0*162408),,,,Do_ChangeStatus(49),,,

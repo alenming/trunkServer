@@ -1,0 +1,5 @@
+首冲奖励,成长礼包价格,赠送钻石,购买次数
+ItemID+Num,,,
+FirstPayRewards,GrowGiftPrice,GiftDiamonds,GetTimes
+json,int,int,int
+[1+30000+100005+5+10086+1+201501+1],10000,5000,10

@@ -1,0 +1,12 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,魂爆,DeathStatus_1,Is_SkillReady(0*40300),Is_FindTarget(0*40301),,,Do_CastSkill(40300),,,
+2,潜行攻击非战士（包括隐刺）,SkillStatus_33,Is_SkillReady(0*40301),Is_FindTarget(0*50),,,Do_CastSkill(40301),Do_DelBuffForMe([9]),Do_ChangeStatus(3),
+3,潜行攻击敌方召唤师,SkillStatus_33,Is_SkillReady(0*40301),Is_FindTarget(0*51),,,Do_CastSkill(40301),Do_DelBuffForMe([9]),Do_ChangeStatus(3),
+4,非隐身状态去除隐身BUFF,MoveStatus_4,Is_MyBuff(0*9),,,,Do_DelBuffForMe([9]),,,
+5,普攻,MoveStatus_4,Is_SkillReady(0*40301),Is_FindTarget(0*11),,,Do_CastSkill(40301),,,
+6,复活让自己可以被搜索,SkillStatus_41,Is_MyBuff(0*928),,,,Do_DelBuffForMe([928]),,,
+7,天赋死亡判断,SkillStatus_50,Is_MyBuff(0*928),Is_RandomForAI(0*15),Is_FindTarget(0*1),,Do_Count(40006),Do_ChangeStatus(43),,
+8,天赋未触发死亡,SkillStatus_50,,,,,Do_ChangeStatus(42),,,

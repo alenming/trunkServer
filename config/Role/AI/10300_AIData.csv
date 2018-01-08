@@ -1,0 +1,14 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,出场释放战吼,BornStatus_2,Is_SkillReady(0*10305),Is_FindTarget(0*100),,,Do_CastSkill(10305),,,
+2,潜行攻击-召唤师,SkillStatus_50,Is_HasTarget(0*51),,,,Do_DelBuffForMe([9]),Do_ChangeStatus(3),,
+3,潜行攻击-非战士单位,SkillStatus_50,Is_HasTarget(0*50),,,,Do_DelBuffForMe([9]),Do_ChangeStatus(3),,
+4,敌人死了2,SkillStatus_32,Is_HasTarget(1*11),,,,Do_ChangeStatus(4),,,
+5,敌人死了3,SkillStatus_33,Is_HasTarget(1*11),,,,Do_ChangeStatus(4),,,
+6,飞腿（偷召唤师水晶）,SkillStatus_33,Is_SkillReady(0*10306),Is_FindTarget(0*16),,,Do_CastSkill(10306),Do_CastSkill(10307),Do_CastSkill(10308),
+7,飞腿,SkillStatus_33,Is_SkillReady(0*10306),Is_FindTarget(0*11),,,Do_CastSkill(10306),,,
+8,非隐身状态去除隐身BUFF,MoveStatus_4,Is_MyBuff(0*9),,,,Do_DelBuffForMe([9]),,,
+9,3连（偷召唤师水晶）,MoveStatus_4,Is_SkillReady(0*10301),Is_FindTarget(0*16),,,Do_CastSkill(10301),Do_CastSkill(10302),Do_CastSkill(10303),
+10,3连,MoveStatus_4,Is_SkillReady(0*10301),Is_FindTarget(0*11),,,Do_CastSkill(10301),,,

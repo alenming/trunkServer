@@ -1,0 +1,15 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,120s前进,SkillStatus_39,Is_MyBuff(1*105605),Is_MyBuff(1*105602),,,Do_AddBuffForMe([105602+1]),,,
+1,50%血量前进,SkillStatus_39,Is_MyHpLessThan(0*90.0),Is_MyBuff(1*105602),Is_MyBuff(1*105606),Is_MyBuff(1*105603),Do_AddBuffForMe([105602+1]),,,
+2,释放圣盾术,SkillStatus_39,Is_MyHpLessThan(0*60.0),Is_MyBuff(0*105606),Is_SkillReady(0*105601),Is_FindTarget(0*1),Do_CastSkill(105601),Do_DelBuffForMe([105606]),,
+3,待机转冲锋,SkillStatus_39,Is_MyBuff(0*105602),Is_MyBuff(1*16),,,Do_ChangeStatus(31),Do_AddBuffForMe([16+1]),,
+4,待机转移动,SkillStatus_39,Is_MyBuff(0*105602),Is_MyBuff(0*16),,,Do_ChangeStatus(4),,,
+5,攻击敌人,SkillStatus_39,Is_SkillReady(0*105602),Is_FindTarget(0*11),,,Do_CastSkill(105602),,,
+6,添加加速buff,SkillStatus_31,Is_MyBuff(1*11001),,,,Do_AddBuffForMe([11001+1]),,,
+7,冲锋撞击,SkillStatus_31,Is_SkillReady(0*105603),Is_FindTarget(0*11),,,Do_CastSkill(105603),Do_DelBuffForMe([11001]),Do_ChangeStatus(32),
+8,释放圣盾术,MoveStatus_4,Is_MyHpLessThan(0*70.0),Is_MyBuff(0*11),Is_SkillReady(0*105601),Is_FindTarget(0*1),Do_CastSkill(105601),Do_DelBuffForMe([11]),,
+9,消除加速buff,MoveStatus_4,Is_MyBuff(0*11001),,,,Do_DelBuffForMe([11001]),,,
+10,攻击敌人,MoveStatus_4,Is_SkillReady(0*105602),Is_FindTarget(0*11),,,Do_CastSkill(105602),,,

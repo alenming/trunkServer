@@ -1,0 +1,10 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,技能监视buff,BornStatus_2,Is_MyBuff(1*162701),Is_MyBuff(1*162703),Is_MyBuff(1*162704),,Do_AddBuffForMe([162701+1]*[162703+1]*[162704+1]),,,
+2,助战-发兵水晶,StandStatus_3,Is_MyBuff(1*162720),Is_MyBuff(1*162702),,,Do_AddBuffForMe([162702+1]*[162720+1]),,,
+3,召唤炮台助战,StandStatus_3,Is_MyBuff(0*162730),Is_MyBuff(1*162731),,,Do_AddBuffForMe([162731+1]),Do_DelBuffForMe([162730]),,
+4,召唤骷髅长老,StandStatus_3,Is_SkillReady(0*111901),Is_MyBuff(1*162703),,,Do_LockPointsForMe(180*0),Do_ChangeStatus(31),Do_CastSkill(111901),Do_Clear()
+5,召唤骨龙,StandStatus_3,Is_SkillReady(0*111904),Is_MyBuff(1*162704),,,Do_LockPointsForMe(70*0),Do_ChangeStatus(31),Do_CastSkill(111904),Do_Clear()
+6,地狱之焰,StandStatus_3,Is_MyBuff(1*162707),Is_FindTarget(0*19),,,Do_ChangeStatus(32),Do_AddBuffForMe([162705+1]),Do_Clear(),

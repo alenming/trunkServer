@@ -1,0 +1,8 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,出生状态初始化,BornStatus_2,Is_MyBuff(1*310420),,,,Do_AddBuffForMe([310420+1]),,,
+2,碰到召唤师自爆,MoveStatus_4,Is_HasTarget(0*92),Is_FindTarget(0*1),,,Do_Count(310400),Do_Clear(),,
+3,死亡无法被搜索,DeathStatus_1,Is_FindTarget(0*1),,,,Do_Count(41),Do_Clear(),,
+4,死亡自爆,SkillStatus_31,Is_SkillReady(0*310420),Is_FindTarget(0*310421),,,Do_CastSkill(310420),,,

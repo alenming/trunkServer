@@ -1,0 +1,16 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,出场隐身,BornStatus_2,Is_SkillReady(0*30505),Is_FindTarget(0*1),,,Do_CastSkill(30505),Do_AddBuffForMe([9+1]*[30501+1]*[30505+1]),,
+2,潜行进入怒意,SkillStatus_39,Is_MyAttribute(0*303*0*20.0),Is_MyBuff(1*30508),Is_HasTarget(0*30508),,Do_AddBuffForMe([30506+1]*[30508+1]*[30509+1]),,,
+3,潜行进入怒意,SkillStatus_39,Is_MyAttribute(0*303*0*20.0),Is_MyBuff(1*30508),Is_HasTarget(0*30509),,Do_AddBuffForMe([30506+1]*[30508+1]*[30509+1]),,,
+4,退出怒意,SkillStatus_39,Is_MyBuff(0*30508),Is_HasTarget(1*12),,,Do_DelBuffForMe([30507+30508+30509]),,,
+5,潜行攻击-非战士单位,SkillStatus_39,Is_FindTarget(0*50),,,,Do_DelBuffForMe([9]),Do_ChangeStatus(3),Do_Clear(),
+6,潜行攻击-召唤师,SkillStatus_39,Is_FindTarget(0*51),,,,Do_DelBuffForMe([9]),Do_ChangeStatus(3),Do_Clear(),
+7,进入怒意,MoveStatus_4,Is_MyAttribute(0*303*0*20.0),Is_MyBuff(1*30508),Is_HasTarget(0*11),,Do_AddBuffForMe([30506+1]*[30508+1]*[30509+1]),Do_ChangeStatus(3),,
+8,退出怒意,MoveStatus_4,Is_MyBuff(0*30508),Is_HasTarget(1*11),,,Do_DelBuffForMe([30507+30508+30509]),Do_ChangeStatus(3),,
+9,退出怒意,MoveStatus_4,Is_MyAttribute(0*303*1*0.0),Is_MyBuff(0*30508),,,Do_DelBuffForMe([30507+30508+30509]),Do_ChangeStatus(3),,
+10,非隐身状态去除隐身BUFF,MoveStatus_4,Is_MyBuff(0*9),,,,Do_DelBuffForMe([9+30505]),Do_AddBuffForMe([30+1]),,
+11,破隐一击,MoveStatus_4,Is_SkillReady(0*30506),Is_MyBuff(0*30501),Is_FindTarget(0*11),,Do_CastSkill(30506),Do_DelBuffForMe([30501]),,
+12,普攻1,MoveStatus_4,Is_SkillReady(0*30501),Is_FindTarget(0*11),,,Do_CastSkill(30501),,,

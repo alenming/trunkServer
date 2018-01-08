@@ -1,0 +1,2 @@
+/usr/bin/ar cr lib/libJason.a  CMakeFiles/Jason.dir/External/Jason/json_writer.cpp.o CMakeFiles/Jason.dir/External/Jason/json_reader.cpp.o CMakeFiles/Jason.dir/External/Jason/json_value.cpp.o
+/usr/bin/ranlib lib/libJason.a

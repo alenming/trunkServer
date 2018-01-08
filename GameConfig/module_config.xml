@@ -1,0 +1,65 @@
+﻿
+<!-- 
+modetype:
+STORAGEID_NONE   = 0,	  		//无
+STORAGEID_SERVER = 1,	  		//服务器相关信息
+STORAGEID_USER	 = 2,	  		//用户数据
+STORAGEID_BAG	 = 3,	  		//背包数据
+STORAGEID_EQUIP	 = 4,	  		//装备数据
+STORAGEID_HERO   = 5,	  		//英雄数据
+STORAGEID_SUMMONER = 6,	  		//召唤师数据
+STORAGEID_STAGE  = 7,	  		//关卡数据
+STORAGEID_TEAM = 8,       		//队伍数据
+STORAGEID_TASK = 9,             //任务数据
+STORAGEID_ACHIEVEMENT = 10,     //成就数据
+STORAGEID_STORY = 11,			//剧情数据
+STORAGEID_PASSTEAM = 12,		//通关队伍
+STORAGEID_UNION = 13,			//公会数据
+STORAGEID_MAIL = 14,            //邮件数据
+STORAGEID_ACTIVITY = 15,		//活动副本
+STORAGEID_GOLDTEST = 16,        //金币试炼
+STORAGEID_HEROTEST = 17,		//英雄试炼
+STORAGEID_TOWERTEST = 18,		//爬塔试炼
+STORAGEID_PVP				= 19,		//PVP
+STORAGE_SHOP				= 20	 //商店数据
+STORAGE_STAT				= 21	//统计数据
+STORAGE_GLOBALMAIL	= 22	    //全局邮件
+STORAGE_CHECK			  = 23		  //登陆验证//礼包    
+STORAGE_PAY			  = 24		  //充值
+
+配置简析：
+服务器通过本配置文档配置数据库服务器地址，通过逐条解析，先会从modeltype进行匹配，如果modeltype类型没有
+匹配到一个storage，则会在storagemanager分配一个storage与之匹配并加入storagemanager中管理， 而storage的
+类型(redisstorage，dbstorage，cachestorage)会根据配置中type字段进行确定。目前如果2个modeltype类型相同，
+那么type的类型也必须相同，否则无法正常初始化成功。rangemin和rangemax的意义为uid取模360后的范围选取，设
+计的意义为处理多用户请求的时候，将多用户的数据处理分摊到多台数据库服务器去。如果modeltype相同的配置有多
+条，那么应该平均分配1到360到每条配置。
+-->
+
+<?xml version="1.0" encoding="utf-8" ?>
+<module>
+	<server type="redis" rangemin="0" rangemax="360" ip="127.0.0.1" port="6379" passward="" modeltype="1" />
+	<server type="redis" rangemin="0" rangemax="360" ip="127.0.0.1" port="6379" passward="" modeltype="2" />
+	<server type="redis" rangemin="0" rangemax="360" ip="127.0.0.1" port="6379" passward="" modeltype="3" />
+	<server type="redis" rangemin="0" rangemax="360" ip="127.0.0.1" port="6379" passward="" modeltype="4" />
+	<server type="redis" rangemin="0" rangemax="360" ip="127.0.0.1" port="6379" passward="" modeltype="5" />
+	<server type="redis" rangemin="0" rangemax="360" ip="127.0.0.1" port="6379" passward="" modeltype="6" />
+	<server type="redis" rangemin="0" rangemax="360" ip="127.0.0.1" port="6379" passward="" modeltype="7" />
+	<server type="redis" rangemin="0" rangemax="360" ip="127.0.0.1" port="6379" passward="" modeltype="8" />
+	<server type="redis" rangemin="0" rangemax="360" ip="127.0.0.1" port="6379" passward="" modeltype="9" />
+	<server type="redis" rangemin="0" rangemax="360" ip="127.0.0.1" port="6379" passward="" modeltype="10" />
+	<server type="redis" rangemin="0" rangemax="360" ip="127.0.0.1" port="6379" passward="" modeltype="11" />
+	<server type="redis" rangemin="0" rangemax="360" ip="127.0.0.1" port="6379" passward="" modeltype="12" />
+	<server type="redis" rangemin="0" rangemax="360" ip="127.0.0.1" port="6379" passward="" modeltype="13" />
+	<server type="redis" rangemin="0" rangemax="360" ip="127.0.0.1" port="6379" passward="" modeltype="14" />
+	<server type="redis" rangemin="0" rangemax="360" ip="127.0.0.1" port="6379" passward="" modeltype="15" />
+	<server type="redis" rangemin="0" rangemax="360" ip="127.0.0.1" port="6379" passward="" modeltype="16" />
+	<server type="redis" rangemin="0" rangemax="360" ip="127.0.0.1" port="6379" passward="" modeltype="17" />
+	<server type="redis" rangemin="0" rangemax="360" ip="127.0.0.1" port="6379" passward="" modeltype="18" />
+	<server type="redis" rangemin="0" rangemax="360" ip="127.0.0.1" port="6379" passward="" modeltype="19" />
+	<server type="redis" rangemin="0" rangemax="360" ip="127.0.0.1" port="6379" passward="" modeltype="20" />
+	<server type="redis" rangemin="0" rangemax="360" ip="127.0.0.1" port="6379" passward="" modeltype="21" />
+	<server type="redis" rangemin="0" rangemax="360" ip="127.0.0.1" port="6379" passward="" modeltype="22" />
+	<server type="redis" rangemin="0" rangemax="360" ip="127.0.0.1" port="6379" passward="" modeltype="23" />
+	<server type="redis" rangemin="0" rangemax="360" ip="127.0.0.1" port="6379" passward="" modeltype="24" />
+</module>

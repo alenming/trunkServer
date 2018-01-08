@@ -1,0 +1,70 @@
+[Debug][2016-09-31][16:40:19] ==================================================
+[Debug][2016-09-31][16:40:19] ===> BattleServer ServerID=2 Binding on Port=6666 ...
+[Debug][2016-09-31][16:40:19] connect to redis ip=192.168.0.192, port=6379 success!
+[Debug][2016-09-31][16:40:19] insert redis storer storageId=1
+[Debug][2016-09-31][16:40:19] insert redis storer storageId=2
+[Debug][2016-09-31][16:40:19] insert redis storer storageId=3
+[Debug][2016-09-31][16:40:19] insert redis storer storageId=4
+[Debug][2016-09-31][16:40:19] insert redis storer storageId=5
+[Debug][2016-09-31][16:40:19] insert redis storer storageId=6
+[Debug][2016-09-31][16:40:19] insert redis storer storageId=7
+[Debug][2016-09-31][16:40:19] insert redis storer storageId=8
+[Debug][2016-09-31][16:40:19] insert redis storer storageId=9
+[Debug][2016-09-31][16:40:19] insert redis storer storageId=10
+[Debug][2016-09-31][16:40:19] insert redis storer storageId=11
+[Debug][2016-09-31][16:40:19] insert redis storer storageId=12
+[Debug][2016-09-31][16:40:19] insert redis storer storageId=13
+[Debug][2016-09-31][16:40:19] insert redis storer storageId=14
+[Debug][2016-09-31][16:40:19] insert redis storer storageId=15
+[Debug][2016-09-31][16:40:19] insert redis storer storageId=16
+[Debug][2016-09-31][16:40:19] insert redis storer storageId=17
+[Debug][2016-09-31][16:40:19] insert redis storer storageId=18
+[Debug][2016-09-31][16:40:19] insert redis storer storageId=19
+[Debug][2016-09-31][16:40:19] insert redis storer storageId=20
+[Debug][2016-09-31][16:40:19] connect to redis ip=120.76.166.234, port=6380 success!
+[Debug][2016-09-31][16:40:19] insert redis storer storageId=21
+[Debug][2016-09-31][16:40:19] insert redis storer storageId=22
+[Debug][2016-09-31][16:40:19] insert redis storer storageId=23
+[Info][2016-09-31][16:40:21] can't not find SkillStatus_52 in NameToIdMap
+[Info][2016-09-31][16:40:21] can't not find SkillStatus_52 in NameToIdMap
+[Info][2016-09-31][16:40:26] can't not find PattackVar in NameToIdMap
+[Info][2016-09-31][16:40:26] can't not find PattackVar in NameToIdMap
+[Info][2016-09-31][16:40:26] can't not find MattackVar in NameToIdMap
+[Info][2016-09-31][16:40:26] can't not find MattackVar in NameToIdMap
+[Info][2016-09-31][16:40:26] can't not find PattackVar in NameToIdMap
+[Info][2016-09-31][16:40:26] can't not find PattackVar in NameToIdMap
+[Info][2016-09-31][16:40:26] can't not find MattackVar in NameToIdMap
+[Info][2016-09-31][16:40:26] can't not find MattackVar in NameToIdMap
+[Info][2016-09-31][16:40:30] Execute False On File e:\summoner\sum-server\branch1.0.0\common\gamecommon\activehelper.cpp Line 109 : pTimerManager != NULL
+[Info][2016-09-31][16:40:30] Execute False On File e:\summoner\sum-server\branch1.0.0\common\gamecommon\activehelper.cpp Line 109 : pTimerManager != NULL
+[Info][2016-09-31][16:40:30] Execute False On File e:\summoner\sum-server\branch1.0.0\common\gamecommon\activehelper.cpp Line 109 : pTimerManager != NULL
+[Info][2016-09-31][16:40:30] Execute False On File e:\summoner\sum-server\branch1.0.0\common\gamecommon\activehelper.cpp Line 109 : pTimerManager != NULL
+[Info][2016-09-31][16:40:30] Execute False On File e:\summoner\sum-server\branch1.0.0\common\gamecommon\activehelper.cpp Line 109 : pTimerManager != NULL
+[Info][2016-09-31][16:40:30] Execute False On File e:\summoner\sum-server\branch1.0.0\common\gamecommon\activehelper.cpp Line 109 : pTimerManager != NULL
+[Info][2016-09-31][16:40:30] Execute False On File e:\summoner\sum-server\branch1.0.0\common\gamecommon\activehelper.cpp Line 109 : pTimerManager != NULL
+[Info][2016-09-31][16:40:30] Execute False On File e:\summoner\sum-server\branch1.0.0\common\gamecommon\activehelper.cpp Line 109 : pTimerManager != NULL
+[Info][2016-09-31][16:40:30] Execute False On File e:\summoner\sum-server\branch1.0.0\common\gamecommon\activehelper.cpp Line 109 : pTimerManager != NULL
+[Info][2016-09-31][16:40:30] Execute False On File e:\summoner\sum-server\branch1.0.0\common\gamecommon\activehelper.cpp Line 109 : pTimerManager != NULL
+[Info][2016-09-31][16:40:30] Execute False On File e:\summoner\sum-server\branch1.0.0\common\gamecommon\activehelper.cpp Line 109 : pTimerManager != NULL
+[Info][2016-09-31][16:40:30] Execute False On File e:\summoner\sum-server\branch1.0.0\common\gamecommon\activehelper.cpp Line 109 : pTimerManager != NULL
+[Info][2016-09-31][16:40:30] Execute False On File e:\summoner\sum-server\branch1.0.0\common\gamecommon\activehelper.cpp Line 109 : pTimerManager != NULL
+[Info][2016-09-31][16:40:30] Execute False On File e:\summoner\sum-server\branch1.0.0\common\gamecommon\activehelper.cpp Line 109 : pTimerManager != NULL
+[Debug][2016-09-31][16:40:30] ===> BattleServer Launching ...
+[Debug][2016-09-31][16:40:30] accept ip 127.0.0.1 prot 12129 socketId 380
+[Error][2016-09-31][16:40:30] sock 124 msg accept SockError 10035 
+[Debug][2016-09-31][16:43:17] BattleServer maincmd 0, subcmd 2, len 0, uid 11088972
+[Debug][2016-09-31][16:44:16] BattleServer maincmd 0, subcmd 2, len 0, uid 11088972
+[Debug][2016-09-31][16:47:56] BattleServer maincmd 0, subcmd 2, len 0, uid 11088972
+[Debug][2016-09-31][17:42:30] BattleServer maincmd 0, subcmd 2, len 0, uid 11088972
+[Debug][2016-09-31][17:43:48] BattleServer maincmd 0, subcmd 2, len 0, uid 11088972
+[Debug][2016-09-31][17:44:22] BattleServer maincmd 0, subcmd 2, len 0, uid 11088972
+[Debug][2016-09-31][17:45:46] BattleServer maincmd 0, subcmd 2, len 0, uid 11088972
+[Debug][2016-09-31][17:46:03] BattleServer maincmd 0, subcmd 2, len 0, uid 11088972
+[Debug][2016-09-31][17:50:04] BattleServer maincmd 0, subcmd 2, len 0, uid 11088972
+[Debug][2016-09-31][17:50:41] BattleServer maincmd 0, subcmd 2, len 0, uid 11088972
+[Debug][2016-09-31][17:59:39] BattleServer maincmd 0, subcmd 2, len 0, uid 10007
+[Debug][2016-09-31][18:06:26] BattleServer maincmd 0, subcmd 2, len 0, uid 11088975
+[Debug][2016-09-31][18:06:27] BattleServer maincmd 0, subcmd 2, len 0, uid 11088972
+[Debug][2016-09-31][18:08:39] BattleServer maincmd 0, subcmd 2, len 0, uid 11088972
+[Debug][2016-09-31][18:08:43] BattleServer maincmd 0, subcmd 2, len 0, uid 11088975
+[Error][2016-09-31][18:33:35] sock 380 isSockBlockError 10054 

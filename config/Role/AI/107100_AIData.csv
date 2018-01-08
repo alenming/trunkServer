@@ -1,0 +1,10 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+2,移动释放嗜血技能,MoveStatus_4,Is_SkillReady(0*107102),Is_FindTarget(0*27),,,Do_CastSkill(107102),,,
+1,移动普攻,MoveStatus_4,Is_SkillReady(0*105305),Is_FindTarget(0*11),,,Do_CastSkill(105305),,,
+3,120s添加攻击BUFF,SkillStatus_39,Is_MyBuff(1*105305),Is_MyBuff(1*107103),,,Do_AddBuffForMe([105305+1]),,,
+5,待机转移动,SkillStatus_39,Is_MyBuff(0*105305),,,,Do_ChangeStatus(4),,,
+4,待机释放嗜血技能,SkillStatus_39,Is_SkillReady(0*107101),Is_MyBuff(0*107103),Is_FindTarget(0*27),,Do_CastSkill(107101),,,
+6,普攻1,SkillStatus_39,Is_SkillReady(0*105304),Is_FindTarget(0*11),,,Do_CastSkill(105304),,,

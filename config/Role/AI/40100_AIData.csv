@@ -1,0 +1,10 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,普攻,MoveStatus_4,Is_SkillReady(0*40101),Is_FindTarget(0*11),,,Do_CastSkill(40101),,,
+2,毒雾-亡语5S,DeathStatus_1,Is_SkillReady(0*40110),,,,Do_LockPointsForMe(0*0),Do_CastSkill(40110),,
+3,给毒雾特效,SkillStatus_42,Is_SkillReady(0*40111),Is_FindTarget(0*40102),,,Do_CastSkill(40111),,,
+3,复活让自己可以被搜索,SkillStatus_45,Is_MyBuff(0*928),,,,Do_DelBuffForMe([928]),,,
+4,天赋死亡判断,SkillStatus_50,Is_MyBuff(0*928),Is_RandomForAI(0*15),Is_FindTarget(0*1),,Do_Count(40006),Do_ChangeStatus(43),,
+5,天赋死亡判断,SkillStatus_50,,,,,Do_ChangeStatus(42),,,

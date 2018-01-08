@@ -1,0 +1,9 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,疯砍,StandStatus_3,Is_SkillReady(0*40602),Is_FindTarget(0*11),,,Do_CastSkill(40602),,,
+2,普通攻击1,StandStatus_3,Is_SkillReady(0*40600),Is_FindTarget(0*11),,,Do_CastSkill(40600),,,
+3,开始移动,StandStatus_3,Is_MyHpLessThan(0*70.0),,,,Do_ChangeStatus(4),,,
+4,移动下普通攻击1,MoveStatus_4,Is_SkillReady(0*40600),Is_FindTarget(0*11),,,Do_CastSkill(40600),,,
+5,普通攻击2,SkillStatus_31,Is_SkillReady(0*40601),Is_FindTarget(0*11),,,Do_CastSkill(40601),,,

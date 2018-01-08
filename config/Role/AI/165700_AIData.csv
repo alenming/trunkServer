@@ -1,0 +1,13 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,出生添加召唤幽灵BUFF,BornStatus_2,Is_MyBuff(1*165705),Is_MyBuff(1*165706),,,,Do_AddBuffForMe([165705+1]*[165706+1]),,
+2,位置1召唤判定,StandStatus_3,Is_MyBuff(1*165701),,,,,Do_ChangeStatus(7),,
+3,位置2召唤判定,StandStatus_3,Is_MyBuff(1*165702),,,,,Do_ChangeStatus(7),,
+4,位置3召唤判定,StandStatus_3,Is_MyBuff(1*165703),,,,,Do_ChangeStatus(7),,
+5,位置4召唤判定,StandStatus_3,Is_MyBuff(1*165704),,,,,Do_ChangeStatus(7),,
+6,位置1召唤,ChargingStatus_7,Is_MyBuff(1*165701),Is_SkillReady(0*165701),,,,Do_AddBuffForMe([165701+1]),Do_LockPointsForMe(188*0),Do_CastSkill(165701)
+7,位置2召唤,ChargingStatus_7,Is_MyBuff(1*165702),Is_SkillReady(0*165701),,,,Do_AddBuffForMe([165702+1]),Do_LockPointsForMe(565*0),Do_CastSkill(165701)
+8,位置3召唤,ChargingStatus_7,Is_MyBuff(1*165703),Is_SkillReady(0*165701),,,,Do_AddBuffForMe([165703+1]),Do_LockPointsForMe(941*0),Do_CastSkill(165701)
+9,位置4召唤,ChargingStatus_7,Is_MyBuff(1*165704),Is_SkillReady(0*165701),,,,Do_AddBuffForMe([165704+1]),Do_LockPointsForMe(1367*0),Do_CastSkill(165701)

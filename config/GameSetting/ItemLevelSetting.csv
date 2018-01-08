@@ -1,0 +1,11 @@
+品质,图标外框,文字颜色,聊天装备英雄文字颜色
+主键 白绿蓝紫金,,,
+ItemLevel,ItemFrame,Color,ChatColor
+index,string,json,json
+1,item_lv_wood.png,[204+102+51],[255+250+240]
+2,item_lv_green.png,[51+204+51],[51+204+51]
+3,item_lv_blue.png,[0+153+255],[0+153+255]
+4,item_lv_voilet.png,[204+102+255],[204+102+255]
+5,item_lv_golden.png,[230+173+1],[255+215+0]
+6,item_lv_orange.png,[255+51+0],[255+51+0]
+7,item_lv_white.png,[255+255+255],[255+255+255]

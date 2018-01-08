@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{50C6F8EB-CCF1-4C2A-890B-6526672AAE05}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>SUMServer</RootNamespace>
+    <ProjectName>BattleServer</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>
+    </LinkIncremental>
+    <IntDir>$(SolutionDir).$(ProjectName)$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)bin\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../External/kxServer/;../External/kxServer/server;../External/kxServer/pulgins;../External/kxServer/helper;../External/kxServer/core;../External/kxServer/commnication;../External;../Common/SimpleCocos;../External/hiredis;../External/mysqld;../Common/DBDriver;Classes;common;gameFrame;logic;../Common;../Common/GameConfig;../Common/GameModel;../Common/GameCommon;../Common/GameUser;../Common/Protocol;../Common/TaskAction;../Common/ServerConfig;rapidjson;rapidjson/error;rapidjson/internal;rapidjson/msinttypes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>../External/libs/libmysql.lib;../External/libs/libmysqld.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\GameCommon\Achievement.h" />
+    <ClInclude Include="..\Common\GameCommon\ActiveHelper.h" />
+    <ClInclude Include="..\Common\GameCommon\ActiveTask.h" />
+    <ClInclude Include="..\Common\GameCommon\ActiveTimeObject.h" />
+    <ClInclude Include="..\Common\GameCommon\BattleDataHelper.h" />
+    <ClInclude Include="..\Common\GameCommon\BufferData.h" />
+    <ClInclude Include="..\Common\GameCommon\CommonHelper.h" />
+    <ClInclude Include="..\Common\GameCommon\CommOssHelper.h" />
+    <ClInclude Include="..\Common\GameCommon\CommStructs.h" />
+    <ClInclude Include="..\Common\GameCommon\CommTools.h" />
+    <ClInclude Include="..\Common\GameCommon\EquipComm.h" />
+    <ClInclude Include="..\Common\GameCommon\GameDef.h" />
+    <ClInclude Include="..\Common\GameCommon\ItemDrop.h" />
+    <ClInclude Include="..\Common\GameCommon\KxCommManager.h" />
+    <ClInclude Include="..\Common\GameCommon\KxCSComm.h" />
+    <ClInclude Include="..\Common\GameCommon\MailHelper.h" />
+    <ClInclude Include="..\Common\GameCommon\ModelHelper.h" />
+    <ClInclude Include="..\Common\GameCommon\PropUseHelper.h" />
+    <ClInclude Include="..\Common\GameCommon\PvpSettleResult.h" />
+    <ClInclude Include="..\Common\GameCommon\RandGenerator.h" />
+    <ClInclude Include="..\Common\GameCommon\SummonerServer.h" />
+    <ClInclude Include="..\Common\GameCommon\Task.h" />
+    <ClInclude Include="..\Common\GameCommon\TaskAchieveHelper.h" />
+    <ClInclude Include="..\Common\GameCommon\TimeCalcTool.h" />
+    <ClInclude Include="..\Common\GameConfig\ConfActive.h" />
+    <ClInclude Include="..\Common\GameConfig\ConfAnalytic.h" />
+    <ClInclude Include="..\Common\GameConfig\ConfArena.h" />
+    <ClInclude Include="..\Common\GameConfig\ConfFight.h" />
+    <ClInclude Include="..\Common\GameConfig\ConfGameSetting.h" />
+    <ClInclude Include="..\Common\GameConfig\ConfGuide.h" />
+    <ClInclude Include="..\Common\GameConfig\ConfHall.h" />
+    <ClInclude Include="..\Common\GameConfig\ConfLanguage.h" />
+    <ClInclude Include="..\Common\GameConfig\ConfManager.h" />
+    <ClInclude Include="..\Common\GameConfig\ConfMusic.h" />
+    <ClInclude Include="..\Common\GameConfig\ConfOther.h" />
+    <ClInclude Include="..\Common\GameConfig\ConfRole.h" />
+    <ClInclude Include="..\Common\GameConfig\ConfStage.h" />
+    <ClInclude Include="..\Common\GameConfig\ConfUnion.h" />
+    <ClInclude Include="..\Common\GameConfig\CsvLoader.h" />
+    <ClInclude Include="..\Common\GameModel\AchievementModel.h" />
+    <ClInclude Include="..\Common\GameModel\ActivityInstanceModel.h" />
+    <ClInclude Include="..\Common\GameModel\BagModel.h" />
+    <ClInclude Include="..\Common\GameModel\BillnoModel.h" />
+    <ClInclude Include="..\Common\GameModel\BlueDiamondModel.h" />
+    <ClInclude Include="..\Common\GameModel\EquipModel.h" />
+    <ClInclude Include="..\Common\GameModel\GiftModel.h" />
+    <ClInclude Include="..\Common\GameModel\GlobalMailModel.h" />
+    <ClInclude Include="..\Common\GameModel\GoldTestModel.h" />
+    <ClInclude Include="..\Common\GameModel\GuideModel.h" />
+    <ClInclude Include="..\Common\GameModel\HeadModel.h" />
+    <ClInclude Include="..\Common\GameModel\HeroModel.h" />
+    <ClInclude Include="..\Common\GameModel\HeroTestModel.h" />
+    <ClInclude Include="..\Common\GameModel\IDBModel.h" />
+    <ClInclude Include="..\Common\GameModel\MailModel.h" />
+    <ClInclude Include="..\Common\GameModel\ModelDef.h" />
+    <ClInclude Include="..\Common\GameModel\PassTeamModel.h" />
+    <ClInclude Include="..\Common\GameModel\PersonMercenaryModel.h" />
+    <ClInclude Include="..\Common\GameModel\PvpModel.h" />
+    <ClInclude Include="..\Common\GameModel\PvpRankModel.h" />
+    <ClInclude Include="..\Common\GameModel\PvpTaskModel.h" />
+    <ClInclude Include="..\Common\GameModel\RankModel.h" />
+    <ClInclude Include="..\Common\GameModel\ShopModel.h" />
+    <ClInclude Include="..\Common\GameModel\StageModel.h" />
+    <ClInclude Include="..\Common\GameModel\StatModel.h" />
+    <ClInclude Include="..\Common\GameModel\SummonModel.h" />
+    <ClInclude Include="..\Common\GameModel\TaskModel.h" />
+    <ClInclude Include="..\Common\GameModel\TeamModel.h" />
+    <ClInclude Include="..\Common\GameModel\TowerTestModel.h" />
+    <ClInclude Include="..\Common\GameModel\UnionExpiditionModel.h" />
+    <ClInclude Include="..\Common\GameModel\UnionMercenaryModel.h" />
+    <ClInclude Include="..\Common\GameModel\UnionModel.h" />
+    <ClInclude Include="..\Common\GameModel\UnionShopModel.h" />
+    <ClInclude Include="..\Common\GameModel\UserActiveModel.h" />
+    <ClInclude Include="..\Common\GameModel\UserModel.h" />
+    <ClInclude Include="..\Common\GameModel\UserUnionModel.h" />
+    <ClInclude Include="..\Common\GameUser\GameUser.h" />
+    <ClInclude Include="..\Common\GameUser\GameUserManager.h" />
+    <ClInclude Include="..\Common\GameUser\UserActionListener.h" />
+    <ClInclude Include="..\Common\GameUser\UserActionManager.h" />
+    <ClInclude Include="..\Common\Protocol\AchievementProtocol.h" />
+    <ClInclude Include="..\Common\Protocol\ActiveProtocol.h" />
+    <ClInclude Include="..\Common\Protocol\BagProtocol.h" />
+    <ClInclude Include="..\Common\Protocol\BattleProtocol.h" />
+    <ClInclude Include="..\Common\Protocol\ErrorCodeProtocol.h" />
+    <ClInclude Include="..\Common\Protocol\GoldTestProtocol.h" />
+    <ClInclude Include="..\Common\Protocol\GuideProtocol.h" />
+    <ClInclude Include="..\Common\Protocol\HeroProtocol.h" />
+    <ClInclude Include="..\Common\Protocol\HeroTestProtocol.h" />
+    <ClInclude Include="..\Common\Protocol\InstanceProtocol.h" />
+    <ClInclude Include="..\Common\Protocol\InternalProtocol.h" />
+    <ClInclude Include="..\Common\Protocol\LoginProtocol.h" />
+    <ClInclude Include="..\Common\Protocol\MailProtocol.h" />
+    <ClInclude Include="..\Common\Protocol\PayProtocol.h" />
+    <ClInclude Include="..\Common\Protocol\Protocol.h" />
+    <ClInclude Include="..\Common\Protocol\PvpProtocol.h" />
+    <ClInclude Include="..\Common\Protocol\RankProtocol.h" />
+    <ClInclude Include="..\Common\Protocol\ServerProtocol.h" />
+    <ClInclude Include="..\Common\Protocol\ShopProtocol.h" />
+    <ClInclude Include="..\Common\Protocol\StageProtocol.h" />
+    <ClInclude Include="..\Common\Protocol\SummonerProtocol.h" />
+    <ClInclude Include="..\Common\Protocol\TaskProtocol.h" />
+    <ClInclude Include="..\Common\Protocol\TeamProtocol.h" />
+    <ClInclude Include="..\Common\Protocol\TowerTestProtocol.h" />
+    <ClInclude Include="..\Common\Protocol\UnionProtocol.h" />
+    <ClInclude Include="..\Common\Protocol\UserProtocol.h" />
+    <ClInclude Include="..\Common\DBDriver\DbStorer.h" />
+    <ClInclude Include="..\External\hiredis\async.h" />
+    <ClInclude Include="..\External\hiredis\config.h" />
+    <ClInclude Include="..\External\hiredis\hiredis.h" />
+    <ClInclude Include="..\External\hiredis\net.h" />
+    <ClInclude Include="..\External\hiredis\sds.h" />
+    <ClInclude Include="..\Common\DBDriver\IStorer.h" />
+    <ClInclude Include="..\Common\DBDriver\MarkupSTL.h" />
+    <ClInclude Include="..\Common\DBDriver\RedisStorer.h" />
+    <ClInclude Include="..\Common\DBDriver\Storage.h" />
+    <ClInclude Include="..\Common\DBDriver\StorageManager.h" />
+    <ClInclude Include="..\External\kxServer\commnication\KxBufferList.h" />
+    <ClInclude Include="..\External\kxServer\commnication\KxCommInterfaces.h" />
+    <ClInclude Include="..\External\kxServer\commnication\KxEpoller.h" />
+    <ClInclude Include="..\External\kxServer\commnication\KxSelectPoller.h" />
+    <ClInclude Include="..\External\kxServer\commnication\KxSock.h" />
+    <ClInclude Include="..\External\kxServer\commnication\KxTCPClienter.h" />
+    <ClInclude Include="..\External\kxServer\commnication\KxTCPConnector.h" />
+    <ClInclude Include="..\External\kxServer\commnication\KxTCPListener.h" />
+    <ClInclude Include="..\External\kxServer\commnication\KxTCPUnit.h" />
+    <ClInclude Include="..\External\kxServer\commnication\KxUDPUnit.h" />
+    <ClInclude Include="..\External\kxServer\core\KxCore.h" />
+    <ClInclude Include="..\External\kxServer\core\KxLog.h" />
+    <ClInclude Include="..\External\kxServer\core\KxMemPool.h" />
+    <ClInclude Include="..\External\kxServer\core\KxObject.h" />
+    <ClInclude Include="..\External\kxServer\core\KxPlatform.h" />
+    <ClInclude Include="..\External\kxServer\helper\KxTimerCallback.h" />
+    <ClInclude Include="..\External\kxServer\helper\KxTimerManager.h" />
+    <ClInclude Include="..\External\kxServer\helper\KxTimeVal.h" />
+    <ClInclude Include="..\External\kxServer\helper\LogBattleHandler.h" />
+    <ClInclude Include="..\External\kxServer\helper\LogConsoleHandler.h" />
+    <ClInclude Include="..\External\kxServer\helper\LogFileHandler.h" />
+    <ClInclude Include="..\External\kxServer\KXServer.h" />
+    <ClInclude Include="..\External\kxServer\server\KxBaseServer.h" />
+    <ClInclude Include="..\Common\SimpleCocos\Director.h" />
+    <ClInclude Include="..\Common\SimpleCocos\Node.h" />
+    <ClInclude Include="..\Common\SimpleCocos\Ref.h" />
+    <ClInclude Include="..\Common\SimpleCocos\SimpleCocos.h" />
+    <ClInclude Include="..\Common\SimpleCocos\Vec2.h" />
+    <ClInclude Include="Classes\BattleDataCache.h" />
+    <ClInclude Include="Classes\BattleModule.h" />
+    <ClInclude Include="Classes\BattleServer.h" />
+    <ClInclude Include="Classes\BattleService.h" />
+    <ClInclude Include="Classes\GateModule.h" />
+    <ClInclude Include="Classes\Player.h" />
+    <ClInclude Include="Classes\PvpService.h" />
+    <ClInclude Include="Classes\Room.h" />
+    <ClInclude Include="Classes\RoomManager.h" />
+    <ClInclude Include="Classes\ServerService.h" />
+    <ClInclude Include="common\BattleHelper.h" />
+    <ClInclude Include="common\BattleScene.h" />
+    <ClInclude Include="common\Boss.h" />
+    <ClInclude Include="common\Bullet.h" />
+    <ClInclude Include="common\CallSoldier.h" />
+    <ClInclude Include="common\ComponentCache.h" />
+    <ClInclude Include="common\GameObject.h" />
+    <ClInclude Include="common\Hero.h" />
+    <ClInclude Include="common\Monster.h" />
+    <ClInclude Include="common\Role.h" />
+    <ClInclude Include="common\RoleComm.h" />
+    <ClInclude Include="common\Soldier.h" />
+    <ClInclude Include="gameFrame\BattleModels.h" />
+    <ClInclude Include="gameFrame\EventManager.h" />
+    <ClInclude Include="gameFrame\RandomNumber.h" />
+    <ClInclude Include="logic\AIActions.h" />
+    <ClInclude Include="logic\AIComponent.h" />
+    <ClInclude Include="logic\AIConditions.h" />
+    <ClInclude Include="logic\Buff.h" />
+    <ClInclude Include="logic\BuffComponent.h" />
+    <ClInclude Include="logic\BulletComponent.h" />
+    <ClInclude Include="logic\CallComponent.h" />
+    <ClInclude Include="logic\Count.h" />
+    <ClInclude Include="logic\Dispatch.h" />
+    <ClInclude Include="logic\HeroComponent.h" />
+    <ClInclude Include="logic\LogicComponent.h" />
+    <ClInclude Include="logic\ReplayRecorder.h" />
+    <ClInclude Include="logic\RoleComponent.h" />
+    <ClInclude Include="logic\Skill.h" />
+    <ClInclude Include="logic\SkillComponent.h" />
+    <ClInclude Include="logic\State.h" />
+    <ClInclude Include="logic\TargetSearcher.h" />
+    <ClInclude Include="rapidjson\allocators.h" />
+    <ClInclude Include="rapidjson\document.h" />
+    <ClInclude Include="rapidjson\encodedstream.h" />
+    <ClInclude Include="rapidjson\encodings.h" />
+    <ClInclude Include="rapidjson\error\en.h" />
+    <ClInclude Include="rapidjson\error\error.h" />
+    <ClInclude Include="rapidjson\filereadstream.h" />
+    <ClInclude Include="rapidjson\filestream.h" />
+    <ClInclude Include="rapidjson\filewritestream.h" />
+    <ClInclude Include="rapidjson\internal\biginteger.h" />
+    <ClInclude Include="rapidjson\internal\diyfp.h" />
+    <ClInclude Include="rapidjson\internal\dtoa.h" />
+    <ClInclude Include="rapidjson\internal\ieee754.h" />
+    <ClInclude Include="rapidjson\internal\itoa.h" />
+    <ClInclude Include="rapidjson\internal\meta.h" />
+    <ClInclude Include="rapidjson\internal\pow10.h" />
+    <ClInclude Include="rapidjson\internal\stack.h" />
+    <ClInclude Include="rapidjson\internal\strfunc.h" />
+    <ClInclude Include="rapidjson\internal\strtod.h" />
+    <ClInclude Include="rapidjson\memorybuffer.h" />
+    <ClInclude Include="rapidjson\memorystream.h" />
+    <ClInclude Include="rapidjson\msinttypes\inttypes.h" />
+    <ClInclude Include="rapidjson\msinttypes\stdint.h" />
+    <ClInclude Include="rapidjson\prettywriter.h" />
+    <ClInclude Include="rapidjson\rapidjson.h" />
+    <ClInclude Include="rapidjson\reader.h" />
+    <ClInclude Include="rapidjson\stringbuffer.h" />
+    <ClInclude Include="rapidjson\writer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\GameCommon\Achievement.cpp" />
+    <ClCompile Include="..\Common\GameCommon\ActiveHelper.cpp" />
+    <ClCompile Include="..\Common\GameCommon\ActiveTask.cpp" />
+    <ClCompile Include="..\Common\GameCommon\ActiveTimeObject.cpp" />
+    <ClCompile Include="..\Common\GameCommon\BattleDataHelper.cpp" />
+    <ClCompile Include="..\Common\GameCommon\BufferData.cpp" />
+    <ClCompile Include="..\Common\GameCommon\CommonHelper.cpp" />
+    <ClCompile Include="..\Common\GameCommon\CommOssHelper.cpp" />
+    <ClCompile Include="..\Common\GameCommon\ItemDrop.cpp" />
+    <ClCompile Include="..\Common\GameCommon\KxCommManager.cpp" />
+    <ClCompile Include="..\Common\GameCommon\MailHelper.cpp" />
+    <ClCompile Include="..\Common\GameCommon\ModelHelper.cpp" />
+    <ClCompile Include="..\Common\GameCommon\PropUseHelper.cpp" />
+    <ClCompile Include="..\Common\GameCommon\PvpSettleResult.cpp" />
+    <ClCompile Include="..\Common\GameCommon\RandGenerator.cpp" />
+    <ClCompile Include="..\Common\GameCommon\SummonerServer.cpp" />
+    <ClCompile Include="..\Common\GameCommon\Task.cpp" />
+    <ClCompile Include="..\Common\GameCommon\TaskAchieveHelper.cpp" />
+    <ClCompile Include="..\Common\GameCommon\TimeCalcTool.cpp" />
+    <ClCompile Include="..\Common\GameConfig\ConfActive.cpp" />
+    <ClCompile Include="..\Common\GameConfig\ConfAnalytic.cpp" />
+    <ClCompile Include="..\Common\GameConfig\ConfArena.cpp" />
+    <ClCompile Include="..\Common\GameConfig\ConfFight.cpp" />
+    <ClCompile Include="..\Common\GameConfig\ConfGameSetting.cpp" />
+    <ClCompile Include="..\Common\GameConfig\ConfGuide.cpp" />
+    <ClCompile Include="..\Common\GameConfig\ConfHall.cpp" />
+    <ClCompile Include="..\Common\GameConfig\ConfLanguage.cpp" />
+    <ClCompile Include="..\Common\GameConfig\ConfManager.cpp" />
+    <ClCompile Include="..\Common\GameConfig\ConfMusic.cpp" />
+    <ClCompile Include="..\Common\GameConfig\ConfOther.cpp" />
+    <ClCompile Include="..\Common\GameConfig\ConfRole.cpp" />
+    <ClCompile Include="..\Common\GameConfig\ConfStage.cpp" />
+    <ClCompile Include="..\Common\GameConfig\ConfUnion.cpp" />
+    <ClCompile Include="..\Common\GameConfig\CsvLoader.cpp" />
+    <ClCompile Include="..\Common\DBDriver\DbStorer.cpp" />
+    <ClCompile Include="..\Common\GameModel\AchievementModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\ActivityInstanceModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\BagModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\BillnoModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\BlueDiamondModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\EquipModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\GiftModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\GlobalMailModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\GoldTestModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\GuideModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\HeadModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\HeroModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\HeroTestModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\IDBModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\MailModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\PassTeamModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\PersonMercenaryModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\PvpModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\PvpRankModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\PvpTaskModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\RankModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\ShopModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\StageModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\StatModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\SummonModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\TaskModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\TeamModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\TowerTestModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\UnionExpiditionModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\UnionMercenaryModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\UnionModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\UnionShopModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\UserActiveModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\UserModel.cpp" />
+    <ClCompile Include="..\Common\GameModel\UserUnionModel.cpp" />
+    <ClCompile Include="..\Common\GameUser\GameUser.cpp" />
+    <ClCompile Include="..\Common\GameUser\GameUserManager.cpp" />
+    <ClCompile Include="..\Common\GameUser\UserActionManager.cpp" />
+    <ClCompile Include="..\External\hiredis\async.c" />
+    <ClCompile Include="..\External\hiredis\hiredis.c" />
+    <ClCompile Include="..\External\hiredis\net.c" />
+    <ClCompile Include="..\External\hiredis\sds.c" />
+    <ClCompile Include="..\Common\DBDriver\IStorer.cpp" />
+    <ClCompile Include="..\Common\DBDriver\MarkupSTL.cpp" />
+    <ClCompile Include="..\Common\DBDriver\RedisStorer.cpp" />
+    <ClCompile Include="..\Common\DBDriver\Storage.cpp" />
+    <ClCompile Include="..\Common\DBDriver\StorageManager.cpp" />
+    <ClCompile Include="..\External\kxServer\commnication\KxBufferList.cpp" />
+    <ClCompile Include="..\External\kxServer\commnication\KxEpoller.cpp" />
+    <ClCompile Include="..\External\kxServer\commnication\KxSelectPoller.cpp" />
+    <ClCompile Include="..\External\kxServer\commnication\KxSock.cpp" />
+    <ClCompile Include="..\External\kxServer\commnication\KxTCPClienter.cpp" />
+    <ClCompile Include="..\External\kxServer\commnication\KxTCPConnector.cpp" />
+    <ClCompile Include="..\External\kxServer\commnication\KxTCPListener.cpp" />
+    <ClCompile Include="..\External\kxServer\commnication\KxTCPUnit.cpp" />
+    <ClCompile Include="..\External\kxServer\commnication\KxUDPUnit.cpp" />
+    <ClCompile Include="..\External\kxServer\core\KxLog.cpp" />
+    <ClCompile Include="..\External\kxServer\core\KxMemPool.cpp" />
+    <ClCompile Include="..\External\kxServer\core\KxObject.cpp" />
+    <ClCompile Include="..\External\kxServer\helper\KxTimerManager.cpp" />
+    <ClCompile Include="..\External\kxServer\helper\LogBattleHandler.cpp" />
+    <ClCompile Include="..\External\kxServer\helper\LogConsoleHandler.cpp" />
+    <ClCompile Include="..\External\kxServer\helper\LogFileHandler.cpp" />
+    <ClCompile Include="..\External\kxServer\server\KxBaseServer.cpp" />
+    <ClCompile Include="..\Common\SimpleCocos\Director.cpp" />
+    <ClCompile Include="..\Common\SimpleCocos\Node.cpp" />
+    <ClCompile Include="..\Common\SimpleCocos\Ref.cpp" />
+    <ClCompile Include="..\Common\SimpleCocos\Vec2.cpp" />
+    <ClCompile Include="Classes\BattleDataCache.cpp" />
+    <ClCompile Include="Classes\BattleMain.cpp" />
+    <ClCompile Include="Classes\BattleModule.cpp" />
+    <ClCompile Include="Classes\BattleServer.cpp" />
+    <ClCompile Include="Classes\BattleService.cpp" />
+    <ClCompile Include="Classes\GateModule.cpp" />
+    <ClCompile Include="Classes\Player.cpp" />
+    <ClCompile Include="Classes\PvpService.cpp" />
+    <ClCompile Include="Classes\Room.cpp" />
+    <ClCompile Include="Classes\RoomManager.cpp" />
+    <ClCompile Include="Classes\ServerService.cpp" />
+    <ClCompile Include="common\BattleHelper.cpp" />
+    <ClCompile Include="common\BattleLogic.cpp" />
+    <ClCompile Include="common\BattleScene.cpp" />
+    <ClCompile Include="common\BattleSerialize.cpp" />
+    <ClCompile Include="common\Boss.cpp" />
+    <ClCompile Include="common\Bullet.cpp" />
+    <ClCompile Include="common\CallSoldier.cpp" />
+    <ClCompile Include="common\ComponentCache.cpp" />
+    <ClCompile Include="common\GameObject.cpp" />
+    <ClCompile Include="common\Hero.cpp" />
+    <ClCompile Include="common\Monster.cpp" />
+    <ClCompile Include="common\Role.cpp" />
+    <ClCompile Include="common\Soldier.cpp" />
+    <ClCompile Include="gameFrame\BattleModels.cpp" />
+    <ClCompile Include="gameFrame\RandomNumber.cpp" />
+    <ClCompile Include="logic\AIActions.cpp" />
+    <ClCompile Include="logic\AIComponent.cpp" />
+    <ClCompile Include="logic\AIConditions.cpp" />
+    <ClCompile Include="logic\Buff.cpp" />
+    <ClCompile Include="logic\BuffComponent.cpp" />
+    <ClCompile Include="logic\BulletComponent.cpp" />
+    <ClCompile Include="logic\CallComponent.cpp" />
+    <ClCompile Include="logic\Count.cpp" />
+    <ClCompile Include="logic\Dispatch.cpp" />
+    <ClCompile Include="logic\HeroComponent.cpp" />
+    <ClCompile Include="logic\LogicComponent.cpp" />
+    <ClCompile Include="logic\RoleComponent.cpp" />
+    <ClCompile Include="logic\Skill.cpp" />
+    <ClCompile Include="logic\SkillComponent.cpp" />
+    <ClCompile Include="logic\State.cpp" />
+    <ClCompile Include="logic\TargetSearcher.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Common\SimpleCocos\Vec2.inl">
+      <FileType>Document</FileType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

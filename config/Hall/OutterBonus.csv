@@ -1,0 +1,31 @@
+战斗外属性加成ID,备注（无效列） ,加成效果名称语言包,加成效果描述语言包,加成作用对象条件1,条件1参数,加成作用对象条件2,条件2参数,加成作用对象条件3,条件3参数,加成作用对象条件4,条件4参数,加成效果1ID-（OutterBonusSetting）,加成效果1参数,加成效果1语言包（Uilan）,加成效果2ID-（OutterBonusSetting）,加成效果2参数,加成效果2语言包（Uilan）,加成效果3ID-（OutterBonusSetting）,加成效果3参数,加成效果3语言包（Uilan）,加成效果4ID-（OutterBonusSetting）,加成效果4参数,加成效果4语言包（Uilan）,Buff的大图标,Buff的小图标
+,（无效列） ,,,,,,,,,,,,,,,,,,,,,,,,
+ID,Null,Name,Desc,Type,Param,Type,Param,Type,Param,Type,Param,EffectId,Param,EffectLanID,EffectId,Param,EffectLanID,EffectId,Param,EffectLanID,EffectId,Param,EffectLanID,Pic,PicS
+index,null,int,int,int,json,int,json,int,json,int,json,int,int,int,int,int,int,int,int,int,int,int,int,String,String
+1,爬塔：物攻+5%,536,1207,2,[2],,,,,,,7,5,1207,,,,,,,,,,climbtower_attribar_attack.png,GameBuffPic1.png
+2,爬塔：物攻+10%,536,1207,2,[2],,,,,,,7,10,1207,,,,,,,,,,climbtower_attribar_attack.png,GameBuffPic1.png
+3,爬塔：物攻+15%,536,1207,2,[2],,,,,,,7,15,1207,,,,,,,,,,climbtower_attribar_attack.png,GameBuffPic1.png
+4,爬塔：魔攻+5%,537,1209,2,[2],,,,,,,9,5,1209,,,,,,,,,,climbtower_attribar_magicattack.png,GameBuffPic4.png
+5,爬塔：魔攻+10%,537,1209,2,[2],,,,,,,9,10,1209,,,,,,,,,,climbtower_attribar_magicattack.png,GameBuffPic4.png
+6,爬塔：魔攻+15%,537,1209,2,[2],,,,,,,9,15,1209,,,,,,,,,,climbtower_attribar_magicattack.png,GameBuffPic4.png
+7,爬塔：物甲+40,539,1211,2,[2],,,,,,,11,40,1211,,,,,,,,,,climbtower_attribar_defense.png,GameBuffPic2.png
+8,爬塔：物甲+80,539,1211,2,[2],,,,,,,11,80,1211,,,,,,,,,,climbtower_attribar_defense.png,GameBuffPic2.png
+9,爬塔：物甲+120,539,1211,2,[2],,,,,,,11,120,1211,,,,,,,,,,climbtower_attribar_defense.png,GameBuffPic2.png
+10,爬塔：魔甲+40,541,1214,2,[2],,,,,,,14,40,1214,,,,,,,,,,climbtower_attribar_magicsheild.png,GameBuffPic5.png
+11,爬塔：魔甲+80,541,1214,2,[2],,,,,,,14,80,1214,,,,,,,,,,climbtower_attribar_magicsheild.png,GameBuffPic5.png
+12,爬塔：魔甲+120,541,1214,2,[2],,,,,,,14,120,1214,,,,,,,,,,climbtower_attribar_magicsheild.png,GameBuffPic5.png
+13,爬塔：物穿+5,542,1216,2,[2],,,,,,,16,5,1216,,,,,,,,,,climbtower_attribar_attackpenetration.png,GameBuffPic3.png
+14,爬塔：物穿+10,542,1216,2,[2],,,,,,,16,10,1216,,,,,,,,,,climbtower_attribar_attackpenetration.png,GameBuffPic3.png
+15,爬塔：物穿+15,542,1216,2,[2],,,,,,,16,15,1216,,,,,,,,,,climbtower_attribar_attackpenetration.png,GameBuffPic3.png
+16,爬塔：魔穿+5,543,1218,2,[2],,,,,,,18,5,1218,,,,,,,,,,climbtower_attribar_magicpenetration.png,GameBuffPic6.png
+17,爬塔：魔穿+10,543,1218,2,[2],,,,,,,18,10,1218,,,,,,,,,,climbtower_attribar_magicpenetration.png,GameBuffPic6.png
+18,爬塔：魔穿+15,543,1218,2,[2],,,,,,,18,15,1218,,,,,,,,,,climbtower_attribar_magicpenetration.png,GameBuffPic6.png
+19,爬塔：生命+5%,535,1205,2,[2],,,,,,,5,5,1205,,,,,,,,,,climbtower_attribar_life.png,GameBuffPic14.png
+20,爬塔：生命+10%,535,1205,2,[2],,,,,,,5,10,1205,,,,,,,,,,climbtower_attribar_life.png,GameBuffPic14.png
+21,爬塔：生命+15%,535,1205,2,[2],,,,,,,5,15,1205,,,,,,,,,,climbtower_attribar_life.png,GameBuffPic14.png
+101,英雄试炼：战士,,,2,[2],7,[1],,,,,5,50,1205,7,50,1207,,,,,,,,
+102,英雄试炼：射手,,,2,[2],7,[3],,,,,5,50,1205,7,50,1207,,,,,,,,
+103,英雄试炼：刺客,,,2,[2],7,[2],,,,,5,50,1205,7,50,1207,,,,,,,,
+104,英雄试炼：法师,,,2,[2],7,[4],,,,,5,50,1205,9,50,1209,,,,,,,,
+105,英雄试炼：辅助,,,2,[2],7,[5],,,,,5,50,1205,13,50,1213,,,,,,,,
+106,英雄试炼：守卫,,,2,[2],7,[6],,,,,5,50,1205,7,50,1207,33,6000,1207,,,,,

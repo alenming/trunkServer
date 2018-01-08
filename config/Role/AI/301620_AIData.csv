@@ -1,0 +1,10 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,添加无敌BUFF,BornStatus_2,Is_MyBuff(1*1),,,,Do_AddBuffForMe([10+1]),,,
+2,搜索到敌方跳转状态,StandStatus_3,Is_MyBuff(1*112707),Is_FindTarget(0*112701),,,Do_AddBuffForMe([112707+1]),Do_CastSkill(112705),Do_ChangeStatus(32),
+3,搜索到友军跳转状态,StandStatus_3,Is_MyBuff(1*112708),Is_FindTarget(0*112702),,,Do_AddBuffForMe([112708+1]),Do_CastSkill(112705),Do_ChangeStatus(32),
+4,添加触发特效,SkillStatus_33,Is_MyBuff(1*112710),,,,Do_AddBuffForMe([112710+1]),,,
+5,搜索到地方释放火焰法阵,SkillStatus_34,Is_MyBuff(0*112707),Is_FindTarget(0*3),,,Do_DelBuffForMe([112707]),Do_CastSkill(112703),,
+6,搜索到友军释放火焰法阵,SkillStatus_34,Is_MyBuff(0*112708),Is_FindTarget(0*2),,,Do_DelBuffForMe([112708]),Do_CastSkill(112703),,

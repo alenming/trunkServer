@@ -1,0 +1,7 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,召唤骷髅长老,StandStatus_3,Is_SkillReady(0*141201),Is_MyBuff(1*13),,,Do_LockPointsForMe(180*0),Do_ChangeStatus(31),Do_CastSkill(141201),Do_Clear()
+2,召唤死亡骑士,StandStatus_3,Is_SkillReady(0*141202),Is_MyBuff(1*141201),,,Do_LockPointsForMe(410*0),Do_ChangeStatus(31),Do_CastSkill(141202),Do_Clear()
+3,召唤魔蛛,StandStatus_3,Is_SkillReady(0*141203),Is_MyHpLessThan(0*80.0),,,Do_LockPointsForMe(50*0),Do_CastSkill(141203),Do_Clear(),

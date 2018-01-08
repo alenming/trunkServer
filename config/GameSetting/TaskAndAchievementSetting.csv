@@ -1,0 +1,5 @@
+任务完成音效,主线任务图标,日常任务图标,成就完成音效
+规则,,,
+TaskFinishSound,MainTaskIcon,DailyTaskIcon,AchieveFinishSound
+int,string,string,int
+,icon_task_zhu.png,icon_task_ri.png,

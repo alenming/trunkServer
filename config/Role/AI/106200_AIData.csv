@@ -1,0 +1,13 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,收魂光环和黑暗深渊,BornStatus_2,Is_MyBuff(1*106101),Is_SkillReady(0*106001),Is_FindTarget(0*1),,Do_AddBuffForMe([106101+1]),Do_LockPointsForMe(900*0),Do_CastSkill(106001),
+2,删除黑暗之力,SkillStatus_39,Is_HasTarget(0*106204),Is_MyBuff(0*106202),,,Do_DelBuffForMe([106202+106203]),,,
+3,50%血量添加前进Buff,SkillStatus_39,Is_MyHpLessThan(0*50.00),Is_MyBuff(1*106201),Is_FindTarget(0*106203),,Do_AddBuffForMe([106201+1]*[106204+1]*[106205+1]),Do_Count(106202),,
+4,待机转前进,SkillStatus_39,Is_MyBuff(0*106204),Is_FindTarget(1*12),,,Do_ChangeStatus(4),,,
+5,待机黑暗之力技能起手,SkillStatus_39,Is_FindTarget(0*12),,,,Do_ChangeStatus(34),,,
+6,删除黑暗之力,MoveStatus_4,Is_HasTarget(0*106204),Is_MyBuff(0*106202),,,Do_DelBuffForMe([106202+106203]),,,
+7,移动黑暗之力技能起手,MoveStatus_4,Is_FindTarget(0*12),,,,Do_ChangeStatus(34),,,
+8,删除黑暗之力,ChargingStatus_7,Is_HasTarget(0*106204),Is_MyBuff(0*106202),,,Do_DelBuffForMe([106202+106203]),,,
+9,技能释放,ChargingStatus_7,Is_SkillReady(0*106201),Is_SkillReady(0*106202),,,Do_CastSkill(106201),Do_CastSkill(106202),,

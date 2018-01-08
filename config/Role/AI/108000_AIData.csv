@@ -1,0 +1,8 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,召唤亡灵大军,StandStatus_3,Is_SkillReady(0*108004),Is_FindTarget(0*1),,,Do_CastSkill(108004),,,
+2,释放瘟疫,StandStatus_3,Is_SkillReady(0*108003),Is_FindTarget(0*1),,,Do_CastSkill(108003),,,
+3,普攻1,StandStatus_3,Is_SkillReady(0*108001),Is_FindTarget(0*11),,,Do_CastSkill(108001),,,
+4,普攻2,SkillStatus_32,Is_SkillReady(0*108002),Is_FindTarget(0*11),,,Do_CastSkill(108002),,,

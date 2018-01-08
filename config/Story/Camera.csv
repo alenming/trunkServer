@@ -1,0 +1,4 @@
+镜头ID,镜头横移动作,镜头横移到 x值,镜头横移时间,拉伸比例到某值,拉伸时间,镜头动作总时间,后续镜头ID
+,1左2右,,,　1%-100%,,,
+Camera_ID,Camera_Moveway,Camera_Moveto,Camera_Movetime,Camera_Zoomto,Camera_Zoomtime,Camera_Time,Camera_NextCamera
+int,int,int,int,int,int,int,int

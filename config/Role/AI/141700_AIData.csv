@@ -1,0 +1,13 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,出生给予自己计时BUFF,BornStatus_2,Is_MyBuff(1*14),,,,Do_AddBuffForMe([14+1]),,,
+2,冰墙挡人,StandStatus_3,Is_SkillReady(0*140801),,,,Do_LockPointsForMe(1800*0),Do_CastSkill(140801),,
+3,冰球砸人,StandStatus_3,Is_SkillReady(0*140800),Is_FindTarget(0*3),,,Do_CastSkill(140800),,,
+4,暴风雪,StandStatus_3,Is_SkillReady(0*140803),Is_MyBuff(1*14),,,Do_CastSkill(140803),,,
+5,让暴风雪再密一点,SkillStatus_34,Is_SkillReady(0*140804),,,,Do_CastSkill(140804),,,
+6,让暴风雪再密一点,SkillStatus_34,Is_SkillReady(0*140805),,,,Do_CastSkill(140805),,,
+7,让暴风雪再密二点,SkillStatus_34,Is_SkillReady(0*140806),,,,Do_CastSkill(140806),,,
+8,让暴风雪再密二点,SkillStatus_34,Is_SkillReady(0*140807),,,,Do_CastSkill(140807),,,
+9,让暴风雪再密二点,SkillStatus_34,Is_SkillReady(0*140808),,,,Do_CastSkill(140808),,,

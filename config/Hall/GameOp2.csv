@@ -1,0 +1,4 @@
+活动ID,宣传图,描述语言包,掉落规则ID,掉落影响类型（1道具ID，2道具类型ID）,道具ID掉落倍率影响参数,道具类型ID掉落倍率影响参数,新增的活动道具,掉落种类倍率修改参数
+主键,,,,,,,,
+GmaeOp_ID,GameOp_Pic,GameOp_des,DropRuleID,DropType,Drop_Ratio,DropType_Ratio,NewItemDrop,MeanwhileDropNum_Ratio
+index,string,int,json,int,json,json,json,json

@@ -1,0 +1,13 @@
+AI顺序值,描述,所需状态,AI条件组,,,,AI动作组,,,
+,,对应角色状态标签,条件1,条件2,条件3,条件4,动作1,动作2,动作3,动作4
+AI_Order,null,AI_NeedRoleStatus,AI_Condition1,AI_Condition2,AI_Condition3,AI_Condition4,AI_Action1,AI_Action2,AI_Action3,AI_Action4
+int,null,string,function,function,function,function,function,function,function,function
+1,刺客攻击1,StandStatus_3,Is_SkillReady(0*1211),Is_FindTarget(0*11),,,Do_CastSkill(1211),,,
+2,刺客攻击2,StandStatus_3,Is_SkillReady(0*1212),Is_FindTarget(0*11),,,Do_CastSkill(1212),,,
+3,刺客攻击3,StandStatus_3,Is_SkillReady(0*1213),Is_FindTarget(0*11),,,Do_CastSkill(1213),,,
+4,刺客攻击4,StandStatus_3,Is_SkillReady(0*1214),Is_FindTarget(0*11),,,Do_CastSkill(1214),,,
+5,开始移动,StandStatus_3,Is_MyHpLessThan(0*70.0),,,,Do_ChangeStatus(4),,,
+6,移动攻击1,MoveStatus_4,Is_SkillReady(0*1211),Is_FindTarget(0*11),,,Do_CastSkill(1211),,,
+7,移动攻击2,MoveStatus_4,Is_SkillReady(0*1212),Is_FindTarget(0*11),,,Do_CastSkill(1212),,,
+8,移动攻击3,MoveStatus_4,Is_SkillReady(0*1213),Is_FindTarget(0*11),,,Do_CastSkill(1213),,,
+9,移动攻击4,MoveStatus_4,Is_SkillReady(0*1214),Is_FindTarget(0*11),,,Do_CastSkill(1214),,,

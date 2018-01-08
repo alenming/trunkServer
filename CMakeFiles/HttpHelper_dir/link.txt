@@ -1,0 +1,2 @@
+/usr/bin/ar cr lib/libHttpHelper.a  CMakeFiles/HttpHelper.dir/External/HttpHelper/HttpHelper.cpp.o
+/usr/bin/ranlib lib/libHttpHelper.a

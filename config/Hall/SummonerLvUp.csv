@@ -1,0 +1,5 @@
+召唤师等级,该等级解锁功能,功能名称语言包1,功能图标1,功能名称语言包2,功能图标2,功能名称语言包3,功能图标3
+主键（召唤师达到该等级）,策划用,语言包ID,对应美术资源路径,语言包ID,对应美术资源路径,语言包ID,对应美术资源路径
+ID,null,Name1,Picture1,Name2,Picture2,Name3,Picture3
+index,null,int,string,int,string,int,string
+5,竞技场,20,ui_new/g_guide/ButtonIcon/Arena.csb,,,,

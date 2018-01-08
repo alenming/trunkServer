@@ -1,0 +1,7 @@
+服务器组ID,服务器ID,服务器名,IP地址,Port
+1,1,LoginCheck,127.0.0.1,6668
+2,2,ServiceServer,127.0.0.1,6667
+3,3,BattleServer,127.0.0.1,6666
+4,4,MatchServer,127.0.0.1,6669
+5,5,UnionServer,127.0.0.1,6670
+20,20,RankServer,127.0.0.1,6680
