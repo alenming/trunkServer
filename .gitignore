@@ -9,3 +9,8 @@
 *.sdf
 *.suo
 *.suo
+.svn/format
+.svn/entries
+*.svn-base
+.svn/wc.db
+.svn/wc.db-journal
