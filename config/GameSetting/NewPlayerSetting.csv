@@ -2,4 +2,4 @@
 不能空行,,,,,,,,,,,,,,,,,,,,,
 NewbieID,HeadId,UserLv,UserExp,Gold,Diamond,InitialBagCapacity,MaxBagCapacity,MaxHeroCapacity,Summoners,Items,Equips,Heros,SummonerInGroup,Task,Achievement,OpenChapter,OpenGuide,HeadID,UserName,ChestID,RobotId
 int,int,int,int,int,int,int,int,int,json,json,json,jsons,int,json,json,json,json,json,string,json,json
-1,1,1,0,0,0,100,300,300,[1500],[],[],[10000+1]*[10200+1]*[30600+1],1500,[3+1003+1004+1005+1501+2001+2101],[1+4+7+10+13+17+20+23+26+29+32+35+38+1001],[1+101],[1+11+13+1101],[6+8+9+10+11+12],Leo,[1+2+3+4+5],[1+2+3+4+5]
+1,1,1,0,1000000000,10000000,100,300,300,[1500],[],[],[10000+1]*[10200+1]*[30600+1],1500,[3+1003+1004+1005+1501+2001+2101],[1+4+7+10+13+17+20+23+26+29+32+35+38+1001],[1+101],[1+11+13+1101],[6+8+9+10+11+12],Leo,[1+2+3+4+5],[1+2+3+4+5]
