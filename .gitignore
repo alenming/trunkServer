@@ -14,3 +14,4 @@
 *.svn-base
 .svn/wc.db
 .svn/wc.db-journal
+*.suo
