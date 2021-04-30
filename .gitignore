@@ -15,3 +15,5 @@
 .svn/wc.db
 .svn/wc.db-journal
 *.suo
+*.opensdf
+*.suo
