@@ -18,3 +18,5 @@
 *.opensdf
 *.suo
 *.suo
+*.log
+*.bat
