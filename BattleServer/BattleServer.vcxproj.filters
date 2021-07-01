@@ -643,49 +643,16 @@
     <ClInclude Include="logic\ReplayRecorder.h">
       <Filter>BattleServer\BattleServer\BattleLogic\logic</Filter>
     </ClInclude>
-    <ClInclude Include="rapidjson\allocators.h">
-      <Filter>Common\Rapidjson</Filter>
+    <ClInclude Include="rapidjson\error\en.h">
+      <Filter>Common\Rapidjson\error</Filter>
     </ClInclude>
-    <ClInclude Include="rapidjson\document.h">
-      <Filter>Common\Rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="rapidjson\encodedstream.h">
-      <Filter>Common\Rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="rapidjson\encodings.h">
-      <Filter>Common\Rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="rapidjson\filereadstream.h">
-      <Filter>Common\Rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="rapidjson\filestream.h">
-      <Filter>Common\Rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="rapidjson\filewritestream.h">
-      <Filter>Common\Rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="rapidjson\memorybuffer.h">
-      <Filter>Common\Rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="rapidjson\memorystream.h">
-      <Filter>Common\Rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="rapidjson\prettywriter.h">
-      <Filter>Common\Rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="rapidjson\rapidjson.h">
-      <Filter>Common\Rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="rapidjson\reader.h">
-      <Filter>Common\Rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="rapidjson\stringbuffer.h">
-      <Filter>Common\Rapidjson</Filter>
-    </ClInclude>
-    <ClInclude Include="rapidjson\writer.h">
-      <Filter>Common\Rapidjson</Filter>
+    <ClInclude Include="rapidjson\error\error.h">
+      <Filter>Common\Rapidjson\error</Filter>
     </ClInclude>
     <ClInclude Include="rapidjson\internal\biginteger.h">
+      <Filter>Common\Rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\internal\clzll.h">
       <Filter>Common\Rapidjson\internal</Filter>
     </ClInclude>
     <ClInclude Include="rapidjson\internal\diyfp.h">
@@ -706,6 +673,9 @@
     <ClInclude Include="rapidjson\internal\pow10.h">
       <Filter>Common\Rapidjson\internal</Filter>
     </ClInclude>
+    <ClInclude Include="rapidjson\internal\regex.h">
+      <Filter>Common\Rapidjson\internal</Filter>
+    </ClInclude>
     <ClInclude Include="rapidjson\internal\stack.h">
       <Filter>Common\Rapidjson\internal</Filter>
     </ClInclude>
@@ -715,17 +685,74 @@
     <ClInclude Include="rapidjson\internal\strtod.h">
       <Filter>Common\Rapidjson\internal</Filter>
     </ClInclude>
-    <ClInclude Include="rapidjson\error\error.h">
-      <Filter>Common\Rapidjson\error</Filter>
-    </ClInclude>
-    <ClInclude Include="rapidjson\error\en.h">
-      <Filter>Common\Rapidjson\error</Filter>
+    <ClInclude Include="rapidjson\internal\swap.h">
+      <Filter>Common\Rapidjson\internal</Filter>
     </ClInclude>
     <ClInclude Include="rapidjson\msinttypes\inttypes.h">
       <Filter>Common\Rapidjson\msinttypes</Filter>
     </ClInclude>
     <ClInclude Include="rapidjson\msinttypes\stdint.h">
       <Filter>Common\Rapidjson\msinttypes</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\allocators.h">
+      <Filter>Common\Rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\cursorstreamwrapper.h">
+      <Filter>Common\Rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\document.h">
+      <Filter>Common\Rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\encodedstream.h">
+      <Filter>Common\Rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\encodings.h">
+      <Filter>Common\Rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\filereadstream.h">
+      <Filter>Common\Rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\filewritestream.h">
+      <Filter>Common\Rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\fwd.h">
+      <Filter>Common\Rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\istreamwrapper.h">
+      <Filter>Common\Rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\memorybuffer.h">
+      <Filter>Common\Rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\memorystream.h">
+      <Filter>Common\Rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\ostreamwrapper.h">
+      <Filter>Common\Rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\pointer.h">
+      <Filter>Common\Rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\prettywriter.h">
+      <Filter>Common\Rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\rapidjson.h">
+      <Filter>Common\Rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\reader.h">
+      <Filter>Common\Rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\schema.h">
+      <Filter>Common\Rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\stream.h">
+      <Filter>Common\Rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\stringbuffer.h">
+      <Filter>Common\Rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidjson\writer.h">
+      <Filter>Common\Rapidjson</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
