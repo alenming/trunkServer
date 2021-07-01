@@ -269,7 +269,7 @@ bool KxSock::isSockBlockError()
     KXLOGERROR("error: sock %d isSockBlockError %d ", m_Sock, errorCode);
 #else
     if (errno == EWOULDBLOCK || errno == EAGAIN 
-        || errno == EINPROGRESS || errno == EINTR)
+        || errno == R_EINPROGRESS || errno == EINTR)
     {
         return true;
     }

@@ -56,7 +56,7 @@
 #define close closesocket
 #define SETERRNO errnox = WSAGetLastError()
 #undef errno
-int errnox = EINPROGRESS;
+int errnox = R_EINPROGRESS;
 #define errno errnox
 #else
 #define SETERRNO
@@ -160,9 +160,9 @@ static int redisContextWaitReady(redisContext *c, int fd, const struct timeval *
     }
 
 #ifdef HIREDIS_WIN
-    if (errno == EINPROGRESS || errno == WSAEWOULDBLOCK) {
+    if (errno == R_EINPROGRESS || errno == WSAEWOULDBLOCK) {
 #else
-    if (errno == EINPROGRESS) {
+    if (errno == R_EINPROGRESS) {
 #endif
         FD_ZERO(&wfd);
         FD_SET(fd, &wfd);
@@ -286,7 +286,7 @@ int redisContextConnectTcp(redisContext *c, const char *addr, int port, struct t
       
     if (connect(s, (struct sockaddr*)&sa, sizeof(sa)) == -1) {
         SETERRNO;
-        if (errno == EINPROGRESS && !blocking) {
+        if (errno == R_EINPROGRESS && !blocking) {
             /* This is ok. */
         } else {
             if (redisContextWaitReady(c,s,timeout) != REDIS_OK)
@@ -320,7 +320,7 @@ int redisContextConnectUnix(redisContext *c, const char *path, struct timeval *t
     sa.sun_family = AF_LOCAL;
     strncpy(sa.sun_path,path,sizeof(sa.sun_path)-1);
     if (connect(s, (struct sockaddr*)&sa, sizeof(sa)) == -1) {
-        if (errno == EINPROGRESS && !blocking) {
+        if (errno == R_EINPROGRESS && !blocking) {
             /* This is ok. */
         } else {
             if (redisContextWaitReady(c,s,timeout) != REDIS_OK)

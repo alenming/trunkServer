@@ -435,7 +435,7 @@ static int __redisAsyncHandleConnect(redisAsyncContext *ac) {
 
     if (redisCheckSocketError(c,c->fd) == REDIS_ERR) {
         /* Try again later when connect(2) is still in progress. */
-        if (errno == EINPROGRESS)
+        if (errno == R_EINPROGRESS)
             return REDIS_OK;
 
         if (ac->onConnect) ac->onConnect(ac,REDIS_ERR);
