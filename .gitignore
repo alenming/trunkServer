@@ -16,3 +16,6 @@
 *.opensdf
 *.bat
 *.log
+bin/msvcr120d.dll
+bin/msvcp120d.dll
+bin/msvcr120.dll
