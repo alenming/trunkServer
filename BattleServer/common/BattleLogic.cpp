@@ -421,7 +421,7 @@ void CBattleHelper::processCommand()
 
 			case CommandCallSolider:
 				//’ŸªΩ’ŸªΩŒÔ
-				createCallSoldier(cmd.ExecuterId, cmd.Ext1, cmd.Ext2, cmd.Ext3, cmd.Ext4);
+				createCallSoldier(cmd.ExecuterId, cmd.Ext1, cmd.Ext2, (float)cmd.Ext3, (float)cmd.Ext4);
 				break;
 #ifndef RunningInServer
 			case CommandTalk:

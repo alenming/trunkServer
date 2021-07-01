@@ -7,8 +7,6 @@
 *.ilk
 *.exe
 *.sdf
-*.suo
-*.suo
 .svn/format
 .svn/entries
 *.svn-base
@@ -16,7 +14,4 @@
 .svn/wc.db-journal
 *.suo
 *.opensdf
-*.suo
-*.suo
-*.log
 *.bat
