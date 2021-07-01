@@ -44,7 +44,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>
     </LinkIncremental>
-    <IntDir>$(SolutionDir).$(ProjectName)$(Configuration)\</IntDir>
+    <IntDir>$(SolutionDir)bin\.$(ProjectName)$(Configuration)\</IntDir>
     <OutDir>$(SolutionDir)bin\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

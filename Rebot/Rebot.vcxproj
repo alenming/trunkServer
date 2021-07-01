@@ -329,7 +329,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)bin\</OutDir>
-    <IntDir>$(SolutionDir).$(ProjectName)$(Configuration)\</IntDir>
+    <IntDir>$(SolutionDir)bin\.$(ProjectName)$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
